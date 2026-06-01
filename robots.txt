@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /.qa/
+Disallow: /uploads/
+
+Sitemap: https://thelodestone.my/sitemap.xml

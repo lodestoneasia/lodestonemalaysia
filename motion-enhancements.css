@@ -1,0 +1,32 @@
+/* ============================================================
+   Motion Enhancement Layer — CSS
+   Pairs with motion-enhancements.js
+   Targets existing IDs/classes in lodestone-mock-site-v3.html
+   ============================================================ */
+
+/* GSAP owns transform on these — keep box-shadow/border/background smooth */
+[data-tilt]{transition: box-shadow .4s var(--ease), border-color .4s var(--ease) !important}
+.magnet{transition: background .25s var(--ease), box-shadow .25s var(--ease) !important}
+
+/* Will-change hints where we scrub */
+.hero-grid, .strengths-card, .hero-copy{will-change: transform}
+.sec-head h2, .about h2, .evo-card-text h2, .cta-banner h2, .contact h2, .finder-side h2{
+  will-change: clip-path, transform;
+}
+
+/* Process steps — connecting line driven by --line-scale CSS variable */
+#process .steps{position: relative; --line-scale: 0}
+#process .steps::before{
+  content:""; position:absolute; top:24px; left:5%; right:5%; height:2px;
+  background: linear-gradient(90deg, var(--primary), var(--aurora-1), var(--accent));
+  transform-origin: left center; transform: scaleX(var(--line-scale));
+  border-radius: 2px; z-index: 0; opacity: .55;
+}
+#process .step{position: relative; z-index: 1}
+#process .step-num{position: relative; z-index: 2; background: var(--paper)}
+@media (max-width: 720px){ #process .steps::before{display:none} }
+
+/* Reduce-motion guard mirrors the existing CSS guard */
+@media (prefers-reduced-motion: reduce){
+  [data-tilt], .magnet{transition:none !important; transform:none !important}
+}

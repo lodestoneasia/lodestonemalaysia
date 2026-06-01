@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="cgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3A4FB5" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#3A4FB5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(400, 400)">
+    <circle r="380" fill="url(#cgGlow)"/>
+    <circle r="340" fill="none" stroke="#3A4FB5" stroke-width="1" opacity="0.32"/>
+    <circle r="300" fill="none" stroke="#3A4FB5" stroke-width="0.6" stroke-dasharray="2 4" opacity="0.32"/>
+    <circle r="180" fill="none" stroke="#3A4FB5" stroke-width="1" opacity="0.32"/>
+    <g stroke="#3A4FB5" opacity="0.28">
+      <g><line x1="0" y1="-340" x2="0" y2="-310" stroke-width="2"/></g>
+      <g transform="rotate(15)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(30)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(45)"><line x1="0" y1="-340" x2="0" y2="-318" stroke-width="1"/></g>
+      <g transform="rotate(60)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(75)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(90)"><line x1="0" y1="-340" x2="0" y2="-310" stroke-width="2"/></g>
+      <g transform="rotate(105)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(120)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(135)"><line x1="0" y1="-340" x2="0" y2="-318" stroke-width="1"/></g>
+      <g transform="rotate(150)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(165)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(180)"><line x1="0" y1="-340" x2="0" y2="-310" stroke-width="2"/></g>
+      <g transform="rotate(195)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(210)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(225)"><line x1="0" y1="-340" x2="0" y2="-318" stroke-width="1"/></g>
+      <g transform="rotate(240)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(255)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(270)"><line x1="0" y1="-340" x2="0" y2="-310" stroke-width="2"/></g>
+      <g transform="rotate(285)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(300)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(315)"><line x1="0" y1="-340" x2="0" y2="-318" stroke-width="1"/></g>
+      <g transform="rotate(330)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+      <g transform="rotate(345)"><line x1="0" y1="-340" x2="0" y2="-322" stroke-width="0.5"/></g>
+    </g>
+    <g>
+      <path d="M0 -180 L20 0 L0 180 L-20 0 Z" fill="#3A4FB5" opacity="0.5"/>
+      <path d="M-180 0 L0 20 L180 0 L0 -20 Z" fill="#3A4FB5" opacity="0.4"/>
+      <path d="M-127 -127 L8 8 L127 127 L-8 -8 Z" fill="#F7A325" opacity="0.32"/>
+      <path d="M127 -127 L-8 8 L-127 127 L8 -8 Z" fill="#F7A325" opacity="0.32"/>
+    </g>
+    <g font-family="Georgia, serif" font-size="22" fill="#3A4FB5" opacity="0.55" text-anchor="middle">
+      <text x="0" y="-258">N</text>
+      <text x="262" y="6">E</text>
+      <text x="0" y="270">S</text>
+      <text x="-262" y="6">W</text>
+    </g>
+    <circle r="6" fill="#F7A325" opacity="0.65"/>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" preserveAspectRatio="xMidYEnd slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF7F2" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#FAF7F2" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#F7E2C8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#F1C9B0"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD180" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#F7A325" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#F7A325" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mtnBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C5BFE0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#A39ECC" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="mtnMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A8C8B6"/>
+      <stop offset="100%" stop-color="#7FA793"/>
+    </linearGradient>
+    <linearGradient id="mtnFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5C8975"/>
+      <stop offset="100%" stop-color="#3F6B58"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="800" fill="url(#sky)"/>
+
+  <circle cx="1380" cy="280" r="280" fill="url(#sunGlow)"/>
+  <circle cx="1380" cy="280" r="58" fill="#F7A325" opacity="0.92"/>
+
+  <g stroke="#F7A325" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <line x1="1380" y1="178" x2="1380" y2="148"/>
+    <line x1="1380" y1="412" x2="1380" y2="382"/>
+    <line x1="1488" y1="280" x2="1518" y2="280"/>
+    <line x1="1242" y1="280" x2="1272" y2="280"/>
+    <line x1="1453" y1="207" x2="1478" y2="182"/>
+    <line x1="1307" y1="353" x2="1282" y2="378"/>
+    <line x1="1453" y1="353" x2="1478" y2="378"/>
+    <line x1="1307" y1="207" x2="1282" y2="182"/>
+  </g>
+
+  <g transform="translate(1170, 175)">
+    <path d="M0 -28 L5 -5 L28 0 L5 5 L0 28 L-5 5 L-28 0 L-5 -5 Z" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="0" cy="0" r="3" fill="#F7A325"/>
+  </g>
+
+  <g fill="#FFFFFF" opacity="0.4">
+    <ellipse cx="380" cy="200" rx="120" ry="13"/>
+    <ellipse cx="700" cy="250" rx="80" ry="9"/>
+    <ellipse cx="1080" cy="380" rx="100" ry="11"/>
+  </g>
+
+  <g fill="none" stroke="#1F2547" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <path d="M340 280 q 8 -8 16 0 q 8 -8 16 0"/>
+    <path d="M380 300 q 6 -6 12 0 q 6 -6 12 0"/>
+    <path d="M300 320 q 5 -5 10 0 q 5 -5 10 0"/>
+    <path d="M820 340 q 7 -7 14 0 q 7 -7 14 0"/>
+    <path d="M1620 220 q 6 -6 12 0 q 6 -6 12 0"/>
+  </g>
+
+  <path d="M0 460 Q 240 340 480 380 Q 700 320 950 360 Q 1180 290 1430 350 Q 1660 310 1920 340 L 1920 800 L 0 800 Z" fill="url(#mtnBack)"/>
+  <path d="M0 540 L 180 410 L 360 480 L 540 380 L 720 470 L 900 400 L 1080 470 L 1260 380 L 1440 470 L 1620 420 L 1800 460 L 1920 430 L 1920 800 L 0 800 Z" fill="url(#mtnMid)"/>
+  <path d="M0 620 L 240 500 L 480 570 L 720 470 L 960 540 L 1200 480 L 1440 550 L 1680 500 L 1920 540 L 1920 800 L 0 800 Z" fill="url(#mtnFront)"/>
+
+  <path d="M-50 720 Q 240 670 480 690 Q 720 660 960 685 Q 1200 660 1440 685 Q 1680 670 1970 685" fill="none" stroke="#FAF7F2" stroke-width="3" stroke-dasharray="3 10" opacity="0.55" stroke-linecap="round"/>
+</svg>
