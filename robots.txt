@@ -3,4 +3,4 @@ Allow: /
 Disallow: /.qa/
 Disallow: /uploads/
 
-Sitemap: https://thelodestone.my/sitemap.xml
+Sitemap: https://thelodestonesolution.com/sitemap.xml
