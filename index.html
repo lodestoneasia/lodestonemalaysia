@@ -353,6 +353,56 @@
   }
   .strengths-foot a:hover{gap:8px}
 
+  /* ===== Lodestone Lens — Screening spotlight ===== */
+  .lens-spotlight{justify-content:flex-start}
+  .lens-tag{
+    align-self:flex-start;display:inline-block;
+    font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:600;background:var(--cream);
+    padding:5px 11px;border-radius:999px;margin-bottom:18px;
+    position:relative;z-index:1;
+  }
+  .lens-head{
+    display:flex;align-items:center;gap:14px;margin-bottom:14px;
+    position:relative;z-index:1;
+  }
+  .lens-icon{
+    width:54px;height:54px;border-radius:16px;flex-shrink:0;
+    background:linear-gradient(135deg,#E0E6FF,#C7D2FF);
+    display:grid;place-items:center;color:var(--primary);
+    box-shadow:0 8px 20px rgba(58, 79, 181, .2);
+  }
+  .lens-icon svg{width:26px;height:26px}
+  .lens-head .strengths-title{margin-bottom:2px}
+  .lens-program{
+    font-size:.86rem;color:var(--primary);font-weight:600;
+    margin:0;letter-spacing:.01em;
+  }
+  .lens-points{
+    list-style:none;margin:2px 0 0;padding:0;
+    display:flex;flex-direction:column;gap:10px;
+    position:relative;z-index:1;
+  }
+  .lens-points li{
+    display:flex;align-items:center;gap:10px;
+    font-size:.9rem;color:var(--ink);line-height:1.35;
+  }
+  .lens-points li svg{color:var(--sage);flex-shrink:0}
+  .lens-outcome{
+    margin-top:18px;padding-top:16px;
+    border-top:1px dashed rgba(31, 37, 71, .14);
+    display:flex;align-items:center;gap:8px;
+    font-size:.84rem;color:var(--sage);font-weight:600;
+    position:relative;z-index:1;
+  }
+  .lens-outcome svg{flex-shrink:0}
+  .lens-actions{
+    margin-top:18px;display:flex;flex-direction:column;gap:10px;
+    position:relative;z-index:1;
+  }
+  .lens-actions .btn-whatsapp{width:100%;padding:13px 18px;font-size:.95rem;justify-content:center}
+  .lens-actions .program-link{margin-top:0;justify-content:center;font-size:.9rem}
+
   /* Cursor spotlight */
   .spotlight{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(247, 163, 37, .18),transparent 60%);pointer-events:none;transition:opacity .3s;opacity:0;mix-blend-mode:multiply;z-index:0}
   .hero:hover .spotlight{opacity:1}
@@ -780,6 +830,10 @@
     .b-large,.b-tall{grid-column:auto;grid-row:auto}
     .strengths-title{font-size:1.25rem}
     .strengths-subtitle{font-size:.84rem;margin-bottom:14px}
+    .lens-icon{width:46px;height:46px;border-radius:14px}
+    .lens-icon svg{width:22px;height:22px}
+    .lens-tag{margin-bottom:14px}
+    .lens-points li{font-size:.86rem}
     .strength-tile{padding:14px;border-radius:14px}
     .strength-icon{width:32px;height:32px;font-size:1rem}
     /* ===== Lodestone Lens — divided-list layout on phones ===== */
@@ -2050,63 +2104,37 @@
       </div>
     </div>
     <div class="hero-art">
-      <div class="strengths-card">
+      <div class="strengths-card lens-spotlight">
         <span class="strengths-eyebrow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
           The Lodestone Lens
         </span>
-        <h3 class="strengths-title">Your child's superpowers</h3>
-        <p class="strengths-subtitle">We see strengths first. Every program is built around them.</p>
 
-        <div class="strengths-grid">
-          <button class="strength-tile st-1" type="button" aria-label="Visual thinker">
-            <div class="strength-front">
-              <div class="strength-icon">✨</div>
-              <div class="strength-name">Visual<br>thinker</div>
-            </div>
-            <div class="strength-detail">
-              <span class="strength-detail-label">Channelled via</span>
-              <span class="strength-detail-text">Math · Coding · Screening</span>
-            </div>
-          </button>
+        <span class="lens-tag">Ages 4–16 · No diagnosis needed</span>
 
-          <button class="strength-tile st-2" type="button" aria-label="Pattern spotter">
-            <div class="strength-front">
-              <div class="strength-icon">🧩</div>
-              <div class="strength-name">Pattern<br>spotter</div>
-            </div>
-            <div class="strength-detail">
-              <span class="strength-detail-label">Channelled via</span>
-              <span class="strength-detail-text">Coding · Math · IGCSE</span>
-            </div>
-          </button>
-
-          <button class="strength-tile st-3" type="button" aria-label="Big imaginer">
-            <div class="strength-front">
-              <div class="strength-icon">🌈</div>
-              <div class="strength-name">Big<br>imaginer</div>
-            </div>
-            <div class="strength-detail">
-              <span class="strength-detail-label">Channelled via</span>
-              <span class="strength-detail-text">Say Play · SEL · Coding</span>
-            </div>
-          </button>
-
-          <button class="strength-tile st-4" type="button" aria-label="Deep feeler">
-            <div class="strength-front">
-              <div class="strength-icon">💛</div>
-              <div class="strength-name">Deep<br>feeler</div>
-            </div>
-            <div class="strength-detail">
-              <span class="strength-detail-label">Channelled via</span>
-              <span class="strength-detail-text">SEL · Say Play</span>
-            </div>
-          </button>
+        <div class="lens-head">
+          <div class="lens-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <div>
+            <h3 class="strengths-title">See your child clearly</h3>
+            <p class="lens-program">Screening &amp; Assessment</p>
+          </div>
         </div>
 
-        <div class="strengths-foot">
-          <span class="strengths-foot-meta"><span class="pulse-dot" aria-hidden="true"></span> Tap a tile</span>
-          <a href="#finder">Find your child's path →</a>
+        <p class="strengths-subtitle">Early-stage screening for dyslexia, ADHD and autism — with a detailed report and clear next steps. Most families get the clarity they've been waiting for in just 1–2 sessions.</p>
+
+        <ul class="lens-points">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Detailed written report you can keep</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Clear, practical next-step plan</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No referral or prior diagnosis needed</li>
+        </ul>
+
+        <div class="lens-outcome"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Clarity in 1–2 sessions</div>
+
+        <div class="lens-actions">
+          <a href="https://wa.me/60122127743?text=Hi%21%20I%27d%20like%20to%20book%20a%20screening%20for%20my%20child.%20Could%20you%20share%20details%20about%20timing%2C%20process%2C%20and%20pricing%3F" class="btn-whatsapp" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>Book a screening</a>
+          <a href="#contact" class="program-link">or fill a form &rarr;</a>
         </div>
       </div>
     </div>
@@ -2731,15 +2759,6 @@
     btn.addEventListener('click', () => {
       const open = item.classList.toggle('open');
       btn.setAttribute('aria-expanded', open);
-    });
-  });
-
-  // ===== Strength tiles: click to pin (works on touch + desktop) =====
-  document.querySelectorAll('.strength-tile').forEach(tile => {
-    tile.addEventListener('click', () => {
-      const wasActive = tile.classList.contains('active');
-      document.querySelectorAll('.strength-tile.active').forEach(t => t.classList.remove('active'));
-      if (!wasActive) tile.classList.add('active');
     });
   });
 
