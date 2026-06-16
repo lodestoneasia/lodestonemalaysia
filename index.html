@@ -794,6 +794,14 @@
   @media(max-width:980px){
     .nav-links{display:none}
     .menu-toggle{display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:var(--paper);box-shadow:var(--shadow-sm)}
+    .nav.nav-open .nav-links{
+      display:flex;flex-direction:column;align-items:flex-start;gap:20px;
+      position:absolute;top:100%;left:0;right:0;
+      background:var(--paper);padding:22px 24px 26px;
+      box-shadow:var(--shadow-lg);border-top:1px solid var(--line);
+    }
+    .nav.nav-open .nav-links a{font-size:1.05rem}
+    .menu-toggle[aria-expanded="true"]{background:var(--primary);color:#fff}
     .nav-actions .a11y-toggle{display:none}
     .hero-grid{grid-template-columns:1fr;text-align:center;gap:40px}
     .hero p.lede{margin-inline:auto}
@@ -3343,6 +3351,36 @@
     sync();
     new MutationObserver(sync).observe(resultName, { childList: true, characterData: true, subtree: true });
   }
+})();
+
+// ===== Mobile menu (hamburger) =====
+(function(){
+  var nav = document.getElementById('nav');
+  var toggle = nav && nav.querySelector('.menu-toggle');
+  var links = nav && nav.querySelector('.nav-links');
+  if (!nav || !toggle || !links) return;
+  toggle.setAttribute('aria-expanded', 'false');
+  function setOpen(open){
+    nav.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  toggle.addEventListener('click', function(e){
+    e.stopPropagation();
+    setOpen(!nav.classList.contains('nav-open'));
+  });
+  // Close when a menu link is tapped
+  links.addEventListener('click', function(e){
+    if (e.target.closest('a')) setOpen(false);
+  });
+  // Close when tapping outside the menu
+  document.addEventListener('click', function(e){
+    if (nav.classList.contains('nav-open') && !nav.contains(e.target)) setOpen(false);
+  });
+  // Close on Escape
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') setOpen(false);
+  });
 })();
 
 </script>
