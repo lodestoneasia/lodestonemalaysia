@@ -465,7 +465,7 @@
   .reveal.in{opacity:1;transform:none}
 
   /* ===== FINDER (interactive quiz) ===== */
-  .finder{position:relative}
+  .finder{position:relative;padding-bottom:36px}
   .finder-card{
     background:var(--paper);border-radius:var(--radius-lg);padding:50px;
     box-shadow:var(--shadow-md);border:1px solid var(--line);
@@ -1285,11 +1285,12 @@
   @media (max-width: 720px){ .evo-mark-accent{ width: 44px; height: 44px; top: 12px; right: 12px } }
 
   /* About-section logo banner (full lockup, centered above the columns) */
+  .about{ padding-top: 14px }
   .about-mark-wrap{
     position: relative;
-    width: 380px; max-width: 84vw;
+    width: 500px; max-width: 92vw;
     aspect-ratio: 1;
-    margin: 0 auto 64px;
+    margin: 0 auto 24px;
     display: grid; place-items: center;
   }
   .about-enso{
@@ -1303,15 +1304,15 @@
   @media (prefers-reduced-motion: reduce){ .about-enso{ animation: none } }
   .about-mark-banner{
     position: relative;
-    width: 320px; max-width: 84%;
+    width: 480px; max-width: 94%;
     height: auto;
     z-index: 1;
-    opacity: 0;
+    opacity: .95;
     display: block;
   }
   @media (max-width: 720px){
-    .about-mark-wrap{ width: 280px; margin-bottom: 44px }
-    .about-mark-banner{ width: 230px }
+    .about-mark-wrap{ width: 400px; margin-bottom: 20px }
+    .about-mark-banner{ width: 340px }
   }
 
   /* Re-affirm footer logo treatment now that bg is transparent, brightness(0)+invert(1) makes opaque pixels white, transparent stays transparent */
@@ -2124,7 +2125,9 @@
       </button>
     </div>
   </div>
-  <div class="subnav">
+</header>
+
+<div class="subnav">
     <div class="container subnav-row">
       <span class="subnav-label">Where does your child need <span class="lbl-accent">support?</span></span>
       <a class="need-pill" href="adhd-support.html"><span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span>ADHD</a>
@@ -2136,7 +2139,7 @@
       <a class="need-pill" href="slow-learners-support.html"><span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></span>Slow Learners</a>
     </div>
   </div>
-</header>
+
 
 <!-- ============= HERO ============= -->
 <section class="hero" id="top">
@@ -3177,14 +3180,14 @@
       var ring = document.querySelector('.about-enso-ring');
       var logo = document.querySelector('.about-mark-wrap .about-mark-banner');
       if (!ring || !logo) return;
-      gsap.set(logo, { opacity: 0, scale: 0.94 });
+      gsap.set(logo, { scale: 0.96 });
       ScrollTrigger.create({
-        trigger: '.about-mark-wrap', start: 'top 80%', once: true, onEnter: function(){
+        trigger: '.about-mark-wrap', start: 'top 85%', once: true, onEnter: function(){
           gsap.to(ring, {
             attr: { 'stroke-dashoffset': 0 }, duration: 1.5, ease: 'expo.out'
           });
           gsap.to(logo, {
-            opacity: 0.95, scale: 1, duration: 1.0, ease: 'expo.out', delay: 0.4
+            scale: 1, duration: 1.0, ease: 'expo.out', delay: 0.3
           });
         }
       });
