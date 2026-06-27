@@ -403,6 +403,21 @@
   .lens-actions .btn-whatsapp{width:100%;padding:13px 18px;font-size:.95rem;justify-content:center}
   .lens-actions .program-link{margin-top:0;justify-content:center;font-size:.9rem}
 
+  /* Hero: Support-by-need picker (replaces the lens card content) */
+  .needhero-sub{font-size:.86rem;color:var(--ink-soft);margin:2px 0 16px;position:relative;z-index:1}
+  .needhero-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative;z-index:1}
+  .needhero{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:13px;background:rgba(255,255,255,.72);border:1px solid rgba(31,37,71,.08);transition:transform .25s var(--ease),box-shadow .25s,background .25s}
+  .needhero:hover{transform:translateY(-2px);background:#fff;box-shadow:0 10px 24px rgba(31,37,71,.12)}
+  .needhero .ic{width:30px;height:30px;border-radius:9px;background:rgba(58,79,181,.1);color:var(--primary);display:grid;place-items:center;flex-shrink:0}
+  .needhero .ic svg{width:17px;height:17px}
+  .needhero b{font-size:.85rem;font-weight:600;color:var(--ink);line-height:1.12}
+  .needhero.alt{background:linear-gradient(135deg,var(--primary),var(--primary-dark));border:0}
+  .needhero.alt b{color:#fff}
+  .needhero.alt .ic{background:rgba(255,255,255,.2);color:#fff}
+  /* let the picker card grow to fit its tiles instead of a fixed square */
+  .hero-art{aspect-ratio:auto}
+  .needs-card{height:auto}
+
   /* Cursor spotlight */
   .spotlight{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(247, 163, 37, .18),transparent 60%);pointer-events:none;transition:opacity .3s;opacity:0;mix-blend-mode:multiply;z-index:0}
   .hero:hover .spotlight{opacity:1}
@@ -1995,6 +2010,14 @@
   }
 }
 </script>
+<!-- Google Analytics (GA4) — replace G-YC6ZRBTYTS with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YC6ZRBTYTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YC6ZRBTYTS');
+</script>
 </head>
 <body class="preloading">
 
@@ -2118,37 +2141,24 @@
       </div>
     </div>
     <div class="hero-art">
-      <div class="strengths-card lens-spotlight">
+      <div class="strengths-card needs-card">
         <span class="strengths-eyebrow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
-          The Lodestone Lens
+          Support by your child's need
         </span>
 
-        <span class="lens-tag">Ages 4–16 · No diagnosis needed</span>
+        <h3 class="strengths-title">Where does your child need help?</h3>
+        <p class="needhero-sub">Tap your child's challenge to see how we help. No diagnosis needed.</p>
 
-        <div class="lens-head">
-          <div class="lens-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          </div>
-          <div>
-            <h3 class="strengths-title">See your child clearly</h3>
-            <p class="lens-program">Screening &amp; Assessment</p>
-          </div>
-        </div>
-
-        <p class="strengths-subtitle">Early screening for dyslexia, dyscalculia, ADHD, autism and speech difficulties, as well as the wider learning, emotional or developmental challenges any child can face. You'll get a detailed report and clear next steps, and most families find the clarity they've been waiting for in just 1 to 2 sessions.</p>
-
-        <ul class="lens-points">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Detailed written report you can keep</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Clear, practical next-step plan</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No referral or prior diagnosis needed</li>
-        </ul>
-
-        <div class="lens-outcome"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Clarity in 1–2 sessions</div>
-
-        <div class="lens-actions">
-          <a href="https://wa.me/60122127743?text=Hi%21%20I%27d%20like%20to%20book%20a%20screening%20for%20my%20child.%20Could%20you%20share%20details%20about%20timing%2C%20process%2C%20and%20pricing%3F" class="btn-whatsapp" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>Book a screening</a>
-          <a href="#contact" class="program-link">or fill a form &rarr;</a>
+        <div class="needhero-grid">
+          <a class="needhero" href="adhd-support.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span><b>ADHD</b></a>
+          <a class="needhero" href="dyslexia-support.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><b>Dyslexia</b></a>
+          <a class="needhero" href="dyscalculia-support.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span><b>Dyscalculia</b></a>
+          <a class="needhero" href="dysgraphia-support.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></span><b>Dysgraphia</b></a>
+          <a class="needhero" href="autism-support.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span><b>Autism</b></a>
+          <a class="needhero" href="speech-delay-support.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><b>Speech Delay</b></a>
+          <a class="needhero" href="slow-learners-support.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></span><b>Slow Learners</b></a>
+          <a class="needhero alt" href="#finder"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span><b>Not sure?</b></a>
         </div>
       </div>
     </div>
@@ -2379,6 +2389,77 @@
         <div class="program-actions"><a href="https://wa.me/60122127743?text=Hi%21%20I%27d%20like%20to%20know%20more%20about%20the%20IGCSE%20Crash%20Course.%20Could%20you%20share%20details%20about%20subjects%20covered%2C%20schedule%2C%20and%20pricing%3F" class="btn-whatsapp" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>Chat on WhatsApp</a><a href="#contact" class="program-link">or fill a form &rarr;</a></div>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- ============= SUPPORT BY NEED ============= -->
+<style>
+  .needs-sec{background:var(--cream);padding:88px 0}
+  .needs-head{max-width:720px;margin:0 auto 34px;text-align:center}
+  .needs-head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(1.7rem,3vw,2.3rem);color:var(--ink);margin-top:12px;letter-spacing:-.02em}
+  .needs-head p{color:var(--ink-soft);margin-top:14px;font-size:1.05rem}
+  .needs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .need-card{display:flex;flex-direction:column;gap:9px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+  .need-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:transparent}
+  .need-ico{width:46px;height:46px;border-radius:13px;background:rgba(58,79,181,.08);color:var(--primary);display:grid;place-items:center}
+  .need-ico svg{width:23px;height:23px}
+  .need-card h3{font-family:var(--font-display);font-size:1.1rem;color:var(--ink);margin:0;font-weight:600}
+  .need-card p{font-size:.85rem;color:var(--ink-soft);margin:0;flex:1;line-height:1.45}
+  .need-card .go{color:var(--primary);font-weight:600;font-size:.85rem;margin-top:2px}
+  .need-card.alt{background:linear-gradient(135deg,var(--primary),var(--primary-dark));border:0}
+  .need-card.alt h3,.need-card.alt p,.need-card.alt .go{color:#fff}
+  .need-card.alt p{color:rgba(255,255,255,.9)}
+  .need-card.alt .need-ico{background:rgba(255,255,255,.18);color:#fff}
+  .needs-note{margin-top:28px;text-align:center;font-size:.92rem;color:var(--ink-soft);max-width:760px;margin-left:auto;margin-right:auto;line-height:1.6}
+  .needs-note svg{vertical-align:-3px;margin-right:7px;color:var(--sage)}
+  @media(max-width:900px){.needs-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.needs-grid{grid-template-columns:1fr}}
+</style>
+<section class="needs-sec" id="support">
+  <div class="container">
+    <div class="needs-head reveal">
+      <span class="sec-eyebrow">Support by your child's need</span>
+      <h2>Worried about a specific challenge?</h2>
+      <p>Start where your child is. Each guide explains the challenge, how we help, and which of our programs fit, with no diagnosis required.</p>
+    </div>
+    <div class="needs-grid">
+      <a class="need-card reveal" href="adhd-support.html">
+        <span class="need-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span>
+        <h3>ADHD</h3><p>Focus, impulsivity, restlessness, big feelings.</p><span class="go">Explore &rarr;</span>
+      </a>
+      <a class="need-card reveal" href="dyslexia-support.html">
+        <span class="need-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+        <h3>Dyslexia</h3><p>Reading, decoding, spelling and fluency.</p><span class="go">Explore &rarr;</span>
+      </a>
+      <a class="need-card reveal" href="dyscalculia-support.html">
+        <span class="need-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span>
+        <h3>Dyscalculia</h3><p>Numbers, maths, times tables, word problems.</p><span class="go">Explore &rarr;</span>
+      </a>
+      <a class="need-card reveal" href="dysgraphia-support.html">
+        <span class="need-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></span>
+        <h3>Dysgraphia</h3><p>Handwriting and getting ideas onto paper.</p><span class="go">Explore &rarr;</span>
+      </a>
+      <a class="need-card reveal" href="autism-support.html">
+        <span class="need-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+        <h3>Autism</h3><p>Communication, routine and sensory needs.</p><span class="go">Explore &rarr;</span>
+      </a>
+      <a class="need-card reveal" href="speech-delay-support.html">
+        <span class="need-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <h3>Speech Delay</h3><p>Talking, language and clear articulation.</p><span class="go">Explore &rarr;</span>
+      </a>
+      <a class="need-card reveal" href="slow-learners-support.html">
+        <span class="need-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></span>
+        <h3>Slow Learners</h3><p>Learning steadily, at their own pace.</p><span class="go">Explore &rarr;</span>
+      </a>
+      <a class="need-card alt reveal" href="#finder">
+        <span class="need-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+        <h3>Not sure?</h3><p>Take our 30-second finder and we'll point the way.</p><span class="go">Find your path &rarr;</span>
+      </a>
+    </div>
+    <p class="needs-note reveal">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      This is currently a collaborative effort between The Lodestone Centre and other dyslexia and learning-support centres, so your child benefits from the right specialist expertise at every step.
+    </p>
   </div>
 </section>
 
