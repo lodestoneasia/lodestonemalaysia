@@ -498,6 +498,14 @@
   .finder-progress span.done{background:var(--primary)}
   .finder h3{font-size:1.5rem;margin-bottom:24px}
   .finder-options{display:grid;gap:12px}
+  .finder-chips{display:flex;flex-wrap:wrap;gap:9px}
+  .finder-chip{border:1.5px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.86rem;cursor:pointer;background:var(--paper);font-family:inherit;color:var(--ink);transition:all .25s}
+  .finder-chip:hover{border-color:var(--primary)}
+  .finder-chip.sel{border-color:var(--primary);background:var(--primary);color:#fff;font-weight:600}
+  .finder-hint{margin-top:12px;font-size:.78rem;color:var(--ink-soft)}
+  #finderContinue{font-family:inherit}
+  #finderContinue:disabled{opacity:.4;cursor:default}
+
   .finder-opt{
     text-align:left;background:var(--cream);border:1.5px solid var(--line);
     padding:18px 22px;border-radius:14px;cursor:pointer;font-size:1rem;
@@ -2279,16 +2287,16 @@
       <div class="finder-grid">
         <div class="finder-side">
           <div class="sec-eyebrow">Cari hala tuju</div>
-          <h2>Jawab 3 soalan. Kami akan cadangkan program yang betul.</h2>
+          <h2>Jawab 4 soalan ringkas. Kami akan cadangkan program yang betul.</h2>
           <p style="margin-top:14px">Kebanyakan ibu bapa tidak pasti di mana hendak bermula. Panduan pantas ini menunjuk anda ke program yang paling berkemungkinan membantu anak anda, tiada e-mel diperlukan, tanpa tekanan.</p>
           <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Kurang daripada 30 saat</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Kurang daripada seminit</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dibina oleh pasukan pakar kami</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Mencadang, tidak pernah mendiagnosis</li>
           </ul>
         </div>
         <div class="finder-engine">
-          <div class="finder-progress" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="finder-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
 
           <!-- Step 1 -->
           <div class="finder-step active" data-step="1">
@@ -2318,13 +2326,31 @@
           <div class="finder-step" data-step="3">
             <h3>Adakah anak anda telah dikenal pasti secara rasmi?</h3>
             <div class="finder-options">
-              <button class="finder-opt" data-next="result" data-key="yes"><span class="opt-ico">✅</span> Ya, dengan diagnosis atau laporan</button>
-              <button class="finder-opt" data-next="result" data-key="no"><span class="opt-ico">🤔</span> Belum, saya ada kebimbangan</button>
-              <button class="finder-opt" data-next="result" data-key="unsure"><span class="opt-ico">💭</span> Saya hanya meneroka pilihan</button>
+              <button class="finder-opt" data-next="4" data-key="yes"><span class="opt-ico">✅</span> Ya, dengan diagnosis atau laporan</button>
+              <button class="finder-opt" data-next="4" data-key="no"><span class="opt-ico">🤔</span> Belum, saya ada kebimbangan</button>
+              <button class="finder-opt" data-next="4" data-key="unsure"><span class="opt-ico">💭</span> Saya hanya meneroka pilihan</button>
             </div>
           </div>
 
           <!-- Result -->
+          
+          <!-- Step 4 -->
+          <div class="finder-step" data-step="4">
+            <h3>Ada yang berikut kedengaran biasa? <span style="font-weight:400;font-size:.85rem;color:var(--ink-soft)">Tandakan semua yang berkenaan.</span></h3>
+            <div class="finder-chips">
+              <button class="finder-chip" data-diff="ADHD">ADHD</button>
+              <button class="finder-chip" data-diff="Disleksia">Disleksia</button>
+              <button class="finder-chip" data-diff="Diskalkulia">Diskalkulia</button>
+              <button class="finder-chip" data-diff="Disgrafia">Disgrafia</button>
+              <button class="finder-chip" data-diff="Autisme">Autisme</button>
+              <button class="finder-chip" data-diff="Lewat bercakap">Lewat bercakap</button>
+              <button class="finder-chip" data-diff="Pelajar lambat">Pelajar lambat</button>
+              <button class="finder-chip" data-diff="none" data-none>Tidak pasti / tiada</button>
+            </div>
+            <p class="finder-hint">Syak sahaja sudah memadai. Tiada diagnosis diperlukan, dan "tidak pasti" adalah jawapan yang baik.</p>
+            <button class="btn btn-primary" id="finderContinue" disabled style="margin-top:16px"><span>Lihat cadangan kami <span class="arrow">→</span></span></button>
+          </div>
+
           <div class="finder-result" id="finderResult">
             <span class="result-badge">✨ Dicadangkan untuk anak anda</span>
             <div class="result-name" id="resultName">Say Play (Speech)</div>
@@ -2334,11 +2360,17 @@
               <div><strong id="resultFreq">2–3×/mgg</strong>Kekerapan sesi</div>
               <div><strong>Percuma</strong>Panggilan pertama</div>
             </div>
-            <div style="display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap">
+            <div style="margin-top:18px;text-align:left">
+              <label for="finderNote" style="font-size:.85rem;font-weight:600">Ada apa-apa yang anda ingin kami tahu tentang anak anda? <span style="font-weight:400;color:var(--ink-soft)">(pilihan)</span></label>
+              <textarea id="finderNote" placeholder="cth. Dia berumur 4 tahun dan hanya menyebut beberapa patah perkataan, kebanyakannya di rumah…" style="width:100%;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;font-family:inherit;font-size:.9rem;min-height:64px;resize:vertical;margin-top:6px"></textarea>
+            </div>
+            <div style="display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap">
               <a href="#contact" class="btn btn-primary"><span>Tempah panggilan percuma <span class="arrow">→</span></span></a>
               <a id="finderWaBtn" class="btn" href="https://wa.me/60122127743?text=Hi%21%20I%27d%20like%20to%20learn%20more%20about%20The%20Lodestone%20Centre%27s%20programs." target="_blank" rel="noopener" style="background:#25D366;color:#fff;border:0"><span style="display:inline-flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>Bantuan di WhatsApp</span></a>
               <button class="btn btn-secondary" id="restartFinder">Mula semula</button>
             </div>
+            <div id="finderPreview" style="margin-top:16px;background:var(--cream);border-left:3px solid var(--sage);border-radius:10px;padding:12px 14px;font-size:.76rem;line-height:1.65;color:var(--ink-soft);white-space:pre-wrap;text-align:left"></div>
+            <p style="margin-top:8px;font-size:.72rem;color:var(--ink-soft);text-align:center">Menekan WhatsApp membuka mesej di atas, telah diisi. Tiada apa yang dihantar sehingga anda tekan Hantar.</p>
           </div>
         </div>
       </div>
@@ -3005,7 +3037,20 @@
   const resultDur = document.getElementById('resultDur');
   const resultFreq = document.getElementById('resultFreq');
   const restartFinder = document.getElementById('restartFinder');
+  const finderContinue = document.getElementById('finderContinue');
+  const finderNote = document.getElementById('finderNote');
+  const finderWaBtn = document.getElementById('finderWaBtn');
+  const finderPreview = document.getElementById('finderPreview');
   const choices = {};
+  let diffs = [];
+
+  const labels = {
+    speech:'Pertuturan, bahasa atau komunikasi', reading:'Membaca, menulis atau fokus di sekolah',
+    math:'Matematik menjadi kesukaran harian', social:'Emosi, persahabatan atau tingkah laku',
+    exam:'IGCSE / persediaan peperiksaan', screen:'Saya mahu saringan / penilaian',
+    '3-6':'3 hingga 6 tahun', '7-10':'7 hingga 10 tahun', '11-14':'11 hingga 14 tahun', '15+':'15+ / remaja',
+    yes:'Ya, dengan diagnosis atau laporan', no:'Belum, saya ada kebimbangan', unsure:'Hanya meneroka pilihan'
+  };
 
   const showStep = (n) => {
     finderSteps.forEach(s => s.classList.toggle('active', s.dataset.step === String(n)));
@@ -3014,44 +3059,99 @@
   };
 
   const programMap = {
-    speech: {name:'Say Play (Pertuturan)', desc:'Program pertuturan khusus yang meningkatkan artikulasi, perkembangan bahasa, dan interaksi sosial melalui sesi yang menyeronokkan dan interaktif.', dur:'8–10 mgg', freq:'2×/mgg'}, reading: {name:'Pelan Membaca & Fokus', desc:'Sokongan literasi berstruktur dan pelbagai deria, berasaskan Orton-Gillingham bersama pusat disleksia rakan kami, mengikut rentak anak anda.', dur:'12 mgg', freq:'2–3×/mgg'}, math: {name:'Program Matematik Khusus', desc:'Matematik visual dan pelbagai deria yang dibina untuk kanak-kanak dengan diskalkulia dan kebimbangan matematik.', dur:'10–12 mgg', freq:'2×/mgg'}, social: {name:'Program SEL', desc:'Pembelajaran sosioemosi untuk empati, regulasi, dan persahabatan, diajar secara eksplisit, bukan diandaikan.', dur:'12 mgg', freq:'1–2×/mgg'}, exam: {name:'Kursus Intensif IGCSE', desc:'Program IGCSE intensif 6 bulan dalam satu subjek setiap kursus: ICT, Matematik atau Bahasa Inggeris, pantas, fokus peperiksaan, disesuaikan dengan pelajar anda.', dur:'6 bulan', freq:'3×/mgg'}, screen: {name:'Program Saringan', desc:'Saringan yang jelas dan menyokong untuk disleksia, ADHD atau autisme dengan laporan terperinci dan cadangan.', dur:'1–2 sesi', freq:'sekali sahaja'}, };
+    speech: {name:'Say Play (Pertuturan)', desc:'Program pertuturan khusus yang meningkatkan artikulasi, perkembangan bahasa, dan interaksi sosial melalui sesi yang menyeronokkan dan interaktif.', dur:'8–10 mgg', freq:'2×/mgg', opt:'Lewat bercakap'},
+    early: {name:'Lodestone Early Steps', desc:'Program intervensi awal kami untuk umur 2 hingga 6: asas pertuturan dan bahasa, perkembangan melalui bermain dan kesediaan sekolah, oleh pendidik terlatih.', dur:'Blok 12 mgg', freq:'2–3×/mgg', opt:'Early Steps (Umur 2–6)'},
+    reading: {name:'Pelan Membaca & Fokus', desc:'Sokongan literasi berstruktur dan pelbagai deria, berasaskan Orton-Gillingham bersama pusat disleksia rakan kami, mengikut rentak anak anda.', dur:'12 mgg', freq:'2–3×/mgg', opt:'Disleksia / membaca'},
+    math: {name:'Program Matematik Khusus', desc:'Matematik visual dan pelbagai deria yang dibina untuk kanak-kanak dengan diskalkulia dan kebimbangan matematik.', dur:'10–12 mgg', freq:'2×/mgg', opt:'Diskalkulia / matematik'},
+    social: {name:'Program SEL', desc:'Pembelajaran sosioemosi untuk empati, regulasi, dan persahabatan, diajar secara eksplisit, bukan diandaikan.', dur:'12 mgg', freq:'1–2×/mgg', opt:'Emosi & tingkah laku (SEL)'},
+    exam: {name:'Kursus Intensif IGCSE', desc:'Program IGCSE intensif 6 bulan, satu-dengan-satu, satu subjek setiap kursus: ICT, Matematik atau Bahasa Inggeris.', dur:'6 bulan', freq:'2–3×/mgg', opt:'Kursus Intensif IGCSE'},
+    screen: {name:'Program Saringan', desc:'Saringan yang jelas dan menyokong dengan laporan terperinci dan cadangan yang jujur. RM120 sahaja, laporan termasuk.', dur:'1–2 sesi', freq:'sekali', opt:'Saringan, saya mahu kepastian dulu'}
+  };
+
+  const suggest = () => {
+    const d = diffs.join(' ').toLowerCase();
+    const young = choices['2'] === '3-6';
+    if (d.includes('bercakap')) return young ? programMap.early : programMap.speech;
+    if (d.includes('disleksia') || d.includes('disgrafia')) return programMap.reading;
+    if (d.includes('diskalkulia')) return programMap.math;
+    if (choices['1'] === 'speech') return young ? programMap.early : programMap.speech;
+    if (d.includes('autisme') && young) return programMap.early;
+    if (d.includes('autisme')) return programMap.social;
+    return programMap[choices['1']] || programMap.screen;
+  };
+
+  const composeMsg = () => {
+    const rec = suggest();
+    let m = "Hi! Saya baru menggunakan alat Cari Laluan di laman web anda.\n";
+    m += "\nKebimbangan utama: " + (labels[choices['1']] || "-");
+    m += "\nUmur anak: " + (labels[choices['2']] || "-");
+    m += "\nPenilaian: " + (labels[choices['3']] || "-");
+    m += "\nKedengaran biasa: " + (diffs.length && diffs[0] !== 'none' ? diffs.join(', ') : "Tidak pasti");
+    m += "\nProgram dicadangkan: " + rec.name;
+    const note = finderNote ? finderNote.value.trim() : '';
+    if (note) m += "\n\nTentang anak saya: " + note;
+    m += "\n\nBoleh beritahu saya langkah seterusnya?";
+    return m;
+  };
+
+  const refreshResult = () => {
+    const m = composeMsg();
+    if (finderPreview) finderPreview.textContent = m;
+    if (finderWaBtn) finderWaBtn.href = 'https://wa.me/60122127743?text=' + encodeURIComponent(m);
+  };
+
+  const showResult = () => {
+    const rec = suggest();
+    resultName.textContent = rec.name;
+    resultDesc.textContent = rec.desc;
+    resultDur.textContent = rec.dur;
+    resultFreq.textContent = rec.freq;
+    finderSteps.forEach(s => s.classList.remove('active'));
+    finderResult.classList.add('show');
+    finderProgress.forEach(p => p.classList.add('done'));
+    const sel = document.getElementById('program');
+    if (sel) {
+      const match = Array.from(sel.options).find(o => o.text === rec.opt);
+      if (match) sel.value = match.value || match.text;
+    }
+    refreshResult();
+  };
 
   document.querySelectorAll('.finder-opt').forEach(opt => {
     opt.addEventListener('click', () => {
-      const next = opt.dataset.next;
-      const key = opt.dataset.key;
-      choices[opt.closest('.finder-step').dataset.step] = key;
-      if (next === 'result') {
-        const recommendation = programMap[choices['1']] || programMap.screen;
-        resultName.textContent = recommendation.name;
-        resultDesc.textContent = recommendation.desc;
-        resultDur.textContent = recommendation.dur;
-        resultFreq.textContent = recommendation.freq;
-        finderSteps.forEach(s => s.classList.remove('active'));
-        finderResult.classList.add('show');
-        finderProgress.forEach(p => p.classList.add('done'));
-        // Pre-fill contact form program select
-        const sel = document.getElementById('program');
-        if (sel) {
-          const match = Array.from(sel.options).find(o => o.text.toLowerCase().includes(recommendation.name.toLowerCase().split(' ')[0]));
-          if (match) sel.value = match.value;
-        }
-      } else {
-        showStep(parseInt(next, 10));
-      }
+      choices[opt.closest('.finder-step').dataset.step] = opt.dataset.key;
+      showStep(parseInt(opt.dataset.next, 10));
     });
   });
 
-  restartFinder.addEventListener('click', () => { for (const k in choices) delete choices[k]; showStep(1); });
-
-  // ===== Contact form (mock) =====
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.submit-btn');
-    btn.classList.add('success');
-    setTimeout(() => { btn.classList.remove('success'); form.reset(); alert("Thank you! We'll be in touch within one business day."); }, 1800);
+  document.querySelectorAll('.finder-chip').forEach(ch => {
+    ch.addEventListener('click', () => {
+      if (ch.dataset.none !== undefined){
+        document.querySelectorAll('.finder-chip').forEach(c => c.classList.remove('sel'));
+        ch.classList.add('sel');
+      } else {
+        const none = document.querySelector('.finder-chip[data-none]');
+        if (none) none.classList.remove('sel');
+        ch.classList.toggle('sel');
+      }
+      diffs = Array.from(document.querySelectorAll('.finder-chip.sel')).map(c => c.dataset.diff);
+      finderContinue.disabled = diffs.length === 0;
+    });
   });
+  if (finderContinue) finderContinue.addEventListener('click', showResult);
+  if (finderNote) finderNote.addEventListener('input', refreshResult);
+
+  restartFinder.addEventListener('click', () => {
+    for (const k in choices) delete choices[k];
+    diffs = [];
+    document.querySelectorAll('.finder-chip').forEach(c => c.classList.remove('sel'));
+    if (finderNote) finderNote.value = '';
+    if (finderContinue) finderContinue.disabled = true;
+    showStep(1);
+  });
+
+
+
 </script>
 <script id="design-layer-js">
 

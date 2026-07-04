@@ -498,6 +498,14 @@
   .finder-progress span.done{background:var(--primary)}
   .finder h3{font-size:1.5rem;margin-bottom:24px}
   .finder-options{display:grid;gap:12px}
+  .finder-chips{display:flex;flex-wrap:wrap;gap:9px}
+  .finder-chip{border:1.5px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.86rem;cursor:pointer;background:var(--paper);font-family:inherit;color:var(--ink);transition:all .25s}
+  .finder-chip:hover{border-color:var(--primary)}
+  .finder-chip.sel{border-color:var(--primary);background:var(--primary);color:#fff;font-weight:600}
+  .finder-hint{margin-top:12px;font-size:.78rem;color:var(--ink-soft)}
+  #finderContinue{font-family:inherit}
+  #finderContinue:disabled{opacity:.4;cursor:default}
+
   .finder-opt{
     text-align:left;background:var(--cream);border:1.5px solid var(--line);
     padding:18px 22px;border-radius:14px;cursor:pointer;font-size:1rem;
@@ -2279,16 +2287,16 @@
       <div class="finder-grid">
         <div class="finder-side">
           <div class="sec-eyebrow">Find your path</div>
-          <h2>Answer 3 questions. We'll suggest the right program.</h2>
+          <h2>Answer 4 quick questions. We'll suggest the right program.</h2>
           <p style="margin-top:14px">Most parents aren't sure where to start. This quick guide points you to the program most likely to help your child, no email required, no pressure.</p>
           <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Takes under 30 seconds</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Takes under a minute</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Built by our specialist team</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suggests, never diagnoses</li>
           </ul>
         </div>
         <div class="finder-engine">
-          <div class="finder-progress" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="finder-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
 
           <!-- Step 1 -->
           <div class="finder-step active" data-step="1">
@@ -2318,10 +2326,28 @@
           <div class="finder-step" data-step="3">
             <h3>Has your child been formally identified?</h3>
             <div class="finder-options">
-              <button class="finder-opt" data-next="result" data-key="yes"><span class="opt-ico">✅</span> Yes, with a diagnosis or report</button>
-              <button class="finder-opt" data-next="result" data-key="no"><span class="opt-ico">🤔</span> Not yet, I have concerns</button>
-              <button class="finder-opt" data-next="result" data-key="unsure"><span class="opt-ico">💭</span> I'm just exploring options</button>
+              <button class="finder-opt" data-next="4" data-key="yes"><span class="opt-ico">✅</span> Yes, with a diagnosis or report</button>
+              <button class="finder-opt" data-next="4" data-key="no"><span class="opt-ico">🤔</span> Not yet, I have concerns</button>
+              <button class="finder-opt" data-next="4" data-key="unsure"><span class="opt-ico">💭</span> I'm just exploring options</button>
             </div>
+          </div>
+
+
+          <!-- Step 4 -->
+          <div class="finder-step" data-step="4">
+            <h3>Do any of these sound familiar? <span style="font-weight:400;font-size:.85rem;color:var(--ink-soft)">Tap all that apply.</span></h3>
+            <div class="finder-chips">
+              <button class="finder-chip" data-diff="ADHD">ADHD</button>
+              <button class="finder-chip" data-diff="Dyslexia">Dyslexia</button>
+              <button class="finder-chip" data-diff="Dyscalculia">Dyscalculia</button>
+              <button class="finder-chip" data-diff="Dysgraphia">Dysgraphia</button>
+              <button class="finder-chip" data-diff="Autism">Autism</button>
+              <button class="finder-chip" data-diff="Speech delay">Speech delay</button>
+              <button class="finder-chip" data-diff="Slow learner">Slow learner</button>
+              <button class="finder-chip" data-diff="none" data-none>Not sure / none of these</button>
+            </div>
+            <p class="finder-hint">A suspicion is enough. No diagnosis needed, and "not sure" is a completely fine answer.</p>
+            <button class="btn btn-primary" id="finderContinue" disabled style="margin-top:16px"><span>See our suggestion <span class="arrow">→</span></span></button>
           </div>
 
           <!-- Result -->
@@ -2334,11 +2360,17 @@
               <div><strong id="resultFreq">2–3×/wk</strong>Session frequency</div>
               <div><strong>Free</strong>First call</div>
             </div>
-            <div style="display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap">
-              <a href="#contact" class="btn btn-primary"><span>Book a free call <span class="arrow">→</span></span></a>
+            <div style="margin-top:18px;text-align:left">
+              <label for="finderNote" style="font-size:.85rem;font-weight:600">Anything you'd like us to know about your child? <span style="font-weight:400;color:var(--ink-soft)">(optional)</span></label>
+              <textarea id="finderNote" placeholder="e.g. He's 4 and only says a handful of words, mostly at home…" style="width:100%;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;font-family:inherit;font-size:.9rem;min-height:64px;resize:vertical;margin-top:6px"></textarea>
+            </div>
+            <div style="display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap">
+              <a href="#contact" class="btn btn-primary" id="finderBookBtn"><span>Book a free call <span class="arrow">→</span></span></a>
               <a id="finderWaBtn" class="btn" href="https://wa.me/60122127743?text=Hi%21%20I%27d%20like%20to%20learn%20more%20about%20The%20Lodestone%20Centre%27s%20programs." target="_blank" rel="noopener" style="background:#25D366;color:#fff;border:0"><span style="display:inline-flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>Chat on WhatsApp</span></a>
               <button class="btn btn-secondary" id="restartFinder">Start over</button>
             </div>
+            <div id="finderPreview" style="margin-top:16px;background:var(--cream);border-left:3px solid var(--sage);border-radius:10px;padding:12px 14px;font-size:.76rem;line-height:1.65;color:var(--ink-soft);white-space:pre-wrap;text-align:left"></div>
+            <p style="margin-top:8px;font-size:.72rem;color:var(--ink-soft);text-align:center">Tapping WhatsApp opens the message above, pre-filled. Nothing is sent until you tap Send.</p>
           </div>
         </div>
       </div>
@@ -3005,7 +3037,20 @@
   const resultDur = document.getElementById('resultDur');
   const resultFreq = document.getElementById('resultFreq');
   const restartFinder = document.getElementById('restartFinder');
+  const finderContinue = document.getElementById('finderContinue');
+  const finderNote = document.getElementById('finderNote');
+  const finderWaBtn = document.getElementById('finderWaBtn');
+  const finderPreview = document.getElementById('finderPreview');
   const choices = {};
+  let diffs = [];
+
+  const labels = {
+    speech:'Speech, language or communication', reading:'Reading, writing or focus at school',
+    math:'Math is a daily struggle', social:'Emotions, friendships or behaviour',
+    exam:'IGCSE / exam preparation', screen:'I want a screening / assessment',
+    '3-6':'3 to 6 years', '7-10':'7 to 10 years', '11-14':'11 to 14 years', '15+':'15+ / teen',
+    yes:'Yes, with a diagnosis or report', no:'Not yet, I have concerns', unsure:'Just exploring options'
+  };
 
   const showStep = (n) => {
     finderSteps.forEach(s => s.classList.toggle('active', s.dataset.step === String(n)));
@@ -3014,44 +3059,98 @@
   };
 
   const programMap = {
-    speech: {name:'Say Play (Speech)', desc:'A specialized speech program improving articulation, language development, and social interaction through playful, interactive sessions.', dur:'8–10 wks', freq:'2×/wk'}, reading: {name:'Reading & Focus Plan', desc:'Structured, multi-sensory literacy support, Orton-Gillingham based, run with our partner dyslexia centre, and paced for your child.', dur:'12 wks', freq:'2–3×/wk'}, math: {name:'Specialised Math Program', desc:'Visual, multi-sensory math built for children with dyscalculia and math anxiety.', dur:'10–12 wks', freq:'2×/wk'}, social: {name:'SEL Program', desc:'Social-emotional learning for empathy, regulation, and friendships, taught explicitly, not assumed.', dur:'12 wks', freq:'1–2×/wk'}, exam: {name:'IGCSE Crash Course', desc:'An intensive 6-month IGCSE program in one subject per course: ICT, Mathematics or English, fast-paced, exam-focused, adapted to your learner.', dur:'6 months', freq:'3×/wk'}, screen: {name:'Screening Program', desc:'A clear, supportive screening for dyslexia, ADHD or autism with detailed reports and recommendations.', dur:'1–2 sessions', freq:'one-time'}, };
+    speech: {name:'Say Play (Speech)', desc:'A specialized speech program improving articulation, language development, and social interaction through playful, interactive sessions.', dur:'8–10 wks', freq:'2×/wk', opt:'Speech delay'},
+    early: {name:'Lodestone Early Steps', desc:'Our early intervention program for ages 2 to 6: speech and language foundations, developmental play and school readiness, by trained educators.', dur:'12-wk blocks', freq:'2–3×/wk', opt:'Early Steps (Ages 2–6)'},
+    reading: {name:'Reading & Focus Plan', desc:'Structured, multi-sensory literacy support, Orton-Gillingham based, run with our partner dyslexia centre, and paced for your child.', dur:'12 wks', freq:'2–3×/wk', opt:'Dyslexia / reading'},
+    math: {name:'Specialised Math Program', desc:'Visual, multi-sensory math built for children with dyscalculia and math anxiety.', dur:'10–12 wks', freq:'2×/wk', opt:'Dyscalculia / math'},
+    social: {name:'SEL Program', desc:'Social-emotional learning for empathy, regulation, and friendships, taught explicitly, not assumed.', dur:'12 wks', freq:'1–2×/wk', opt:'Emotions & behaviour (SEL)'},
+    exam: {name:'IGCSE Crash Course', desc:'An intensive 6-month, one-to-one IGCSE program in one subject per course: ICT, Mathematics or English.', dur:'6 months', freq:'2–3×/wk', opt:'IGCSE Crash Course'},
+    screen: {name:'Screening Program', desc:'A clear, supportive screening with a detailed report and honest recommendations. RM120 flat, report included.', dur:'1–2 sessions', freq:'one-time', opt:'Screening, I want answers first'}
+  };
+
+  const suggest = () => {
+    const d = diffs.join(' ').toLowerCase();
+    const young = choices['2'] === '3-6';
+    if (d.includes('speech')) return young ? programMap.early : programMap.speech;
+    if (d.includes('dyslexia') || d.includes('dysgraphia')) return programMap.reading;
+    if (d.includes('dyscalculia')) return programMap.math;
+    if (choices['1'] === 'speech') return young ? programMap.early : programMap.speech;
+    if (d.includes('autism') && young) return programMap.early;
+    if (d.includes('autism')) return programMap.social;
+    return programMap[choices['1']] || programMap.screen;
+  };
+
+  const composeMsg = () => {
+    const rec = suggest();
+    let m = "Hi! I just used the Find Your Path tool on your website.\n";
+    m += "\nTop concern: " + (labels[choices['1']] || "-");
+    m += "\nChild's age: " + (labels[choices['2']] || "-");
+    m += "\nAssessment: " + (labels[choices['3']] || "-");
+    m += "\nSounds familiar: " + (diffs.length && diffs[0] !== 'none' ? diffs.join(', ') : "Not sure");
+    m += "\nSuggested programme: " + rec.name;
+    const note = finderNote ? finderNote.value.trim() : '';
+    if (note) m += "\n\nAbout my child: " + note;
+    m += "\n\nCould you let me know the next step?";
+    return m;
+  };
+
+  const refreshResult = () => {
+    const m = composeMsg();
+    if (finderPreview) finderPreview.textContent = m;
+    if (finderWaBtn) finderWaBtn.href = 'https://wa.me/60122127743?text=' + encodeURIComponent(m);
+  };
+
+  const showResult = () => {
+    const rec = suggest();
+    resultName.textContent = rec.name;
+    resultDesc.textContent = rec.desc;
+    resultDur.textContent = rec.dur;
+    resultFreq.textContent = rec.freq;
+    finderSteps.forEach(s => s.classList.remove('active'));
+    finderResult.classList.add('show');
+    finderProgress.forEach(p => p.classList.add('done'));
+    const sel = document.getElementById('program');
+    if (sel) {
+      const match = Array.from(sel.options).find(o => o.text === rec.opt);
+      if (match) sel.value = match.value || match.text;
+    }
+    refreshResult();
+  };
 
   document.querySelectorAll('.finder-opt').forEach(opt => {
     opt.addEventListener('click', () => {
-      const next = opt.dataset.next;
-      const key = opt.dataset.key;
-      choices[opt.closest('.finder-step').dataset.step] = key;
-      if (next === 'result') {
-        const recommendation = programMap[choices['1']] || programMap.screen;
-        resultName.textContent = recommendation.name;
-        resultDesc.textContent = recommendation.desc;
-        resultDur.textContent = recommendation.dur;
-        resultFreq.textContent = recommendation.freq;
-        finderSteps.forEach(s => s.classList.remove('active'));
-        finderResult.classList.add('show');
-        finderProgress.forEach(p => p.classList.add('done'));
-        // Pre-fill contact form program select
-        const sel = document.getElementById('program');
-        if (sel) {
-          const match = Array.from(sel.options).find(o => o.text.toLowerCase().includes(recommendation.name.toLowerCase().split(' ')[0]));
-          if (match) sel.value = match.value;
-        }
-      } else {
-        showStep(parseInt(next, 10));
-      }
+      choices[opt.closest('.finder-step').dataset.step] = opt.dataset.key;
+      showStep(parseInt(opt.dataset.next, 10));
     });
   });
 
-  restartFinder.addEventListener('click', () => { for (const k in choices) delete choices[k]; showStep(1); });
-
-  // ===== Contact form (mock) =====
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.submit-btn');
-    btn.classList.add('success');
-    setTimeout(() => { btn.classList.remove('success'); form.reset(); alert("Thank you! We'll be in touch within one business day."); }, 1800);
+  document.querySelectorAll('.finder-chip').forEach(ch => {
+    ch.addEventListener('click', () => {
+      if (ch.dataset.none !== undefined){
+        document.querySelectorAll('.finder-chip').forEach(c => c.classList.remove('sel'));
+        ch.classList.add('sel');
+      } else {
+        const none = document.querySelector('.finder-chip[data-none]');
+        if (none) none.classList.remove('sel');
+        ch.classList.toggle('sel');
+      }
+      diffs = Array.from(document.querySelectorAll('.finder-chip.sel')).map(c => c.dataset.diff);
+      finderContinue.disabled = diffs.length === 0;
+    });
   });
+  if (finderContinue) finderContinue.addEventListener('click', showResult);
+  if (finderNote) finderNote.addEventListener('input', refreshResult);
+
+  restartFinder.addEventListener('click', () => {
+    for (const k in choices) delete choices[k];
+    diffs = [];
+    document.querySelectorAll('.finder-chip').forEach(c => c.classList.remove('sel'));
+    if (finderNote) finderNote.value = '';
+    if (finderContinue) finderContinue.disabled = true;
+    showStep(1);
+  });
+
+
 </script>
 <script id="design-layer-js">
 
