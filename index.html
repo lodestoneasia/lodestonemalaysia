@@ -2364,13 +2364,16 @@
               <label for="finderNote" style="font-size:.85rem;font-weight:600">Anything you'd like us to know about your child? <span style="font-weight:400;color:var(--ink-soft)">(optional)</span></label>
               <textarea id="finderNote" placeholder="e.g. He's 4 and only says a handful of words, mostly at home…" style="width:100%;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;font-family:inherit;font-size:.9rem;min-height:64px;resize:vertical;margin-top:6px"></textarea>
             </div>
-            <div style="display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap">
-              <a href="#contact" class="btn btn-primary" id="finderBookBtn"><span>Book a free call <span class="arrow">→</span></span></a>
+            <p style="margin-top:14px;font-size:.82rem;color:var(--ink);text-align:center;font-weight:500">Your answers will be sent via WhatsApp for the quickest response, straight to one of our facilitators.</p>
+            <div style="display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap">
               <a id="finderWaBtn" class="btn" href="https://wa.me/60122127743?text=Hi%21%20I%27d%20like%20to%20learn%20more%20about%20The%20Lodestone%20Centre%27s%20programs." target="_blank" rel="noopener" style="background:#25D366;color:#fff;border:0"><span style="display:inline-flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>Chat on WhatsApp</span></a>
-              <button class="btn btn-secondary" id="restartFinder">Start over</button>
+              <a href="tel:+60122127743" class="btn btn-primary"><span>Urgent? Call us now · +60 12-212 7743</span></a>
+            </div>
+            <div style="text-align:center;margin-top:10px">
+              <button id="restartFinder" style="background:none;border:0;color:var(--ink-soft);font-size:.78rem;text-decoration:underline;cursor:pointer;font-family:inherit">Start over</button>
             </div>
             <div id="finderPreview" style="margin-top:16px;background:var(--cream);border-left:3px solid var(--sage);border-radius:10px;padding:12px 14px;font-size:.76rem;line-height:1.65;color:var(--ink-soft);white-space:pre-wrap;text-align:left"></div>
-            <p style="margin-top:8px;font-size:.72rem;color:var(--ink-soft);text-align:center">Tapping WhatsApp opens the message above, pre-filled. Nothing is sent until you tap Send. Your queries here are sent directly to a facilitator, who will respond soonest.</p>
+            <p style="margin-top:8px;font-size:.72rem;color:var(--ink-soft);text-align:center">Tapping WhatsApp opens the message above, pre-filled. Nothing is sent until you tap Send.</p>
           </div>
         </div>
       </div>
@@ -2910,10 +2913,10 @@
 
 <!-- ============= FLOATING ACTIONS ============= -->
 <div class="float-actions">
-  <button class="float-cta" id="floatCTA" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+  <a class="float-cta" id="floatCTA" href="tel:+60122127743" aria-label="Call The Lodestone Centre now">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    Book free call
-  </button>
+    Urgent? Call us now
+  </a>
   <div class="wa-wrap">
     <a class="wa-btn" href="https://wa.me/60122127743?text=Hi%21%20I%27d%20like%20to%20learn%20more%20about%20The%20Lodestone%20Centre." target="_blank" rel="noopener" aria-label="WhatsApp us">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
@@ -3393,14 +3396,6 @@
           if (tg){ e.preventDefault(); lenis.scrollTo(tg, {offset: -20}); }
         });
       });
-      var floatCTA = document.getElementById('floatCTA');
-      if (floatCTA){
-        floatCTA.onclick = function(e){
-          e.preventDefault();
-          var c = document.getElementById('contact');
-          if (c) lenis.scrollTo(c, {offset: -20});
-        };
-      }
     }
 
     /* ---------- Headline clip reveals ---------- */
