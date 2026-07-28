@@ -1,1 +1,8 @@
+# Private / internal, never publish to the public site
+_internal/
+Lodestone_Master_Student_List.xlsx
+*.xlsx
+.~lock.*#
 .DS_Store
+_*.png
+*.tmp
