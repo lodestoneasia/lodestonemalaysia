@@ -98,6 +98,23 @@
   .avoid{background:#fdeeee;border-left:4px solid #d9776f;border-radius:0 12px 12px 0;padding:16px 22px;margin:18px 0}
   .startbox{background:linear-gradient(135deg,rgba(247,163,37,.14),rgba(247,163,37,.04));border-radius:14px;padding:20px 24px;margin:24px 0}
   .startbox strong{font-family:var(--font-display);font-size:1.05rem}
+  body.easy{font-family:'Verdana',Tahoma,sans-serif;line-height:2;letter-spacing:.02em;background:#FBF7EF}
+  body.easy .art-body p,body.easy .art-body li{font-size:1.14rem;max-width:62ch}
+  body.easy h1,body.easy h2,body.easy h3,body.easy h4,body.easy summary,body.easy .script li{font-family:'Verdana',sans-serif;letter-spacing:0}
+  .a11y{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--ink-soft);border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 13px;cursor:pointer;font-family:inherit}
+  .a11y:hover{border-color:var(--primary);color:var(--primary)}
+  .a11y[aria-pressed="true"]{background:var(--primary);color:#fff;border-color:var(--primary)}
+  .share{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px 28px;margin:34px 0}
+  .share strong{font-family:var(--font-display);font-size:1.12rem;color:var(--ink)}
+  .share p{margin:6px 0 14px;font-size:.98rem}
+  .share-row{display:flex;gap:10px;flex-wrap:wrap}
+  .sh{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-weight:600;font-size:.93rem;border:0;cursor:pointer;font-family:inherit;transition:transform .2s var(--ease)}
+  .sh:hover{transform:translateY(-2px)}
+  .sh-wa{background:#25D366;color:#fff}
+  .sh-fb{background:#1877F2;color:#fff}
+  .sh-copy{background:var(--cream);color:var(--ink);border:1.5px solid var(--line)}
+  .share-note{font-size:.85rem;color:var(--ink-soft);margin:14px 0 0}
+  @media print{.nav,.wa-float,.cta-band,.next,footer,.a11y,.share{display:none}body{background:#fff}}
   details{border-bottom:1px solid var(--line);padding:16px 0}
   summary{font-family:var(--font-display);font-size:1.08rem;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
   summary::-webkit-details-marker{display:none}
@@ -172,6 +189,7 @@
       <a href="guides.html">Parent Guides</a>
       <a href="index.html#support">Support</a>
       <a href="screening-check.html">Free Check</a>
+      <button class="a11y" id="easyToggle" aria-pressed="false" title="Easier reading"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h12M4 17h8"/></svg>Easy read</button>
       <a href="index.html#contact" class="nav-cta">Book free call</a>
     </nav>
     <button class="menu-toggle" aria-label="Menu" onclick="location.href='index.html#contact'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
@@ -300,6 +318,17 @@
 
   <div class="startbox"><strong>If you do one thing this week</strong><p style="margin:6px 0 0">Read aloud to your child for ten minutes tonight. You read, they just listen and enjoy it. No pressure to read anything back. It sounds too simple to matter, and it's the thing parents tell us changed the mood in the house first.</p></div>
 
+
+  <h2>Where we fit in</h2>
+  <p>We are an educational support centre, not a clinic, so we cannot diagnose. What we can do is make the road to an answer shorter and less bewildering.</p>
+  <ul>
+    <li><b>Screening.</b> We can screen your child, map strengths and difficulties, and give you a clear written report. Useful in itself, and it gives a clinician a head start.</li>
+    <li><b>Referral to the right person, not just any person.</b> We work with a vetted network of psychologists, therapists and specialists, including practitioners attached to hospitals. Experience varies, and the right match matters. We'll point you to the one we'd send our own families to.</li>
+    <li><b>Help getting an appointment.</b> Because we work with these professionals regularly, we can often make an introduction and help arrange an appointment more quickly than approaching them cold.</li>
+    <li><b>Support while you wait.</b> Waiting lists can be long. We can begin the practical work, at home and with the school, in the meantime.</li>
+  </ul>
+  <p style="font-size:.95rem">In Malaysia, a formal dyslexia diagnosis requires an educational psychologist registered with the <strong>Allied Health Professions Council Malaysia</strong>. There's no obligation attached to any of this, and no charge for pointing you in the right direction.</p>
+
   <h2>Books and resources worth your time</h2>
   <ul class="refs">
     <li><b><a href="https://www.amazon.com/Overcoming-Dyslexia-Complete-Science-Based-Problems/dp/0375400125" target="_blank" rel="noopener">Overcoming Dyslexia</a></b> by Sally Shaywitz, M.D. The most complete science-based guide for parents.</li>
@@ -328,6 +357,23 @@
     </div>
   </div>
 
+  <div class="share">
+    <strong>Know a parent who needs this?</strong>
+    <p>Sharing it costs you nothing and might save someone months of worrying alone.</p>
+    <div class="share-row">
+      <a class="sh sh-wa" href="https://wa.me/?text=A%20practical%20parent%20guide%20on%20dyslexia%3A%20signs%20by%20age%2C%20what%20helps%20at%20home%2C%20and%20how%20to%20talk%20to%20school%3A%20https%3A%2F%2Fthelodestonesolution.com%2Fguide-dyslexia.html" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','share',{method:'whatsapp',item:'guide-dyslexia'})">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>WhatsApp
+      </a>
+      <a class="sh sh-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthelodestonesolution.com%2Fguide-dyslexia.html" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','share',{method:'facebook',item:'guide-dyslexia'})">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook
+      </a>
+      <button class="sh sh-copy" id="copyLink">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span>Copy link</span>
+      </button>
+    </div>
+    <p class="share-note">Instagram and TikTok don't allow links in captions, so put <strong>thelodestonesolution.com/guides</strong> in your bio or use the link sticker.</p>
+  </div>
+
   <div class="next">
     <a href="dyslexia-support.html"><span>How we help</span><b>Dyslexia &amp; reading support &rarr;</b></a>
     <a href="guides.html"><span>More guides</span><b>All parent guides &rarr;</b></a>
@@ -353,5 +399,15 @@
   <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
 </a>
 
+<script>
+(function(){var b=document.getElementById('easyToggle');if(!b)return;
+ b.addEventListener('click',function(){var on=document.body.classList.toggle('easy');b.setAttribute('aria-pressed',on?'true':'false');if(window.gtag)gtag('event','easy_read_toggle',{state:on?'on':'off'});});})();
+(function(){var c=document.getElementById('copyLink');if(!c)return;
+ c.addEventListener('click',function(){var url='https://thelodestonesolution.com/guide-dyslexia.html';
+ var done=function(){var s=c.querySelector('span');s.textContent='Copied';setTimeout(function(){s.textContent='Copy link'},2000);};
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(done);}
+ else{var t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);done();}
+ if(window.gtag)gtag('event','share',{method:'copy_link',item:'guide-dyslexia'});});})();
+</script>
 </body>
 </html>
