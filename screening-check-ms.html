@@ -27,7 +27,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3">
 <link rel="icon" href="favicon.ico?v=3" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
@@ -122,6 +121,57 @@
   .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;margin-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.84rem;color:#7d86a8}
   .wa-float{position:fixed;bottom:22px;right:22px;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:var(--shadow-lg);z-index:60}
   @media(max-width:760px){.nav-links{display:none}.frow{grid-template-columns:1fr}}
+
+  /* ==== whole-child tool ==== */
+  .steps-bar{display:flex;gap:8px;margin:0 0 22px}
+  .steps-bar span{flex:1;height:4px;border-radius:99px;background:var(--line)}
+  .steps-bar span.on{background:var(--primary)}
+  .stage{display:none}.stage.on{display:block;animation:fade .45s var(--ease)}
+  .band-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:16px 0 4px}
+  .band-grid button{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:18px 10px;cursor:pointer;font-family:inherit;font-weight:700;font-size:.95rem;color:var(--ink);transition:.2s var(--ease)}
+  .band-grid button:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+  .dom-block{border-top:1px solid var(--line);padding:20px 0 8px}
+  .dom-block:first-of-type{border-top:0}
+  .dom-head{display:flex;align-items:center;gap:11px;margin-bottom:6px}
+  .dom-head .ic{width:34px;height:34px;border-radius:10px;background:rgba(58,79,181,.08);color:var(--primary);display:grid;place-items:center;flex-shrink:0}
+  .dom-head .ic svg{width:19px;height:19px}
+  .dom-head h3{font-size:1.06rem;margin:0}
+  .backlink{background:none;border:0;color:var(--ink-soft);font-family:inherit;font-size:.92rem;cursor:pointer;padding:0;text-decoration:underline}
+  .rescore{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 6px}
+  .pill{border-radius:999px;padding:7px 15px;font-size:.88rem;font-weight:700}
+  .pill.watch{background:#FDEBCB;color:#8a5a00}
+  .pill.look{background:#fbdcd6;color:#8f3520}
+  .pill.ok{background:#dff0e7;color:#1f6b47}
+  .rdom{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0}
+  .rdom.hi{border-left:4px solid #d9776f}
+  .rdom.mid{border-left:4px solid var(--accent)}
+  .rdom h4{font-size:1.05rem;margin:0 0 4px;display:flex;align-items:center;gap:9px}
+  .rdom p{font-size:.93rem;color:var(--ink-soft);margin:4px 0 0}
+  .rdom a{color:var(--primary);font-weight:600;font-size:.9rem;display:inline-block;margin-top:8px}
+  .rdom ul{margin:8px 0 0;padding-left:18px}
+  .rdom li{font-size:.9rem;color:var(--ink-soft);margin:3px 0}
+  .strengths-box{background:#eef7f3;border-left:4px solid var(--sage);border-radius:0 12px 12px 0;padding:16px 20px;margin:16px 0}
+  .strengths-box b{color:var(--ink)}
+  .wellbeing{background:#fff;border:2px solid #d9776f;border-radius:14px;padding:18px 22px;margin:16px 0}
+  .wellbeing b{color:#b4442f}
+  @media(max-width:760px){.band-grid{grid-template-columns:1fr 1fr}}
+  @media print{.nav,.wa-float,.lead,.steps-bar{display:none}}
+
+  .qrow{border-bottom:1px solid #f2efe8;padding:14px 0;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+  .qrow:last-child{border-bottom:0}
+  .qtext{font-size:.98rem;color:var(--ink);line-height:1.5}
+  .scale{display:flex;gap:6px;flex-shrink:0}
+  .scale label{cursor:pointer}
+  .scale input{position:absolute;opacity:0;width:0;height:0}
+  .scale span{display:inline-block;padding:7px 13px;border:1.5px solid var(--line);border-radius:999px;font-size:.82rem;font-weight:600;color:var(--ink-soft);transition:.15s;white-space:nowrap;background:#fff}
+  .scale input:checked+span{border-color:var(--primary);background:var(--primary);color:#fff}
+  .scale label.pos input:checked+span{border-color:#2e7d5b;background:#2e7d5b}
+  .scale label.warn input:checked+span{border-color:#c9821a;background:#c9821a}
+  .gate{background:var(--cream);border-radius:14px;padding:18px 22px;margin:14px 0}
+  .gate h4{font-size:1rem;margin:0 0 10px}
+  .gate .scale{flex-wrap:wrap}
+  .legend{font-size:.84rem;color:var(--ink-soft);background:#eef1fb;border-radius:10px;padding:10px 14px;margin:10px 0 4px}
+  @media(max-width:700px){.qrow{grid-template-columns:1fr;gap:8px}.scale{width:100%}.scale label{flex:1}.scale span{display:block;text-align:center;padding:9px 4px}}
   /* explainer */
   .explain{background:var(--paper);border-top:1px solid var(--line);padding:54px 0 10px}
   .explain .container{max-width:760px}
@@ -151,24 +201,28 @@
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-{"@type":"ListItem","position":1,"name":"Laman Utama","item":"https://thelodestonesolution.com/"},
-{"@type":"ListItem","position":2,"name":"Semakan Pembelajaran Percuma","item":"https://thelodestonesolution.com/screening-check-ms.html"}]}
+{"@type":"ListItem","position":1,"name":"Laman Utama","item":"https://thelodestonesolution.com/index-ms.html"},
+{"@type":"ListItem","position":2,"name":"Semakan Perkembangan Anak Percuma","item":"https://thelodestonesolution.com/screening-check-ms.html"}]}
 </script>
-<!-- Google Analytics (GA4) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+"name":"Semakan Perkembangan Anak Percuma",
+"url":"https://thelodestonesolution.com/screening-check-ms.html",
+"applicationCategory":"EducationalApplication",
+"operatingSystem":"Any",
+"inLanguage":"ms-MY",
+"description":"Panduan pemerhatian ibu bapa secara percuma untuk umur 2 hingga 16 tahun ke atas, merangkumi pembelajaran, komunikasi, sosial, motor dan perkembangan emosi. Bukan instrumen diagnostik.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"MYR"},
+"publisher":{"@type":"Organization","name":"The Lodestone Centre","url":"https://thelodestonesolution.com/"}}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC6ZRBTYTS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YC6ZRBTYTS');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YC6ZRBTYTS');</script>
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="index-ms.html" class="logo" aria-label="The Lodestone Centre home">
+    <a href="index-ms.html" class="logo" aria-label="The Lodestone Centre laman utama">
       <span class="logo-mark" aria-hidden="true"></span>
       <span class="wordmark"><span class="wm-the">The</span><span class="wm-name">Lodestone</span><span class="wm-tag">Etiquette &middot; Virtue &middot; Order</span></span>
     </a>
@@ -176,137 +230,76 @@
       <a href="index-ms.html#programs">Program</a>
       <a href="guides-ms.html">Panduan Ibu Bapa</a>
       <a href="index-ms.html#support">Sokongan</a>
-      <a href="lodestone-evo.html">Evo</a>
-      <a href="index-ms.html#faq">Soalan Lazim</a>
       <a href="screening-check.html" class="lang-switch" aria-label="English version">EN</a>
       <a href="index-ms.html#contact" class="nav-cta">Tempah panggilan percuma</a>
     </nav>
-    <button class="menu-toggle" aria-label="Open menu" onclick="location.href='index.html#contact'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <button class="menu-toggle" aria-label="Menu" onclick="location.href='index-ms.html#contact'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
   </div>
 </header>
 
-<div class="container"><nav class="crumb" aria-label="Breadcrumb"><a href="index-ms.html">Laman Utama</a> &rsaquo; <span>Semakan Pembelajaran Percuma</span></nav></div>
+<div class="container"><nav class="crumb" aria-label="Breadcrumb"><a href="index-ms.html">Laman Utama</a> &rsaquo; <span>Semakan Anak Percuma</span></nav></div>
 
-<!-- HERO -->
+
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Percuma &middot; 2 minit &middot; Tiada diagnosis diperlukan</span>
-    <h1>Anak anda bergelut di sekolah?<br>Mari cari titik permulaan.</h1>
-    <p class="lede">Tandakan tanda-tanda yang anda cam pada anak anda. Kami akan cadangkan, dengan bahasa yang mudah, bidang mana yang wajar dilihat dahulu, dan bagaimana kami boleh membantu. Ia percuma, mengambil masa kira-kira dua minit, dan tanpa sebarang tekanan.</p>
+    <span class="eyebrow">Percuma &middot; Lebih kurang 3 minit &middot; Bukan diagnosis</span>
+    <h1>Bagaimana keadaan anak anda?</h1>
+    <p class="lede">Semakan menyeluruh untuk umur 2 hingga 16 tahun ke atas. Jawab dengan jujur berdasarkan apa yang anda benar-benar nampak, termasuk perkara yang berjalan baik. Kami akan tunjukkan bidang mana yang nampak elok dan bidang mana yang mungkin wajar diperhatikan dengan lebih dekat.</p>
     <div class="disclaimer-pill">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <span>Ini titik permulaan yang menyokong, bukan diagnosis. Hanya profesional bertauliah boleh mendiagnosis perbezaan pembelajaran, dan kami dengan senang hati membimbing anda ke sana.</span>
+      <span><strong>Sila baca:</strong> ini panduan pemerhatian ibu bapa, bukan instrumen saringan perubatan atau psikologi, dan ia tidak menghasilkan sebarang markah atau diagnosis. Hanya profesional bertauliah boleh membuat diagnosis. Jika ada apa-apa yang merisaukan anda, sila berbincang dengan doktor anda, Klinik Kesihatan atau pihak sekolah anak anda.</span>
     </div>
   </div>
 </section>
 
-<!-- TOOL -->
 <section class="container">
-  <form class="tool" id="checkForm" novalidate>
+  <div class="tool">
+    <div class="steps-bar" aria-hidden="true"><span id="s1" class="on"></span><span id="s2"></span><span id="s3"></span><span id="s4"></span></div>
 
-    <h3 style="font-size:1.05rem;margin-bottom:6px">Berapa umur anak anda?</h3>
-    <div class="age-row">
-      <label><input type="radio" name="age" value="Under 6"><span>Bawah 6</span></label>
-      <label><input type="radio" name="age" value="6–9"><span>6–9</span></label>
-      <label><input type="radio" name="age" value="10–13"><span>10–13</span></label>
-      <label><input type="radio" name="age" value="14+"><span>14+</span></label>
-    </div>
-    <p style="font-size:.92rem;color:var(--ink-soft);margin-top:14px">Kini tandakan setiap tanda yang kerap anda perasan. Tandakan seberapa banyak atau sedikit yang anda mahu, merentasi mana-mana bidang di bawah.</p>
-
-    <!-- Reading -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span> Membaca &amp; mengeja</h3>
-      <label class="opt"><input type="checkbox" data-domain="dyslexia"><span>Membaca perlahan dan susah payah, jauh di bawah cara mereka bertutur</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyslexia"><span>Meneka perkataan, atau mengelirukan yang serupa (b/d, was/saw)</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyslexia"><span>Sukar membunyikan perkataan yang asing</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyslexia"><span>Mengelak membaca kuat, atau mengeja satu perkataan dengan pelbagai cara</span></label>
+    <div class="stage on" id="stage1">
+      <h3 style="font-size:1.15rem">Pertama, berapa umur anak anda?</h3>
+      <p style="font-size:.95rem;color:var(--ink-soft);margin-top:4px">Apa yang dianggap biasa berubah amat banyak mengikut umur, jadi ini menentukan setiap soalan seterusnya.</p>
+      <div class="band-grid" id="bandGrid"></div>
     </div>
 
-    <!-- Maths -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span> Nombor &amp; matematik</h3>
-      <label class="opt"><input type="checkbox" data-domain="dyscalculia"><span>Mengira jari lama selepas kanak-kanak lain berhenti</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyscalculia"><span>Tidak dapat mengingat fakta seperti 6 + 7 atau sifir</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyscalculia"><span>Keliru besar/kecil, masa atau wang</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyscalculia"><span>Menjadi cemas atau terkaku ketika waktu matematik</span></label>
+    <div class="stage" id="stage2">
+      <button class="backlink" id="backToAge">&larr; tukar umur</button>
+      <h3 style="font-size:1.15rem;margin-top:10px" id="qHead"></h3>
+      <p class="legend" id="qLegend"></p>
+      <div id="qWrap"></div>
+      <div class="see-btn-wrap"><button type="button" class="btn btn-primary" id="toGates"><span>Teruskan &rarr;</span></button></div>
     </div>
 
-    <!-- Writing -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></span> Menulis &amp; tulisan tangan</h3>
-      <label class="opt"><input type="checkbox" data-domain="dysgraphia"><span>Menulis perlahan, berselerak atau menyakitkan (kata tangan sakit)</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dysgraphia"><span>Pegangan pensel janggal, atau saiz dan jarak huruf yang pelik</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dysgraphia"><span>Banyak nak cakap, tetapi terkaku apabila diminta menulisnya</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dysgraphia"><span>Tulisan tangan sukar dibaca, walaupun oleh mereka sendiri</span></label>
+    <div class="stage" id="stage3">
+      <button class="backlink" id="backToQ">&larr; kembali</button>
+      <h3 style="font-size:1.15rem;margin-top:10px">Tiga soalan terakhir</h3>
+      <p style="font-size:.95rem;color:var(--ink-soft);margin-top:4px">Soalan ini lebih penting daripada yang disangka. Berapa lama sesuatu itu berlaku, sama ada ia berlaku di lebih daripada satu tempat, dan sama ada ia benar-benar menyusahkan, itulah yang paling ditimbang oleh profesional.</p>
+      <div id="gateWrap"></div>
+      <div class="see-btn-wrap"><button type="button" class="btn btn-primary" id="seeResult"><span>Lihat apa yang ditunjukkan &rarr;</span></button></div>
     </div>
 
-    <!-- Focus -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span> Fokus, aktiviti &amp; impuls</h3>
-      <label class="opt"><input type="checkbox" data-domain="adhd"><span>Sukar fokus, melainkan sesuatu yang mereka minat</span></label>
-      <label class="opt"><input type="checkbox" data-domain="adhd"><span>Resah, tak boleh duduk diam, atau bertindak sebelum berfikir</span></label>
-      <label class="opt"><input type="checkbox" data-domain="adhd"><span>Hilang barang, lupa langkah, terleka di tengah tugasan</span></label>
-      <label class="opt"><input type="checkbox" data-domain="adhd"><span>Emosi besar dan pantas; pertarungan harian tentang kerja rumah</span></label>
-    </div>
+    <div class="stage" id="stage4">
+      <button class="backlink" id="backToGates">&larr; kembali</button>
+      <div id="resultWrap" style="margin-top:14px"></div>
 
-    <!-- Speech -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> Bertutur &amp; bahasa</h3>
-      <label class="opt"><input type="checkbox" data-domain="speech"><span>Menyebut jauh lebih sedikit perkataan daripada kanak-kanak sebaya</span></label>
-      <label class="opt"><input type="checkbox" data-domain="speech"><span>Sukar difahami, walaupun oleh keluarga terdekat</span></label>
-      <label class="opt"><input type="checkbox" data-domain="speech"><span>Sukar mencantum perkataan menjadi ayat</span></label>
-      <label class="opt"><input type="checkbox" data-domain="speech"><span>Memahami lebih banyak daripada yang boleh disebut</span></label>
-    </div>
-
-    <!-- Social -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span> Sosial, rutin &amp; deria</h3>
-      <label class="opt"><input type="checkbox" data-domain="autism"><span>Sangat selesa dengan rutin; tertekan apabila ia berubah</span></label>
-      <label class="opt"><input type="checkbox" data-domain="autism"><span>Sensitif terhadap bunyi, cahaya, tekstur atau orang ramai</span></label>
-      <label class="opt"><input type="checkbox" data-domain="autism"><span>Sukar bertentang mata, bergilir-gilir atau isyarat sosial</span></label>
-      <label class="opt"><input type="checkbox" data-domain="autism"><span>Minat yang intens dan fokus yang mereka tahu segalanya</span></label>
-    </div>
-
-    <!-- Pace -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span> Mengikuti &amp; rentak</h3>
-      <label class="opt"><input type="checkbox" data-domain="slow"><span>Ambil masa lebih lama untuk faham idea baharu, kemudian cepat lupa</span></label>
-      <label class="opt"><input type="checkbox" data-domain="slow"><span>Perlukan banyak ulangan sebelum sesuatu melekat</span></label>
-      <label class="opt"><input type="checkbox" data-domain="slow"><span>Ketinggalan sedikit lebih jauh setiap tahun walaupun berusaha</span></label>
-      <label class="opt"><input type="checkbox" data-domain="slow"><span>Boleh satu-dengan-satu, tetapi hilang arah dalam kelas sibuk</span></label>
-    </div>
-
-    <div class="see-btn-wrap">
-      <button type="button" class="btn btn-primary" id="seeResult"><span>Lihat titik permulaan &rarr;</span></button>
-    </div>
-  </form>
-
-  <!-- RESULT -->
-  <div class="result" id="result">
-    <div class="result-head">
-      <span class="eyebrow">Titik permulaan anda</span>
-      <h2 id="resultTitle"></h2>
-      <p id="resultIntro"></p>
-    </div>
-    <div class="result-body">
-      <div id="resultCards"></div>
-
-      <div class="lead">
-        <h3>Mahu kami lihat bersama anda?</h3>
-        <p class="sub">Hantar keputusan anda kepada pakar di WhatsApp dan kami akan cadangkan langkah seterusnya yang jelas, percuma, tanpa ikatan. Jawapan anda diringkaskan dalam mesej supaya kami boleh membantu lebih cepat.</p>
+      <div class="lead" style="background:var(--cream);border-radius:16px;padding:22px 24px;margin-top:22px">
+        <h3 style="font-size:1.2rem">Mahu kami melihatnya bersama anda?</h3>
+        <p class="sub" style="font-size:.93rem;color:var(--ink-soft);margin:6px 0 14px">Hantar jawapan anda kepada pasukan pendidikan kami di WhatsApp. Kami akan cadangkan langkah seterusnya yang munasabah, percuma dan tanpa sebarang ikatan, walaupun langkah itu membawa anda ke tempat lain.</p>
         <div class="frow">
           <div class="field"><input type="text" id="pname" placeholder="Nama anda" autocomplete="name"></div>
           <div class="field"><input type="tel" id="pphone" placeholder="Telefon (WhatsApp)" autocomplete="tel"></div>
         </div>
-        <label class="consent"><input type="checkbox" id="consent"><span>Saya mahu The Lodestone Centre menghubungi saya tentang pertanyaan ini. Saya faham butiran saya tidak akan dikongsi dengan pihak lain.</span></label>
+        <label class="consent"><input type="checkbox" id="consent"><span>Saya mahu The Lodestone Centre menghubungi saya berkenaan perkara ini. Butiran saya tidak akan dikongsi dengan sesiapa.</span></label>
         <button type="button" class="btn btn-wa" id="sendWa" style="width:100%">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
-          Hantar keputusan saya di WhatsApp
+          Hantar jawapan saya di WhatsApp
         </button>
         <div class="err" id="formErr">Sila isi nama dan nombor telefon anda, dan tandakan kotak, supaya kami boleh menghubungi anda.</div>
-        <a class="btn btn-ghost" href="index.html#contact" style="width:100%;margin-top:10px">Lebih suka borang? Tempah panggilan percuma</a>
-        <p class="privacy">Kami hanya menggunakan butiran anda untuk membalas pertanyaan. Kami tidak pernah menjual atau berkongsinya. (PDPA 2010)</p>
+        <a class="btn btn-ghost" href="index-ms.html#contact" style="width:100%;margin-top:10px">Lebih suka borang? Tempah panggilan percuma</a>
+        <p class="privacy">Kami hanya menggunakan butiran anda untuk membalas. Kami tidak pernah menjual atau berkongsinya. (PDPA 2010)</p>
       </div>
+
+      <p style="font-size:.8rem;color:#8a90a8;margin-top:20px;border-top:1px solid var(--line);padding-top:14px;line-height:1.6">Semakan ini ditulis oleh pasukan pendidikan kami dalam bahasa yang mudah. Soalan untuk kanak-kanak yang lebih kecil mengikut pendekatan pencapaian tumbesaran CDC "Learn the Signs. Act Early." yang diterbitkan secara terbuka; soalan untuk usia sekolah mencerminkan konsep klinikal yang diterbitkan secara meluas tentang ketekalan, tempat dan kesan. Ia bukan instrumen saringan yang disahkan, tidak menerbitkan semula mana-mana instrumen, dan tidak memberi sebarang markah atau diagnosis.</p>
     </div>
   </div>
 </section>
@@ -370,97 +363,311 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="index.html" aria-label="The Lodestone Centre home"><img src="logo.png" alt="The Lodestone Centre logo" class="footer-logo-img"></a>
-      <p>Pendidikan diperibadikan untuk setiap anak. Mengutamakan kekuatan, mengikut rentak individu, tidak pernah satu-saiz-untuk-semua.</p>
+      <p>Personalised education for every child. Strengths-first, individually paced, never one-size-fits-all.</p>
     </div>
     <div class="footer-disclaimer">The Lodestone Centre offers personalised, strengths-first support for children with ADHD, dyscalculia, dyslexia and other learning differences in Subang Jaya, Petaling Jaya and the Klang Valley, including dysgraphia, autism, speech delay and slower learning, as well as gifted children and those who simply learn at their own pace. Every program is built around the individual child. The Lodestone Centre is an inclusive provider of non-curricular teaching, personal development training, motivational courses, educational support workshops and character development workshops. This free check and our screening and programs are designed to support learning and growth, and are not a substitute for formal schooling or clinical diagnosis.</div>
     <div class="footer-bottom">
-      <span>&copy; 2026 The Lodestone Centre. Hak cipta terpelihara.</span>
+      <span>&copy; 2026 The Lodestone Centre. All rights reserved.</span>
       <span>10, Jalan USJ 10/1, Taipan Business Centre, 47620 Subang Jaya &middot; Selangor</span>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/60122127743?text=Hi%21%20I%27d%20like%20to%20talk%20about%20my%20child%27s%20learning." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a class="wa-float" href="https://wa.me/60122127743?text=Hai%21%20Saya%20ingin%20berbincang%20tentang%20pembelajaran%20anak%20saya." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
 </a>
 
 <script>
-var WA='60122127743';
+/* Observation prompts written in our own words.
+   Younger bands follow the publicly available CDC "Learn the Signs. Act Early."
+   milestone approach (US Government, public domain): positively framed, set at
+   what MOST children do by that age. School-age prompts reflect widely published
+   DSM-5 concepts (persistence, multiple settings, functional impact) described in
+   plain language. No validated instrument is reproduced. */
+
+var BANDS=[
+ {id:'2-3',label:'2 hingga 3 tahun',mode:'milestone'},
+ {id:'4-5',label:'4 hingga 5 tahun',mode:'milestone'},
+ {id:'6-8',label:'6 hingga 8 tahun',mode:'freq'},
+ {id:'9-12',label:'9 hingga 12 tahun',mode:'freq'},
+ {id:'13+',label:'13 tahun ke atas',mode:'freq'}
+];
+
 var DOMAINS={
-  dyslexia:{label:'Reading &amp; dyslexia', icon:'M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z', desc:'Signs around reading, decoding and spelling. Our Reading &amp; Literacy support is built for this.', page:'dyslexia-support.html', name:'Dyslexia &amp; reading'},
-  dyscalculia:{label:'Maths &amp; dyscalculia', icon:'M4 9h16M4 15h16M10 3 8 21M16 3l-2 18', desc:'Signs around numbers, facts and maths confidence. Our Math Program rebuilds number sense, step by step.', page:'dyscalculia-support.html', name:'Dyscalculia &amp; maths'},
-  dysgraphia:{label:'Writing &amp; dysgraphia', icon:'M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z', desc:'Signs around handwriting and getting ideas onto paper. Our Writing &amp; Handwriting support can help.', page:'dysgraphia-support.html', name:'Dysgraphia &amp; writing'},
-  adhd:{label:'Focus &amp; ADHD', icon:'M13 2 3 14h7l-1 8 10-12h-7z', desc:'Signs around attention, activity and big feelings. Our SEL Program builds focus and self-regulation.', page:'adhd-support.html', name:'ADHD &amp; fokus'},
-  speech:{label:'Speech &amp; language', icon:'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z', desc:'Signs around talking and being understood. Our Say Play speech support helps words come more easily.', page:'speech-delay-support.html', name:'Speech &amp; language delay'},
-  autism:{label:'Social, routine &amp; sensory', icon:'M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z', desc:'Signs around communication, routine and sensory needs. We take a calm, neuro-affirming approach.', page:'autism-support.html', name:'Autism support'},
-  slow:{label:'Pace &amp; keeping up', icon:'M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zM12 6v6l4 2', desc:'Signs of learning at a slower pace. We re-pace learning and rebuild confidence in small groups.', page:'slow-learners-support.html', name:'Learning at their own pace'}
+ comm:{name:'Komunikasi &amp; bahasa',icon:'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z',guide:'speech-delay-support-ms.html',gname:'Panduan lewat bertutur'},
+ social:{name:'Sosial &amp; bermain',icon:'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0 8 4 4 0 0 0 0-8z',guide:'autism-support-ms.html',gname:'Panduan autisme'},
+ motor:{name:'Pergerakan &amp; koordinasi',icon:'M12 2v6M12 22v-6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M22 12h-6',guide:'dysgraphia-support-ms.html',gname:'Panduan disgrafia'},
+ daily:{name:'Berdikari harian',icon:'M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zM12 6v6l4 2',guide:'',gname:''},
+ emo:{name:'Emosi &amp; kesejahteraan',icon:'M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z',guide:'',gname:''},
+ attn:{name:'Tumpuan &amp; pengurusan diri',icon:'M13 2 3 14h7l-1 8 10-12h-7z',guide:'adhd-support-ms.html',gname:'Panduan ADHD &amp; tumpuan'},
+ read:{name:'Membaca &amp; mengeja',icon:'M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z',guide:'dyslexia-support-ms.html',gname:'Panduan disleksia'},
+ num:{name:'Nombor &amp; matematik',icon:'M4 9h16M4 15h16M10 3 8 21M16 3l-2 18',guide:'dyscalculia-support-ms.html',gname:'Panduan diskalkulia'},
+ write:{name:'Menulis &amp; tulisan tangan',icon:'M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z',guide:'dysgraphia-support-ms.html',gname:'Panduan disgrafia'},
+ pace:{name:'Kelajuan belajar &amp; ingatan',icon:'M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zM12 6v6l4 2',guide:'slow-learners-support-ms.html',gname:'Panduan belajar ikut kadar sendiri'}
 };
 
-function tally(){
-  var counts={};
-  document.querySelectorAll('#checkForm input[type=checkbox]:checked').forEach(function(c){
-    var d=c.dataset.domain; counts[d]=(counts[d]||0)+1;
-  });
-  return counts;
+/* milestone bands: [domain, "does your child...", wellbeingFlag] */
+var Q={
+'2-3':[
+ ['comm','Menggunakan sekurang-kurangnya 50 perkataan berbeza (kira semua bahasa yang didengarinya)'],
+ ['comm','Menggabungkan dua perkataan, seperti "nak susu" atau "ayah pergi"'],
+ ['comm','Menunjuk sesuatu untuk berkongsi minat dengan anda, bukan sekadar untuk meminta'],
+ ['comm','Menoleh dan memandang apabila anda memanggil namanya'],
+ ['comm','Mengikut arahan mudah tanpa anda menunjuk atau memberi isyarat'],
+ ['social','Menyertai permainan berbalas yang mudah dan meniru apa yang anda buat'],
+ ['social','Perasan kanak-kanak lain dan menunjukkan sedikit minat terhadap mereka'],
+ ['social','Bermain pura-pura dengan mainan, seperti menyuap patung atau menolak kereta mainan'],
+ ['motor','Berjalan dan berlari agak stabil untuk umurnya'],
+ ['motor','Mencoret dengan krayon, dan menyusun beberapa blok'],
+ ['motor','Menggunakan sudu dengan agak baik'],
+ ['daily','Makan pelbagai jenis makanan dan tekstur yang munasabah'],
+ ['daily','Boleh melelapkan mata pada kebanyakan malam tanpa kesukaran besar'],
+ ['emo','Reda apabila dipujuk dalam tempoh yang munasabah semasa marah atau sedih',1],
+ ['emo','Boleh menerima bunyi, cahaya dan tekstur harian tanpa rasa tertekan yang ketara',1]
+],
+'4-5':[
+ ['comm','Bercakap cukup jelas sehingga orang di luar keluarga memahaminya'],
+ ['comm','Menceritakan kisah mudah atau apa yang berlaku sepanjang harinya'],
+ ['comm','Mengikut arahan yang mempunyai dua langkah'],
+ ['comm','Suka rima, dan dapat mengesan apabila perkataan bermula dengan bunyi yang sama'],
+ ['social','Bermain bersama kanak-kanak lain, bukan sekadar bermain di sebelah mereka'],
+ ['social','Menunggu giliran dan berkongsi, selalunya, dengan sedikit peringatan'],
+ ['social','Menerima perubahan rancangan tanpa rasa tertekan yang melampau'],
+ ['motor','Memegang pensel dengan cara yang agak selesa'],
+ ['motor','Menggunakan gunting, dan menguruskan butang atau zip dengan sedikit bantuan'],
+ ['daily','Berpakaian dan ke tandas hampir sepenuhnya sendiri'],
+ ['emo','Pulih daripada rasa kecewa dalam tempoh yang munasabah',1],
+ ['emo','Berpisah dengan anda di sekolah atau taska tanpa rasa sedih yang berpanjangan',1],
+ ['attn','Duduk dan menumpukan perhatian pada aktiviti yang diminatinya selama beberapa minit'],
+ ['read','Mengenal namanya sendiri dan beberapa huruf'],
+ ['num','Mengira kumpulan kecil dengan tepat dan faham bahawa nombor bermaksud kuantiti']
+],
+'6-8':[
+ ['read','Membaca jauh lebih perlahan dan lebih sukar berbanding cara dia bercakap'],
+ ['read','Meneka perkataan, atau terkeliru dengan perkataan yang serupa (b/d, buku/kuku)'],
+ ['read','Sukar membunyikan perkataan yang belum pernah dilihatnya'],
+ ['read','Mengeja perkataan yang sama dengan beberapa cara berbeza dalam satu tulisan'],
+ ['num','Mengira dengan jari sedangkan rakan sekelas sudah tidak perlu'],
+ ['num','Tidak dapat mengingati fakta mudah seperti 6 + 7, walaupun sudah berlatih'],
+ ['num','Terpaksa mengira kumpulan kecil dan tidak nampak "empat" sepintas lalu'],
+ ['write','Tulisan tangannya sukar dibaca, malah oleh dirinya sendiri'],
+ ['write','Mengadu tangannya sakit, atau menulis sangat perlahan dan memenatkan'],
+ ['write','Banyak idea apabila bercakap tetapi terhenti apabila diminta menulisnya'],
+ ['attn','Terlepas arahan di pertengahan: buat langkah pertama, kemudian hanyut'],
+ ['attn','Kerja rumah mengambil masa berjam-jam, kebanyakannya bukan untuk membuat kerja itu'],
+ ['attn','Kerap kehilangan barang, lupa apa yang baru sahaja diberitahu'],
+ ['comm','Sukar menerangkan sesuatu, atau mengikut apa yang guru sampaikan'],
+ ['social','Sukar untuk mendapat atau mengekalkan kawan'],
+ ['social','Terlepas isyarat sosial, atau mahu permainan mengikut peraturan yang ketat'],
+ ['emo','Bertindak balas jauh lebih kuat atau lebih cepat daripada yang sepatutnya',1],
+ ['emo','Berkata perkara seperti "saya bodoh" atau "saya tak boleh buat apa-apa"',1],
+ ['emo','Enggan atau sedih apabila hendak ke sekolah',1],
+ ['motor','Ketara kekok, atau sukar dalam Pendidikan Jasmani dan permainan fizikal'],
+ ['pace','Belajar sesuatu, kemudian sudah hilang semula menjelang minggu berikutnya']
+],
+'9-12':[
+ ['read','Bacaan tepat tetapi perlahan dan memenatkan; mengelak teks yang panjang'],
+ ['read','Ejaan kekal lemah walaupun sudah bertahun diajar'],
+ ['num','Sifir masih tidak kukuh; kembali kepada mengira satu per satu'],
+ ['num','Pecahan, perpuluhan atau peratus terasa mustahil'],
+ ['num','Tiada rasa sama ada sesuatu jawapan itu lebih kurang betul'],
+ ['write','Hasil tulisan jauh lebih ringkas daripada apa yang mampu disebutnya'],
+ ['write','Menulis seminimum mungkin; sangat menolak tugasan menulis'],
+ ['attn','Tidak dapat merancang atau memulakan tugasan panjang; buntu di mana hendak bermula'],
+ ['attn','Lupa menghantar kerja yang sebenarnya sudah siap'],
+ ['attn','Tidak tenteram atau mudah terganggu di dalam kelas walaupun benar-benar mencuba'],
+ ['pace','Ketinggalan sedikit lagi setiap tahun walaupun berusaha sungguh-sungguh'],
+ ['pace','Perlukan lebih banyak ulangan daripada rakan sekelas sebelum sesuatu melekat'],
+ ['social','Menghadapi masalah persahabatan, atau rasa tersisih'],
+ ['social','Sangat terganggu dengan perubahan rancangan atau rutin'],
+ ['emo','Menggambarkan dirinya sebagai bodoh, malas atau gagal',1],
+ ['emo','Nampak cemas, mudah menangis atau menarik diri berkaitan sekolah',1],
+ ['emo','Meledak marah atau terus mendiamkan diri, dan sukar ditenangkan',1],
+ ['daily','Jauh kurang berdikari berbanding rakan seusianya'],
+ ['motor','Ada masalah koordinasi yang menjejaskan tulisan, sukan atau kerja harian']
+],
+'13+':[
+ ['pace','Ulang kaji tidak melekat walaupun berjam-jam dihabiskan'],
+ ['attn','Tidak dapat menguruskan masa, tarikh akhir atau bahan tanpa bantuan'],
+ ['attn','Sentiasa tersilap anggar berapa lama sesuatu akan mengambil masa'],
+ ['attn','Banyak bertangguh, kemudian panik apabila tarikh akhir menghampiri'],
+ ['read','Bacaan perlahan dan memenatkan; sukar menghadap teks yang banyak'],
+ ['write','Tidak dapat menghabiskan peperiksaan bertulis dalam masa yang diberi'],
+ ['write','Hasil tulisan jauh ketinggalan berbanding idea yang mampu disuarakannya'],
+ ['num','Bergantung pada kalkulator untuk pengiraan asas'],
+ ['social','Terasing dari segi sosial, atau rasa tertekan dengan persahabatan'],
+ ['emo','Cemas tentang sekolah atau peperiksaan sehingga menjejaskan kehidupan harian',1],
+ ['emo','Mood rendah, atau hilang minat terhadap perkara yang dahulu diminatinya',1],
+ ['emo','Mengelak ke sekolah, atau meminta untuk tidak pergi',1],
+ ['daily','Bergelut dengan tahap berdikari yang dijangka pada usia ini'],
+ ['pace','Keputusan tidak mencerminkan usaha yang jelas dicurahkan']
+]
+};
+
+/* Gates reflect widely published diagnostic thresholds, in plain language. */
+var GATES=[
+ {id:'dur',q:'Lebih kurang berapa lama ini sudah berlaku?',
+  opts:[['<6','Kurang daripada 6 bulan',0],['6+','6 bulan atau lebih',1],['yrs','Setahun atau lebih',2]]},
+ {id:'set',q:'Di mana ia berlaku?',
+  opts:[['home','Terutamanya di rumah',0],['school','Terutamanya di sekolah',0],['both','Di rumah dan di sekolah',2]]},
+ {id:'imp',q:'Adakah ia benar-benar menyusahkan setiap hari?',
+  opts:[['no','Tidak juga, kami boleh uruskan',0],['some','Ada sedikit kesukaran',1],['yes','Ya, ia perjuangan setiap hari',2]]}
+];
+
+
+var band=null,answers={},gates={};
+var $=function(i){return document.getElementById(i);};
+
+BANDS.forEach(function(b){
+  var el=document.createElement('button');
+  el.textContent=b.label;
+  el.onclick=function(){band=b;answers={};buildQ();go(2);};
+  $('bandGrid').appendChild(el);
+});
+
+function go(n){
+  [1,2,3,4].forEach(function(i){$('stage'+i).classList.toggle('on',i===n);$('s'+i).classList.toggle('on',i<=n);});
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-function age(){var a=document.querySelector('#checkForm input[name=age]:checked');return a?a.value:'';}
+$('backToAge').onclick=function(){go(1);};
+$('backToQ').onclick=function(){go(2);};
+$('backToGates').onclick=function(){go(3);};
 
-document.getElementById('seeResult').addEventListener('click',function(){
-  var counts=tally();
-  var keys=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a]});
-  var top=keys.filter(function(k){return counts[k]>=2});
-  if(top.length===0) top=keys.slice(0,0); // none strong
-  var rt=document.getElementById('resultTitle'), ri=document.getElementById('resultIntro'), rc=document.getElementById('resultCards');
-  var total=keys.reduce(function(s,k){return s+counts[k]},0);
+function buildQ(){
+  var ms=band.mode==='milestone';
+  $('qHead').textContent = ms
+    ? 'Adakah anak anda melakukan perkara ini?'
+    : 'Berapa kerap anda perasan perkara ini?';
+  $('qLegend').innerHTML = ms
+    ? 'Ini perkara yang <strong>kebanyakan kanak-kanak</strong> boleh buat pada usia ini. Kanak-kanak sangat berbeza antara satu sama lain, dan beberapa jawapan "belum lagi" adalah biasa dan selalunya tidak menjadi masalah.'
+    : 'Jawab berdasarkan keadaan biasa. <strong>Jarang</strong> ialah jawapan yang sangat baik dan memberitahu kami sebanyak jawapan "kerap".';
+  var opts = ms
+    ? [['yes','Ya','pos'],['some','Kadangkala','warn'],['no','Belum lagi','']]
+    : [['no','Jarang','pos'],['some','Kadangkala','warn'],['yes','Kerap','']];
+  var byDom={};
+  Q[band.id].forEach(function(it,idx){ (byDom[it[0]]=byDom[it[0]]||[]).push([it,idx]); });
+  var html='';
+  Object.keys(byDom).forEach(function(d){
+    var D=DOMAINS[d];
+    html+='<div class="dom-block"><div class="dom-head"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="'+D.icon+'"/></svg></span><h3>'+D.name+'</h3></div>';
+    byDom[d].forEach(function(pair){
+      var it=pair[0],idx=pair[1];
+      html+='<div class="qrow"><div class="qtext">'+it[1]+'</div><div class="scale">';
+      opts.forEach(function(o){
+        html+='<label class="'+o[2]+'"><input type="radio" name="q'+idx+'" value="'+o[0]+'" data-dom="'+d+'"'+(it[2]?' data-wb="1"':'')+'><span>'+o[1]+'</span></label>';
+      });
+      html+='</div></div>';
+    });
+    html+='</div>';
+  });
+  $('qWrap').innerHTML=html;
+}
 
-  if(total===0){
-    rt.innerHTML="Tiada tanda kuat, dan itu tidak mengapa.";
-    ri.innerHTML="Anda tidak menandakan sebarang tanda, itu melegakan. Jika sesuatu masih merisaukan anda, percayalah naluri anda, perbualan ringkas sentiasa berbaloi.";
-    rc.innerHTML='';
-  } else if(top.length===0){
-    rt.innerHTML="Beberapa tanda ringan untuk diperhatikan.";
-    ri.innerHTML="Tiada yang menonjol dengan kuat, tetapi anda perasan beberapa perkara. Selalunya itu variasi biasa, kadangkala isyarat awal. Perbualan percuma boleh memberi anda ketenangan.";
-    rc.innerHTML='';
+$('toGates').onclick=function(){
+  var g='';
+  GATES.forEach(function(G){
+    g+='<div class="gate"><h4>'+G.q+'</h4><div class="scale">';
+    G.opts.forEach(function(o){
+      g+='<label><input type="radio" name="g'+G.id+'" value="'+o[0]+'" data-w="'+o[2]+'"><span>'+o[1]+'</span></label>';
+    });
+    g+='</div></div>';
+  });
+  $('gateWrap').innerHTML=g;
+  go(3);
+};
+
+$('seeResult').onclick=function(){
+  var ms=band.mode==='milestone';
+  var score={},wb=false,noted=[];
+  Q[band.id].forEach(function(it,idx){
+    var sel=document.querySelector('input[name="q'+idx+'"]:checked');
+    var d=it[0]; if(score[d]===undefined) score[d]=0;
+    if(!sel) return;
+    var v=sel.value, pts=0;
+    if(ms){ pts = (v==='no')?2:(v==='some')?1:0; }
+    else  { pts = (v==='yes')?2:(v==='some')?1:0; }
+    score[d]+=pts;
+    if(pts>0){ noted.push(it[1]); if(it[2]) wb=true; }
+  });
+  var gw=0,gdur='',gset='',gimp='';
+  GATES.forEach(function(G){
+    var s=document.querySelector('input[name="g'+G.id+'"]:checked');
+    if(s){ gw+=parseInt(s.dataset.w,10); var t=s.parentNode.querySelector('span').textContent;
+      if(G.id==='dur')gdur=t; if(G.id==='set')gset=t; if(G.id==='imp')gimp=t; }
+  });
+
+  var high=[],mid=[],fine=[];
+  Object.keys(score).forEach(function(d){
+    if(score[d]>=4) high.push(d); else if(score[d]>=2) mid.push(d); else fine.push(d);
+  });
+
+  var h='';
+  var anyConcern=high.length+mid.length;
+
+  if(anyConcern===0){
+    h+='<div class="rescore"><span class="pill ok">Tiada apa yang menonjol</span></div>';
+    h+='<h2 style="font-size:1.5rem">Jawapan anda menunjukkan anak anda baik-baik sahaja.</h2>';
+    h+='<p style="color:var(--ink-soft)">Merentas setiap bidang yang kami tanya, tiada apa yang mencapai tahap yang biasanya memerlukan perhatian lanjut. Itu memang melegakan, dan wajar diberitahu kepada anak anda juga.</p>';
+    h+='<p style="color:var(--ink-soft)">Jika masih ada sesuatu yang mengganggu fikiran anda yang tidak kami tanya, percayalah pada rasa itu. Ibu bapa selalunya betul bahawa ada sesuatu yang wajar dilihat semula, dan satu perbualan ringkas tidak merugikan apa-apa.</p>';
   } else {
-    var shown=top.slice(0,3);
-    var names=shown.map(function(k){return DOMAINS[k].name.replace(/&amp;/g,'&')});
-    rt.innerHTML="Bidang yang wajar dilihat dahulu";
-    ri.innerHTML="Berdasarkan apa yang anda tandakan, bidang ini menonjol. Ingat, ini titik permulaan, bukan diagnosis, dan banyak yang bertindih. Inilah cara kami boleh membantu setiap satu.";
-    rc.innerHTML=shown.map(function(k){var d=DOMAINS[k];return '<div class="rcard"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="'+d.icon+'"/></svg></span><div><h4>'+d.label+'</h4><p>'+d.desc+'</p><a href="'+d.page+'">Baca cara kami membantu &rarr;</a></div></div>'}).join('');
-  }
-  var r=document.getElementById('result');
-  r.classList.add('show');
-  r.scrollIntoView({behavior:'smooth'});
-  if(window.gtag)gtag('event','screening_completed',{ticks:total,areas:keys.join(',')});
-});
+    h+='<div class="rescore">';
+    if(high.length) h+='<span class="pill look">'+high.length+' bidang wajar diperhatikan dengan lebih dekat</span>';
+    if(mid.length) h+='<span class="pill watch">'+mid.length+' bidang untuk diperhatikan</span>';
+    if(fine.length) h+='<span class="pill ok">'+fine.length+' bidang nampak elok</span>';
+    h+='</div>';
 
-document.getElementById('sendWa').addEventListener('click',function(){
-  var name=(document.getElementById('pname').value||'').trim();
-  var phone=(document.getElementById('pphone').value||'').trim();
-  var consent=document.getElementById('consent').checked;
-  var err=document.getElementById('formErr');
-  if(!name||!phone||!consent){err.style.display='block';return;}
-  err.style.display='none';
-  var counts=tally();
-  var keys=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a]});
-  var top=keys.filter(function(k){return counts[k]>=2}).slice(0,3);
-  var areas=(top.length?top:keys).map(function(k){return DOMAINS[k].name.replace(/&amp;/g,'&')});
-  var L=["\u{1F44B} Hi! I just did the free learning check on your website.",''];
-  if(age())L.push("My child's age: "+age());
-  if(areas.length)L.push('Areas it suggested: '+areas.join(', '));
-  // list ticked signs
-  var sel=[];
-  document.querySelectorAll('#checkForm input[type=checkbox]:checked').forEach(function(c){sel.push('• '+c.parentNode.querySelector('span').textContent)});
-  if(sel.length){L.push('','Signs I ticked:');L=L.concat(sel);}
-  L.push('','Name: '+name,'Phone: '+phone,'','Could we arrange a free 15-minute call?');
-  if(window.gtag)gtag('event','screening_lead',{areas:areas.join(',')});
-  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
-});
+    if(gw<=1){
+      h+='<h2 style="font-size:1.5rem">Ada beberapa perkara untuk diperhatikan, tetapi tiada yang mendesak</h2>';
+      h+='<p style="color:var(--ink-soft)">Anda menandakan beberapa kesukaran, tetapi berdasarkan tiga jawapan terakhir anda, ia belum lama berlaku, muncul hanya di satu tempat, atau tidak begitu menyusahkan kehidupan harian. Profesional menimbang tiga perkara itulah dengan berat, jadi corak begini selalunya rupa-rupanya variasi biasa, fasa sementara, atau sesuatu yang khusus kepada satu keadaan. Wajar diperhatikan, bukan dirisaukan.</p>';
+    } else {
+      h+='<h2 style="font-size:1.5rem">Ada bidang yang wajar dilihat dengan betul</h2>';
+      h+='<p style="color:var(--ink-soft)">Anda menandakan kesukaran yang berterusan, muncul di lebih daripada satu tempat, atau benar-benar menyusahkan. Gabungan itulah yang wajar diambil tindakan. Ini masih bukan diagnosis, dan bidang-bidang ini kerap bertindih, tetapi ia titik yang munasabah untuk mendapatkan pemeriksaan yang betul.</p>';
+    }
+
+    high.concat(mid).forEach(function(d){
+      var D=DOMAINS[d],n=score[d],cls=(n>=4?'hi':'mid');
+      h+='<div class="rdom '+cls+'"><h4><span style="color:var(--primary)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="'+D.icon+'"/></svg></span>'+D.name+'</h4><p>'+(n>=4?'Beberapa perkara menonjol di sini.':'Ada satu dua perkara untuk diperhatikan.')+'</p>';
+      if(D.guide) h+='<a href="'+D.guide+'">Baca '+D.gname+' &rarr;</a>';
+      h+='</div>';
+    });
+
+    if(fine.length){
+      var names=fine.map(function(d){return DOMAINS[d].name.replace(/&amp;/g,'&');});
+      h+='<div class="strengths-box"><b>Berjalan baik:</b> '+names.join(', ')+'. Ini wajar disebut dengan kuat, kesukaran dalam satu bidang tidak bermakna apa-apa tentang keseluruhan diri anak anda.</div>';
+    }
+  }
+
+  if(wb){
+    h+='<div class="wellbeing"><b>Satu perkara yang ingin kami sebut dengan lembut.</b><p style="margin:6px 0 0;font-size:.95rem;color:var(--ink-soft)">Sebahagian jawapan anda menyentuh perasaan anak anda: mood, keyakinan diri, atau kesediaannya untuk ke sekolah. Perkara itu berhak diberi perhatian tersendiri, bukan sekadar sebagai sebahagian daripada masalah pembelajaran. Jika ia sudah berlaku agak lama, sila berbincang juga dengan doktor anda, Klinik Kesihatan, atau kaunselor sekolah. Kami sudi membantu anda memikirkannya, tetapi profesional kesihatan sepatutnya tahu tentang perkara ini.</p></div>';
+  }
+
+  $('resultWrap').innerHTML=h;
+  window._noted=noted;
+  window._doms=high.concat(mid).map(function(d){return DOMAINS[d].name.replace(/&amp;/g,'&');});
+  window._gates=[gdur,gset,gimp];
+  if(window.gtag)gtag('event','screening_completed',{age_band:band.id,areas:window._doms.join(','),gate_weight:gw});
+  go(4);
+};
+
+$('sendWa').onclick=function(){
+  var name=($('pname').value||'').trim(),phone=($('pphone').value||'').trim(),ok=$('consent').checked;
+  if(!name||!phone||!ok){$('formErr').style.display='block';return;}
+  $('formErr').style.display='none';
+  var L=["\u{1F44B} Hai! Saya baru sahaja membuat semakan anak percuma di laman web anda.",''];
+  L.push("Umur anak: "+band.label);
+  if(window._doms&&window._doms.length) L.push('Bidang yang ditanda: '+window._doms.join(', '));
+  else L.push('Tiada apa yang ditanda, tetapi saya ingin berbincang tentang sesuatu.');
+  if(window._gates) L.push('Berapa lama: '+window._gates[0]+' | Di mana: '+window._gates[1]+' | Kesan: '+window._gates[2]);
+  if(window._noted&&window._noted.length){L.push('','Apa yang saya perasan:');window._noted.forEach(function(p){L.push('• '+p);});}
+  L.push('','Nama: '+name,'Telefon: '+phone,'','Bolehkah kita aturkan panggilan percuma 15 minit?');
+  if(window.gtag)gtag('event','screening_lead',{age_band:band.id});
+  window.open('https://wa.me/60122127743?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
+};
+
 </script>
 
 <script type="application/ld+json">
