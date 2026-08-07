@@ -3,28 +3,30 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Free Learning Check for Children | The Lodestone Centre, Subang Jaya</title>
-<meta name="description" content="A free, 2-minute online check to help you understand your child's learning. Tick the signs you recognise (reading, maths, writing, focus, speech, social, pace) and get a supportive, plain-English starting point. Indicative, not a diagnosis. Subang Jaya, Petaling Jaya & Klang Valley." />
-<meta name="keywords" content="free learning screening children, is my child dyslexic test, ADHD checklist for child, dyscalculia signs check, child learning difficulty quiz, dyslexia test Malaysia, screening Subang Jaya, learning assessment Petaling Jaya, free child screening Klang Valley" />
-<meta name="author" content="The Lodestone Centre">
+<title>Free Child Development Check by Age | The Lodestone Centre</title>
+<meta name="description" content="A free 2-minute check for ages 2 to 16+. Tick what you notice and see which areas of your child's development are worth a closer look." />
+<meta name="keywords" content="child development checklist by age, free child screening Malaysia, is my child developing normally, developmental milestones checklist, child learning check, 2 year old not talking, 7 year old cant read, child development check Subang Jaya" />
+<meta name="author" content="The Lodestone Education Team">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta http-equiv="content-language" content="en-MY">
 <meta name="geo.region" content="MY-10">
 <meta name="geo.placename" content="Taipan, Subang Jaya, Petaling Jaya, Klang Valley, Selangor">
 <link rel="canonical" href="https://thelodestonesolution.com/screening-check.html">
+<link rel="alternate" hreflang="en-MY" href="https://thelodestonesolution.com/screening-check.html">
+<link rel="alternate" hreflang="ms-MY" href="https://thelodestonesolution.com/screening-check-ms.html">
+<link rel="alternate" hreflang="x-default" href="https://thelodestonesolution.com/screening-check.html">
 <meta property="og:locale" content="en_MY">
 <meta property="og:site_name" content="The Lodestone Centre">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thelodestonesolution.com/screening-check.html">
-<meta property="og:title" content="Free Learning Check for Children | The Lodestone Centre">
-<meta property="og:description" content="A free, 2-minute check to understand your child's learning, with a supportive starting point. Indicative, not a diagnosis.">
+<meta property="og:title" content="Free Child Development Check by Age">
+<meta property="og:description" content="Tick what you notice about your child and see which areas are worth a closer look. Free, 2 minutes, no diagnosis.">
 <meta property="og:image" content="https://thelodestonesolution.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3">
 <link rel="icon" href="favicon.ico?v=3" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
@@ -50,6 +52,7 @@
   .nav-links{display:flex;gap:26px;align-items:center}
   .nav-links a{font-size:.94rem;font-weight:500;color:var(--ink-soft);transition:color .2s}
   .nav-links a:hover{color:var(--ink)}
+  .lang-switch{font-size:.82rem;font-weight:700;color:var(--ink-soft);border:1.5px solid var(--line);padding:6px 11px;border-radius:999px;letter-spacing:.04em;transition:.2s}.lang-switch:hover{border-color:var(--primary);color:var(--primary)}
   .nav-cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:.9rem;font-weight:500;transition:background .25s}
   .nav-cta:hover{background:var(--primary)}
   .menu-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--ink)}
@@ -118,25 +121,61 @@
   .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;margin-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.84rem;color:#7d86a8}
   .wa-float{position:fixed;bottom:22px;right:22px;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:var(--shadow-lg);z-index:60}
   @media(max-width:760px){.nav-links{display:none}.frow{grid-template-columns:1fr}}
-</style>
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-{"@type":"ListItem","position":1,"name":"Home","item":"https://thelodestonesolution.com/"},
-{"@type":"ListItem","position":2,"name":"Free Learning Check","item":"https://thelodestonesolution.com/screening-check.html"}]}
-</script>
-<!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YC6ZRBTYTS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YC6ZRBTYTS');
-</script>
+  /* ==== whole-child tool ==== */
+  .steps-bar{display:flex;gap:8px;margin:0 0 22px}
+  .steps-bar span{flex:1;height:4px;border-radius:99px;background:var(--line)}
+  .steps-bar span.on{background:var(--primary)}
+  .stage{display:none}.stage.on{display:block;animation:fade .45s var(--ease)}
+  .band-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:16px 0 4px}
+  .band-grid button{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:18px 10px;cursor:pointer;font-family:inherit;font-weight:700;font-size:.95rem;color:var(--ink);transition:.2s var(--ease)}
+  .band-grid button:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+  .dom-block{border-top:1px solid var(--line);padding:20px 0 8px}
+  .dom-block:first-of-type{border-top:0}
+  .dom-head{display:flex;align-items:center;gap:11px;margin-bottom:6px}
+  .dom-head .ic{width:34px;height:34px;border-radius:10px;background:rgba(58,79,181,.08);color:var(--primary);display:grid;place-items:center;flex-shrink:0}
+  .dom-head .ic svg{width:19px;height:19px}
+  .dom-head h3{font-size:1.06rem;margin:0}
+  .backlink{background:none;border:0;color:var(--ink-soft);font-family:inherit;font-size:.92rem;cursor:pointer;padding:0;text-decoration:underline}
+  .rescore{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 6px}
+  .pill{border-radius:999px;padding:7px 15px;font-size:.88rem;font-weight:700}
+  .pill.watch{background:#FDEBCB;color:#8a5a00}
+  .pill.look{background:#fbdcd6;color:#8f3520}
+  .pill.ok{background:#dff0e7;color:#1f6b47}
+  .rdom{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0}
+  .rdom.hi{border-left:4px solid #d9776f}
+  .rdom.mid{border-left:4px solid var(--accent)}
+  .rdom h4{font-size:1.05rem;margin:0 0 4px;display:flex;align-items:center;gap:9px}
+  .rdom p{font-size:.93rem;color:var(--ink-soft);margin:4px 0 0}
+  .rdom a{color:var(--primary);font-weight:600;font-size:.9rem;display:inline-block;margin-top:8px}
+  .rdom ul{margin:8px 0 0;padding-left:18px}
+  .rdom li{font-size:.9rem;color:var(--ink-soft);margin:3px 0}
+  .strengths-box{background:#eef7f3;border-left:4px solid var(--sage);border-radius:0 12px 12px 0;padding:16px 20px;margin:16px 0}
+  .strengths-box b{color:var(--ink)}
+  .wellbeing{background:#fff;border:2px solid #d9776f;border-radius:14px;padding:18px 22px;margin:16px 0}
+  .wellbeing b{color:#b4442f}
+  @media(max-width:760px){.band-grid{grid-template-columns:1fr 1fr}}
+  @media print{.nav,.wa-float,.lead,.steps-bar{display:none}}
+
+  .qrow{border-bottom:1px solid #f2efe8;padding:14px 0;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+  .qrow:last-child{border-bottom:0}
+  .qtext{font-size:.98rem;color:var(--ink);line-height:1.5}
+  .scale{display:flex;gap:6px;flex-shrink:0}
+  .scale label{cursor:pointer}
+  .scale input{position:absolute;opacity:0;width:0;height:0}
+  .scale span{display:inline-block;padding:7px 13px;border:1.5px solid var(--line);border-radius:999px;font-size:.82rem;font-weight:600;color:var(--ink-soft);transition:.15s;white-space:nowrap;background:#fff}
+  .scale input:checked+span{border-color:var(--primary);background:var(--primary);color:#fff}
+  .scale label.pos input:checked+span{border-color:#2e7d5b;background:#2e7d5b}
+  .scale label.warn input:checked+span{border-color:#c9821a;background:#c9821a}
+  .gate{background:var(--cream);border-radius:14px;padding:18px 22px;margin:14px 0}
+  .gate h4{font-size:1rem;margin:0 0 10px}
+  .gate .scale{flex-wrap:wrap}
+  .legend{font-size:.84rem;color:var(--ink-soft);background:#eef1fb;border-radius:10px;padding:10px 14px;margin:10px 0 4px}
+  @media(max-width:700px){.qrow{grid-template-columns:1fr;gap:8px}.scale{width:100%}.scale label{flex:1}.scale span{display:block;text-align:center;padding:9px 4px}}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo" aria-label="The Lodestone Centre home">
@@ -147,141 +186,80 @@
       <a href="index.html#programs">Programs</a>
       <a href="guides.html">Parent Guides</a>
       <a href="index.html#support">Support</a>
-      <a href="lodestone-evo.html">Evo</a>
-      <a href="index.html#faq">FAQ</a>
+      <a href="screening-check-ms.html" class="lang-switch" aria-label="Versi Bahasa Melayu">BM</a>
       <a href="index.html#contact" class="nav-cta">Book free call</a>
     </nav>
-    <button class="menu-toggle" aria-label="Open menu" onclick="location.href='index.html#contact'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <button class="menu-toggle" aria-label="Menu" onclick="location.href='index.html#contact'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
   </div>
 </header>
 
-<div class="container"><nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &rsaquo; <span>Free Learning Check</span></nav></div>
+<div class="container"><nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &rsaquo; <span>Free Child Check</span></nav></div>
 
-<!-- HERO -->
+
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Free &middot; 2 minutes &middot; No diagnosis required</span>
-    <h1>Is your child struggling at school?<br>Let's find where to start.</h1>
-    <p class="lede">Tick the signs you recognise in your child. We'll suggest, in plain English, which areas are worth looking at first, and how we can help. It's free, takes about two minutes, and there's no pressure.</p>
+    <span class="eyebrow">Free &middot; About 3 minutes &middot; Not a diagnosis</span>
+    <h1>How is your child doing?</h1>
+    <p class="lede">A whole-child check for ages 2 to 16 and up. Answer honestly about what you actually see, including the things going well. We'll show you which areas look fine and which might be worth a closer look.</p>
     <div class="disclaimer-pill">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <span>This is a supportive starting point, not a diagnosis. Only a qualified professional can diagnose a learning difference, and we're happy to guide you there.</span>
+      <span><strong>Please read:</strong> this is a parent observation guide, not a medical or psychological screening instrument, and it produces no score or diagnosis. Only a qualified professional can diagnose. If anything worries you, please speak to your doctor, Klinik Kesihatan or your child's school.</span>
     </div>
   </div>
 </section>
 
-<!-- TOOL -->
 <section class="container">
-  <form class="tool" id="checkForm" novalidate>
+  <div class="tool">
+    <div class="steps-bar" aria-hidden="true"><span id="s1" class="on"></span><span id="s2"></span><span id="s3"></span><span id="s4"></span></div>
 
-    <h3 style="font-size:1.05rem;margin-bottom:6px">How old is your child?</h3>
-    <div class="age-row">
-      <label><input type="radio" name="age" value="Under 6"><span>Under 6</span></label>
-      <label><input type="radio" name="age" value="6–9"><span>6–9</span></label>
-      <label><input type="radio" name="age" value="10–13"><span>10–13</span></label>
-      <label><input type="radio" name="age" value="14+"><span>14+</span></label>
-    </div>
-    <p style="font-size:.92rem;color:var(--ink-soft);margin-top:14px">Now tick every sign you often notice. Tick as many or as few as you like, across any of the areas below.</p>
-
-    <!-- Reading -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span> Reading &amp; spelling</h3>
-      <label class="opt"><input type="checkbox" data-domain="dyslexia"><span>Reads slowly and with great effort, below how well they talk</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyslexia"><span>Guesses words, or muddles similar ones (b/d, was/saw)</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyslexia"><span>Struggles to sound out unfamiliar words</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyslexia"><span>Avoids reading aloud, or spells a word several ways</span></label>
+    <div class="stage on" id="stage1">
+      <h3 style="font-size:1.15rem">First, how old is your child?</h3>
+      <p style="font-size:.95rem;color:var(--ink-soft);margin-top:4px">What's typical changes enormously with age, so this shapes every question that follows.</p>
+      <div class="band-grid" id="bandGrid"></div>
     </div>
 
-    <!-- Maths -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span> Numbers &amp; maths</h3>
-      <label class="opt"><input type="checkbox" data-domain="dyscalculia"><span>Counts on fingers long after other children stopped</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyscalculia"><span>Can't recall facts like 6 + 7 or times tables</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyscalculia"><span>Confuses bigger/smaller, time or money</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dyscalculia"><span>Becomes anxious or freezes at maths time</span></label>
+    <div class="stage" id="stage2">
+      <button class="backlink" id="backToAge">&larr; change age</button>
+      <h3 style="font-size:1.15rem;margin-top:10px" id="qHead"></h3>
+      <p class="legend" id="qLegend"></p>
+      <div id="qWrap"></div>
+      <div class="see-btn-wrap"><button type="button" class="btn btn-primary" id="toGates"><span>Continue &rarr;</span></button></div>
     </div>
 
-    <!-- Writing -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></span> Writing &amp; handwriting</h3>
-      <label class="opt"><input type="checkbox" data-domain="dysgraphia"><span>Writing is slow, messy or painful (says their hand hurts)</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dysgraphia"><span>Awkward pencil grip, or odd letter sizing and spacing</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dysgraphia"><span>Lots to say aloud, but freezes when asked to write it</span></label>
-      <label class="opt"><input type="checkbox" data-domain="dysgraphia"><span>Handwriting is hard to read, even for them</span></label>
+    <div class="stage" id="stage3">
+      <button class="backlink" id="backToQ">&larr; back</button>
+      <h3 style="font-size:1.15rem;margin-top:10px">Three last questions</h3>
+      <p style="font-size:.95rem;color:var(--ink-soft);margin-top:4px">These matter more than people expect. How long something has gone on, whether it happens in more than one place, and whether it's actually causing difficulty, are the things professionals weigh most heavily.</p>
+      <div id="gateWrap"></div>
+      <div class="see-btn-wrap"><button type="button" class="btn btn-primary" id="seeResult"><span>See what this suggests &rarr;</span></button></div>
     </div>
 
-    <!-- Focus -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span> Focus, activity &amp; impulse</h3>
-      <label class="opt"><input type="checkbox" data-domain="adhd"><span>Hard to focus, unless it's something they love</span></label>
-      <label class="opt"><input type="checkbox" data-domain="adhd"><span>Fidgets, can't sit still, or acts before thinking</span></label>
-      <label class="opt"><input type="checkbox" data-domain="adhd"><span>Loses things, forgets steps, drifts off mid-task</span></label>
-      <label class="opt"><input type="checkbox" data-domain="adhd"><span>Big, fast emotions; daily battles over homework</span></label>
-    </div>
+    <div class="stage" id="stage4">
+      <button class="backlink" id="backToGates">&larr; back</button>
+      <div id="resultWrap" style="margin-top:14px"></div>
 
-    <!-- Speech -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> Talking &amp; language</h3>
-      <label class="opt"><input type="checkbox" data-domain="speech"><span>Says far fewer words than other children their age</span></label>
-      <label class="opt"><input type="checkbox" data-domain="speech"><span>Hard to understand, even for close family</span></label>
-      <label class="opt"><input type="checkbox" data-domain="speech"><span>Struggles to put words together into sentences</span></label>
-      <label class="opt"><input type="checkbox" data-domain="speech"><span>Understands much more than they can say</span></label>
-    </div>
-
-    <!-- Social -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span> Social, routine &amp; sensory</h3>
-      <label class="opt"><input type="checkbox" data-domain="autism"><span>Finds deep comfort in routine; distress when it changes</span></label>
-      <label class="opt"><input type="checkbox" data-domain="autism"><span>Sensitive to sounds, lights, textures or crowds</span></label>
-      <label class="opt"><input type="checkbox" data-domain="autism"><span>Finds eye contact, turn-taking or social cues hard</span></label>
-      <label class="opt"><input type="checkbox" data-domain="autism"><span>Has intense, focused interests they know everything about</span></label>
-    </div>
-
-    <!-- Pace -->
-    <div class="domain">
-      <h3><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span> Keeping up &amp; pace</h3>
-      <label class="opt"><input type="checkbox" data-domain="slow"><span>Takes longer to grasp new ideas, then forgets quickly</span></label>
-      <label class="opt"><input type="checkbox" data-domain="slow"><span>Needs lots of repetition before something sticks</span></label>
-      <label class="opt"><input type="checkbox" data-domain="slow"><span>Falls a little further behind each year despite trying</span></label>
-      <label class="opt"><input type="checkbox" data-domain="slow"><span>Copes one-to-one, but gets lost in a busy class</span></label>
-    </div>
-
-    <div class="see-btn-wrap">
-      <button type="button" class="btn btn-primary" id="seeResult"><span>See where to start &rarr;</span></button>
-    </div>
-  </form>
-
-  <!-- RESULT -->
-  <div class="result" id="result">
-    <div class="result-head">
-      <span class="eyebrow">Your supportive starting point</span>
-      <h2 id="resultTitle"></h2>
-      <p id="resultIntro"></p>
-    </div>
-    <div class="result-body">
-      <div id="resultCards"></div>
-
-      <div class="lead">
-        <h3>Want us to take a look with you?</h3>
-        <p class="sub">Send your results to a specialist on WhatsApp and we'll suggest a clear next step, free, no obligation. Your answers are summarised in the message so we can help faster.</p>
+      <div class="lead" style="background:var(--cream);border-radius:16px;padding:22px 24px;margin-top:22px">
+        <h3 style="font-size:1.2rem">Want us to look at this with you?</h3>
+        <p class="sub" style="font-size:.93rem;color:var(--ink-soft);margin:6px 0 14px">Send your answers to our education team on WhatsApp. We'll suggest a sensible next step, free and with no obligation, even if that step is somewhere other than here.</p>
         <div class="frow">
           <div class="field"><input type="text" id="pname" placeholder="Your name" autocomplete="name"></div>
           <div class="field"><input type="tel" id="pphone" placeholder="Phone (WhatsApp)" autocomplete="tel"></div>
         </div>
-        <label class="consent"><input type="checkbox" id="consent"><span>I'd like The Lodestone Centre to contact me about my enquiry. I understand my details won't be shared with anyone else.</span></label>
+        <label class="consent"><input type="checkbox" id="consent"><span>I'd like The Lodestone Centre to contact me about this. My details won't be shared with anyone else.</span></label>
         <button type="button" class="btn btn-wa" id="sendWa" style="width:100%">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
-          Send my results on WhatsApp
+          Send my answers on WhatsApp
         </button>
         <div class="err" id="formErr">Please add your name and phone number, and tick the box, so we can reach you.</div>
         <a class="btn btn-ghost" href="index.html#contact" style="width:100%;margin-top:10px">Prefer a form? Book a free call instead</a>
-        <p class="privacy">We only use your details to respond to your enquiry. We never sell or share them. (PDPA 2010)</p>
+        <p class="privacy">We only use your details to respond. We never sell or share them. (PDPA 2010)</p>
       </div>
+
+      <p style="font-size:.8rem;color:#8a90a8;margin-top:20px;border-top:1px solid var(--line);padding-top:14px;line-height:1.6">This check is written by our education team in plain language. Prompts for younger children follow the publicly available CDC "Learn the Signs. Act Early." milestone approach; school-age prompts reflect widely published clinical concepts around persistence, setting and impact. It is not a validated screening instrument, reproduces none, and gives no score or diagnosis.</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -301,77 +279,292 @@
 </a>
 
 <script>
-var WA='60122127743';
+/* Observation prompts written in our own words.
+   Younger bands follow the publicly available CDC "Learn the Signs. Act Early."
+   milestone approach (US Government, public domain): positively framed, set at
+   what MOST children do by that age. School-age prompts reflect widely published
+   DSM-5 concepts (persistence, multiple settings, functional impact) described in
+   plain language. No validated instrument is reproduced. */
+
+var BANDS=[
+ {id:'2-3',label:'2 – 3 years',mode:'milestone'},
+ {id:'4-5',label:'4 – 5 years',mode:'milestone'},
+ {id:'6-8',label:'6 – 8 years',mode:'freq'},
+ {id:'9-12',label:'9 – 12 years',mode:'freq'},
+ {id:'13+',label:'13+ years',mode:'freq'}
+];
+
 var DOMAINS={
-  dyslexia:{label:'Reading &amp; dyslexia', icon:'M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z', desc:'Signs around reading, decoding and spelling. Our Reading &amp; Literacy support is built for this.', page:'dyslexia-support.html', name:'Dyslexia &amp; reading'},
-  dyscalculia:{label:'Maths &amp; dyscalculia', icon:'M4 9h16M4 15h16M10 3 8 21M16 3l-2 18', desc:'Signs around numbers, facts and maths confidence. Our Math Program rebuilds number sense, step by step.', page:'dyscalculia-support.html', name:'Dyscalculia &amp; maths'},
-  dysgraphia:{label:'Writing &amp; dysgraphia', icon:'M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z', desc:'Signs around handwriting and getting ideas onto paper. Our Writing &amp; Handwriting support can help.', page:'dysgraphia-support.html', name:'Dysgraphia &amp; writing'},
-  adhd:{label:'Focus &amp; ADHD', icon:'M13 2 3 14h7l-1 8 10-12h-7z', desc:'Signs around attention, activity and big feelings. Our SEL Program builds focus and self-regulation.', page:'adhd-support.html', name:'ADHD &amp; focus'},
-  speech:{label:'Speech &amp; language', icon:'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z', desc:'Signs around talking and being understood. Our Say Play speech support helps words come more easily.', page:'speech-delay-support.html', name:'Speech &amp; language delay'},
-  autism:{label:'Social, routine &amp; sensory', icon:'M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z', desc:'Signs around communication, routine and sensory needs. We take a calm, neuro-affirming approach.', page:'autism-support.html', name:'Autism support'},
-  slow:{label:'Pace &amp; keeping up', icon:'M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zM12 6v6l4 2', desc:'Signs of learning at a slower pace. We re-pace learning and rebuild confidence in small groups.', page:'slow-learners-support.html', name:'Learning at their own pace'}
+ comm:{name:'Communication &amp; language',icon:'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z',guide:'guide-speech-delay.html',gname:'Speech &amp; language guide'},
+ social:{name:'Social &amp; play',icon:'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0 8 4 4 0 0 0 0-8z',guide:'guide-autism.html',gname:'Autism guide'},
+ motor:{name:'Movement &amp; coordination',icon:'M12 2v6M12 22v-6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M22 12h-6',guide:'guide-dysgraphia.html',gname:'Dysgraphia guide'},
+ daily:{name:'Everyday independence',icon:'M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zM12 6v6l4 2',guide:'',gname:''},
+ emo:{name:'Emotions &amp; wellbeing',icon:'M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z',guide:'',gname:''},
+ attn:{name:'Attention &amp; organisation',icon:'M13 2 3 14h7l-1 8 10-12h-7z',guide:'guide-adhd.html',gname:'ADHD &amp; focus guide'},
+ read:{name:'Reading &amp; spelling',icon:'M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z',guide:'guide-dyslexia.html',gname:'Dyslexia guide'},
+ num:{name:'Numbers &amp; maths',icon:'M4 9h16M4 15h16M10 3 8 21M16 3l-2 18',guide:'guide-dyscalculia.html',gname:'Dyscalculia guide'},
+ write:{name:'Writing &amp; handwriting',icon:'M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z',guide:'guide-dysgraphia.html',gname:'Dysgraphia guide'},
+ pace:{name:'Pace &amp; remembering',icon:'M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zM12 6v6l4 2',guide:'guide-slow-learners.html',gname:'Own-pace learning guide'}
 };
 
-function tally(){
-  var counts={};
-  document.querySelectorAll('#checkForm input[type=checkbox]:checked').forEach(function(c){
-    var d=c.dataset.domain; counts[d]=(counts[d]||0)+1;
-  });
-  return counts;
+/* milestone bands: [domain, "does your child...", wellbeingFlag] */
+var Q={
+'2-3':[
+ ['comm','Use at least 50 different words (counting all the languages they hear)'],
+ ['comm','Put two words together, such as "more milk" or "daddy go"'],
+ ['comm','Point at things to show you something interesting, not just to ask for it'],
+ ['comm','Turn and look when you say their name'],
+ ['comm','Follow a simple instruction without you pointing or gesturing'],
+ ['social','Join in simple back-and-forth games and copy what you do'],
+ ['social','Notice other children and show some interest in them'],
+ ['social','Pretend with toys, such as feeding a doll or driving a car along'],
+ ['motor','Walk and run fairly steadily for their age'],
+ ['motor','Scribble with a crayon, and stack a few blocks'],
+ ['motor','Use a spoon reasonably well'],
+ ['daily','Eat a reasonable range of foods and textures'],
+ ['daily','Settle to sleep most nights without major difficulty'],
+ ['emo','Calm down with comfort within a reasonable time when upset',1],
+ ['emo','Cope with everyday sounds, lights and textures without real distress',1]
+],
+'4-5':[
+ ['comm','Speak clearly enough that people outside the family understand them'],
+ ['comm','Tell you a simple story or what happened in their day'],
+ ['comm','Follow instructions with two steps'],
+ ['comm','Enjoy rhymes, and hear when words start with the same sound'],
+ ['social','Play with other children, not just alongside them'],
+ ['social','Take turns and share, most of the time, with reminders'],
+ ['social','Cope with a change of plan without extreme distress'],
+ ['motor','Hold a pencil in a reasonably comfortable grip'],
+ ['motor','Use scissors, and manage buttons or zips with some help'],
+ ['daily','Dress and use the toilet largely independently'],
+ ['emo','Recover from upsets within a reasonable time',1],
+ ['emo','Separate from you at school or nursery without lasting distress',1],
+ ['attn','Sit and focus on an activity they enjoy for several minutes'],
+ ['read','Recognise their own name and some letters'],
+ ['num','Count small groups reliably and know that numbers mean amounts']
+],
+'6-8':[
+ ['read','Reads much more slowly and effortfully than they speak'],
+ ['read','Guesses at words, or muddles similar ones (b/d, was/saw)'],
+ ['read','Struggles to sound out words they have not seen before'],
+ ['read','Spells the same word several different ways in one piece'],
+ ['num','Counts on fingers when classmates no longer need to'],
+ ['num','Cannot recall simple facts like 6 + 7, despite practice'],
+ ['num','Has to count a small group rather than seeing "four" at a glance'],
+ ['write','Handwriting is hard to read, even for them'],
+ ['write','Says their hand hurts, or writing is very slow and tiring'],
+ ['write','Has plenty to say aloud but freezes when asked to write it'],
+ ['attn','Loses instructions partway through: does the first step, drifts'],
+ ['attn','Homework takes hours, most of it spent not doing homework'],
+ ['attn','Loses belongings repeatedly, forgets what was just said'],
+ ['comm','Struggles to explain things, or to follow what the teacher says'],
+ ['social','Finds making or keeping friendships difficult'],
+ ['social','Misses social cues, or needs play to follow strict rules'],
+ ['emo','Reacts far more strongly or quickly than the situation warrants',1],
+ ['emo','Says things like "I am stupid" or "I cannot do anything"',1],
+ ['emo','Is reluctant or upset about going to school',1],
+ ['motor','Is noticeably clumsy, or finds PE and physical games hard'],
+ ['pace','Learns something, then has lost it again by the next week']
+],
+'9-12':[
+ ['read','Reading is accurate but slow and tiring; avoids longer texts'],
+ ['read','Spelling stays weak despite years of teaching'],
+ ['num','Times tables are still not secure; falls back on counting'],
+ ['num','Fractions, decimals or percentages feel impossible'],
+ ['num','Has no sense of whether an answer is roughly right'],
+ ['write','Written work is far simpler than what they can say aloud'],
+ ['write','Writes the bare minimum; strongly resists writing tasks'],
+ ['attn','Cannot plan or begin a longer task; freezes at where to start'],
+ ['attn','Forgets to hand in work that was actually finished'],
+ ['attn','Restless or distracted in class despite genuinely trying'],
+ ['pace','Falls a little further behind each year despite real effort'],
+ ['pace','Needs far more repetition than classmates before things stick'],
+ ['social','Has friendship difficulties, or feels left out'],
+ ['social','Is very distressed by changes to plans or routine'],
+ ['emo','Describes themselves as stupid, lazy or a failure',1],
+ ['emo','Seems anxious, tearful or withdrawn about school',1],
+ ['emo','Has angry outbursts or shutdowns that are hard to settle',1],
+ ['daily','Is much less independent than others their age'],
+ ['motor','Has coordination difficulties affecting writing, sport or daily tasks']
+],
+'13+':[
+ ['pace','Revision does not stick despite the hours put in'],
+ ['attn','Cannot organise time, deadlines or materials without help'],
+ ['attn','Consistently underestimates how long things will take'],
+ ['attn','Procrastinates heavily, then panics near the deadline'],
+ ['read','Reading is slow and tiring; struggles with the volume of text'],
+ ['write','Cannot finish written exams in the time allowed'],
+ ['write','Written work falls well short of their spoken ideas'],
+ ['num','Relies on a calculator for basic arithmetic'],
+ ['social','Is socially isolated, or finds friendships stressful'],
+ ['emo','Is anxious about school or exams to a degree that affects daily life',1],
+ ['emo','Has low mood, or has lost interest in things they used to enjoy',1],
+ ['emo','Avoids school, or asks not to go',1],
+ ['daily','Struggles with the independence expected at this age'],
+ ['pace','Grades do not reflect the effort clearly going in']
+]
+};
+
+/* Gates reflect widely published diagnostic thresholds, in plain language. */
+var GATES=[
+ {id:'dur',q:'Roughly how long has this been going on?',
+  opts:[['<6','Less than 6 months',0],['6+','6 months or longer',1],['yrs','A year or more',2]]},
+ {id:'set',q:'Where does it show up?',
+  opts:[['home','Mainly at home',0],['school','Mainly at school',0],['both','Both at home and at school',2]]},
+ {id:'imp',q:'Is it causing real difficulty day to day?',
+  opts:[['no','Not really, we manage',0],['some','Some difficulty',1],['yes','Yes, it is a daily struggle',2]]}
+];
+
+
+var band=null,answers={},gates={};
+var $=function(i){return document.getElementById(i);};
+
+BANDS.forEach(function(b){
+  var el=document.createElement('button');
+  el.textContent=b.label;
+  el.onclick=function(){band=b;answers={};buildQ();go(2);};
+  $('bandGrid').appendChild(el);
+});
+
+function go(n){
+  [1,2,3,4].forEach(function(i){$('stage'+i).classList.toggle('on',i===n);$('s'+i).classList.toggle('on',i<=n);});
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-function age(){var a=document.querySelector('#checkForm input[name=age]:checked');return a?a.value:'';}
+$('backToAge').onclick=function(){go(1);};
+$('backToQ').onclick=function(){go(2);};
+$('backToGates').onclick=function(){go(3);};
 
-document.getElementById('seeResult').addEventListener('click',function(){
-  var counts=tally();
-  var keys=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a]});
-  var top=keys.filter(function(k){return counts[k]>=2});
-  if(top.length===0) top=keys.slice(0,0); // none strong
-  var rt=document.getElementById('resultTitle'), ri=document.getElementById('resultIntro'), rc=document.getElementById('resultCards');
-  var total=keys.reduce(function(s,k){return s+counts[k]},0);
+function buildQ(){
+  var ms=band.mode==='milestone';
+  $('qHead').textContent = ms
+    ? 'Does your child do these things?'
+    : 'How often do you notice these?';
+  $('qLegend').innerHTML = ms
+    ? 'These are things <strong>most children</strong> can do by this age. Children vary a lot, and a few "not yet" answers are common and often fine.'
+    : 'Answer for how things usually are. <strong>Rarely</strong> is a perfectly good answer and tells us just as much as "often".';
+  var opts = ms
+    ? [['yes','Yes','pos'],['some','Sometimes','warn'],['no','Not yet','']]
+    : [['no','Rarely','pos'],['some','Sometimes','warn'],['yes','Often','']];
+  var byDom={};
+  Q[band.id].forEach(function(it,idx){ (byDom[it[0]]=byDom[it[0]]||[]).push([it,idx]); });
+  var html='';
+  Object.keys(byDom).forEach(function(d){
+    var D=DOMAINS[d];
+    html+='<div class="dom-block"><div class="dom-head"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="'+D.icon+'"/></svg></span><h3>'+D.name+'</h3></div>';
+    byDom[d].forEach(function(pair){
+      var it=pair[0],idx=pair[1];
+      html+='<div class="qrow"><div class="qtext">'+it[1]+'</div><div class="scale">';
+      opts.forEach(function(o){
+        html+='<label class="'+o[2]+'"><input type="radio" name="q'+idx+'" value="'+o[0]+'" data-dom="'+d+'"'+(it[2]?' data-wb="1"':'')+'><span>'+o[1]+'</span></label>';
+      });
+      html+='</div></div>';
+    });
+    html+='</div>';
+  });
+  $('qWrap').innerHTML=html;
+}
 
-  if(total===0){
-    rt.innerHTML="Nothing strongly flagged, and that's okay.";
-    ri.innerHTML="You didn't tick any signs, which is reassuring. If something still worries you, trust your instinct, a quick chat is always worthwhile.";
-    rc.innerHTML='';
-  } else if(top.length===0){
-    rt.innerHTML="A few mild signs to keep an eye on.";
-    ri.innerHTML="Nothing stood out strongly, but you noticed a few things. Often that's normal variation, sometimes it's an early signal. A free chat can give you peace of mind.";
-    rc.innerHTML='';
+$('toGates').onclick=function(){
+  var g='';
+  GATES.forEach(function(G){
+    g+='<div class="gate"><h4>'+G.q+'</h4><div class="scale">';
+    G.opts.forEach(function(o){
+      g+='<label><input type="radio" name="g'+G.id+'" value="'+o[0]+'" data-w="'+o[2]+'"><span>'+o[1]+'</span></label>';
+    });
+    g+='</div></div>';
+  });
+  $('gateWrap').innerHTML=g;
+  go(3);
+};
+
+$('seeResult').onclick=function(){
+  var ms=band.mode==='milestone';
+  var score={},wb=false,noted=[];
+  Q[band.id].forEach(function(it,idx){
+    var sel=document.querySelector('input[name="q'+idx+'"]:checked');
+    var d=it[0]; if(score[d]===undefined) score[d]=0;
+    if(!sel) return;
+    var v=sel.value, pts=0;
+    if(ms){ pts = (v==='no')?2:(v==='some')?1:0; }
+    else  { pts = (v==='yes')?2:(v==='some')?1:0; }
+    score[d]+=pts;
+    if(pts>0){ noted.push(it[1]); if(it[2]) wb=true; }
+  });
+  var gw=0,gdur='',gset='',gimp='';
+  GATES.forEach(function(G){
+    var s=document.querySelector('input[name="g'+G.id+'"]:checked');
+    if(s){ gw+=parseInt(s.dataset.w,10); var t=s.parentNode.querySelector('span').textContent;
+      if(G.id==='dur')gdur=t; if(G.id==='set')gset=t; if(G.id==='imp')gimp=t; }
+  });
+
+  var high=[],mid=[],fine=[];
+  Object.keys(score).forEach(function(d){
+    if(score[d]>=4) high.push(d); else if(score[d]>=2) mid.push(d); else fine.push(d);
+  });
+
+  var h='';
+  var anyConcern=high.length+mid.length;
+
+  if(anyConcern===0){
+    h+='<div class="rescore"><span class="pill ok">Nothing stood out</span></div>';
+    h+='<h2 style="font-size:1.5rem">Your answers suggest your child is doing well.</h2>';
+    h+='<p style="color:var(--ink-soft)">Across every area we asked about, nothing reached a level that would usually prompt a closer look. That is genuinely reassuring, and worth telling your child too.</p>';
+    h+='<p style="color:var(--ink-soft)">If something still nags at you that we did not ask about, trust it. Parents are usually right that something is worth a second look, and a short conversation costs nothing.</p>';
   } else {
-    var shown=top.slice(0,3);
-    var names=shown.map(function(k){return DOMAINS[k].name.replace(/&amp;/g,'&')});
-    rt.innerHTML="The areas worth looking at first";
-    ri.innerHTML="Based on what you ticked, these areas stand out. Remember, this is a starting point, not a diagnosis, and many of these overlap. Here's how we can help with each.";
-    rc.innerHTML=shown.map(function(k){var d=DOMAINS[k];return '<div class="rcard"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="'+d.icon+'"/></svg></span><div><h4>'+d.label+'</h4><p>'+d.desc+'</p><a href="'+d.page+'">Read how we help &rarr;</a></div></div>'}).join('');
-  }
-  var r=document.getElementById('result');
-  r.classList.add('show');
-  r.scrollIntoView({behavior:'smooth'});
-  if(window.gtag)gtag('event','screening_completed',{ticks:total,areas:keys.join(',')});
-});
+    h+='<div class="rescore">';
+    if(high.length) h+='<span class="pill look">'+high.length+' area'+(high.length>1?'s':'')+' worth a closer look</span>';
+    if(mid.length) h+='<span class="pill watch">'+mid.length+' to keep an eye on</span>';
+    if(fine.length) h+='<span class="pill ok">'+fine.length+' looking fine</span>';
+    h+='</div>';
 
-document.getElementById('sendWa').addEventListener('click',function(){
-  var name=(document.getElementById('pname').value||'').trim();
-  var phone=(document.getElementById('pphone').value||'').trim();
-  var consent=document.getElementById('consent').checked;
-  var err=document.getElementById('formErr');
-  if(!name||!phone||!consent){err.style.display='block';return;}
-  err.style.display='none';
-  var counts=tally();
-  var keys=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a]});
-  var top=keys.filter(function(k){return counts[k]>=2}).slice(0,3);
-  var areas=(top.length?top:keys).map(function(k){return DOMAINS[k].name.replace(/&amp;/g,'&')});
-  var L=["\u{1F44B} Hi! I just did the free learning check on your website.",''];
-  if(age())L.push("My child's age: "+age());
-  if(areas.length)L.push('Areas it suggested: '+areas.join(', '));
-  // list ticked signs
-  var sel=[];
-  document.querySelectorAll('#checkForm input[type=checkbox]:checked').forEach(function(c){sel.push('• '+c.parentNode.querySelector('span').textContent)});
-  if(sel.length){L.push('','Signs I ticked:');L=L.concat(sel);}
+    if(gw<=1){
+      h+='<h2 style="font-size:1.5rem">A few things to watch, but nothing urgent</h2>';
+      h+='<p style="color:var(--ink-soft)">You noted some difficulties, but from your last three answers they have not been going on long, appear in only one setting, or are not causing much day-to-day difficulty. Professionals weigh exactly those three things heavily, so this pattern often turns out to be normal variation, a temporary phase, or something specific to one situation. Worth watching rather than worrying.</p>';
+    } else {
+      h+='<h2 style="font-size:1.5rem">Some areas worth looking at properly</h2>';
+      h+='<p style="color:var(--ink-soft)">You noted difficulties that have persisted, show up in more than one place, or are causing real difficulty. That combination is the one worth acting on. This is still not a diagnosis, and areas often overlap, but it is a reasonable point to seek a proper look.</p>';
+    }
+
+    high.concat(mid).forEach(function(d){
+      var D=DOMAINS[d],n=score[d],cls=(n>=4?'hi':'mid');
+      h+='<div class="rdom '+cls+'"><h4><span style="color:var(--primary)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="'+D.icon+'"/></svg></span>'+D.name+'</h4><p>'+(n>=4?'Several things stood out here.':'One or two things to keep an eye on.')+'</p>';
+      if(D.guide) h+='<a href="'+D.guide+'">Read the '+D.gname+' &rarr;</a>';
+      h+='</div>';
+    });
+
+    if(fine.length){
+      var names=fine.map(function(d){return DOMAINS[d].name.replace(/&amp;/g,'&');});
+      h+='<div class="strengths-box"><b>Doing well:</b> '+names.join(', ')+'. Worth saying out loud, difficulty in one area says nothing about the rest of your child.</div>';
+    }
+  }
+
+  if(wb){
+    h+='<div class="wellbeing"><b>One thing we would gently flag.</b><p style="margin:6px 0 0;font-size:.95rem;color:var(--ink-soft)">Some of your answers touch on how your child is feeling: their mood, confidence, or willingness to go to school. That deserves attention in its own right, not only as part of a learning difficulty. If it has been going on a while, please also speak to your doctor, Klinik Kesihatan, or the school counsellor. We are glad to help you think it through, but a health professional should be in the loop on this one.</p></div>';
+  }
+
+  $('resultWrap').innerHTML=h;
+  window._noted=noted;
+  window._doms=high.concat(mid).map(function(d){return DOMAINS[d].name.replace(/&amp;/g,'&');});
+  window._gates=[gdur,gset,gimp];
+  if(window.gtag)gtag('event','screening_completed',{age_band:band.id,areas:window._doms.join(','),gate_weight:gw});
+  go(4);
+};
+
+$('sendWa').onclick=function(){
+  var name=($('pname').value||'').trim(),phone=($('pphone').value||'').trim(),ok=$('consent').checked;
+  if(!name||!phone||!ok){$('formErr').style.display='block';return;}
+  $('formErr').style.display='none';
+  var L=["\u{1F44B} Hi! I just did the free child check on your website.",''];
+  L.push("Child's age: "+band.label);
+  if(window._doms&&window._doms.length) L.push('Areas flagged: '+window._doms.join(', '));
+  else L.push('Nothing was flagged, but I would like to talk something through.');
+  if(window._gates) L.push('How long: '+window._gates[0]+' | Where: '+window._gates[1]+' | Impact: '+window._gates[2]);
+  if(window._noted&&window._noted.length){L.push('','What I noted:');window._noted.forEach(function(p){L.push('• '+p);});}
   L.push('','Name: '+name,'Phone: '+phone,'','Could we arrange a free 15-minute call?');
-  if(window.gtag)gtag('event','screening_lead',{areas:areas.join(',')});
-  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
-});
+  if(window.gtag)gtag('event','screening_lead',{age_band:band.id});
+  window.open('https://wa.me/60122127743?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
+};
+
 </script>
 </body>
 </html>
