@@ -122,6 +122,31 @@
   .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;margin-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.84rem;color:#7d86a8}
   .wa-float{position:fixed;bottom:22px;right:22px;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:var(--shadow-lg);z-index:60}
   @media(max-width:760px){.nav-links{display:none}.frow{grid-template-columns:1fr}}
+  /* explainer */
+  .explain{background:var(--paper);border-top:1px solid var(--line);padding:54px 0 10px}
+  .explain .container{max-width:760px}
+  .explain h2{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 14px}
+  .explain h3{font-size:1.18rem;margin:34px 0 8px}
+  .explain p{color:var(--ink-soft);margin:0 0 14px;font-size:1.02rem}
+  .explain .lead{font-size:1.1rem;color:var(--ink)}
+  .areas{list-style:none;margin:18px 0 6px;padding:0;display:grid;gap:2px}
+  .areas li{border-top:1px solid var(--line);padding:15px 0}
+  .areas li:last-child{border-bottom:1px solid var(--line)}
+  .areas strong{display:block;font-family:var(--font-display);font-size:1.04rem;color:var(--ink);margin-bottom:3px}
+  .areas span{font-size:.96rem;color:var(--ink-soft)}
+  .areas a{color:var(--primary);font-weight:600;white-space:nowrap}
+  .three{counter-reset:t;list-style:none;padding:0;margin:16px 0}
+  .three li{counter-increment:t;position:relative;padding:0 0 16px 46px;color:var(--ink-soft);font-size:1rem}
+  .three li::before{content:counter(t);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:rgba(58,79,181,.09);color:var(--primary);font-weight:700;font-size:.9rem;display:grid;place-items:center;font-family:var(--font)}
+  .three b{color:var(--ink)}
+  .mimic{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:22px 26px;margin:20px 0}
+  .mimic ul{margin:10px 0 0;padding-left:20px}
+  .mimic li{color:var(--ink-soft);font-size:.97rem;margin-bottom:9px}
+  .faq-q{border-top:1px solid var(--line);padding:18px 0}
+  .faq-q h3{margin:0 0 6px;font-size:1.06rem}
+  .faq-q p{margin:0;font-size:.98rem}
+  @media(max-width:620px){.explain{padding:40px 0 6px}}
+
 </style>
 
 <script type="application/ld+json">
@@ -286,6 +311,65 @@
   </div>
 </section>
 
+<section class="explain">
+  <div class="container">
+    <h2>Apa sebenarnya yang disemak di sini</h2>
+    <p class="lead">Kebanyakan ibu bapa datang ke sini dengan satu kerisauan. Membaca, atau bertutur, atau tidak boleh duduk diam. Semakan ini sengaja bertanya tentang sepuluh bidang, kerana bidang yang anda risaukan selalunya bukan punca sebenar masalah itu.</p>
+    <p>Anak yang tidak mahu duduk diam ketika membuat kerja sekolah mungkin ada masalah tumpuan. Atau mungkin dia pembaca yang baik dan mendapati kerja itu terlalu mudah, atau pembaca yang lemah yang sudah belajar bahawa meja itu tempat dia rasa bodoh. Di meja makan, ketiga-tiganya nampak sama sahaja. Yang membezakannya ialah corak merentas semua bidang lain, dan itulah sebabnya kami bertanya kesemua sepuluh.</p>
+
+    <h3>Sepuluh bidang itu</h3>
+    <ul class="areas">
+      <li><strong>Komunikasi dan bahasa</strong><span>Memahami apa yang diperkatakan, mencari perkataan, dan difahami oleh orang di luar keluarga. Pada kanak-kanak kecil, inilah bidang yang paling kerap muncul dahulu. <a href="speech-delay-support-ms.html">Panduan lewat bertutur</a></span></li>
+      <li><strong>Sosial dan bermain</strong><span>Menyertai rakan, membaca isyarat kanak-kanak lain, menghadapi perubahan, dan perhatian berkongsi. Kesukaran di sini bukan perkara yang sama dengan sifat pemalu. <a href="autism-support-ms.html">Panduan autisme</a></span></li>
+      <li><strong>Pergerakan dan koordinasi</strong><span>Keseimbangan, berlari dan memanjat, serta kawalan halus untuk butang, sudu garfu, gunting dan pensel.</span></li>
+      <li><strong>Berdikari harian</strong><span>Berpakaian, makan, ke tandas, tidur, menjaga barang sendiri. Ukuran yang senyap tetapi jujur tentang berapa banyak bantuan yang masih diperlukan.</span></li>
+      <li><strong>Emosi dan kesejahteraan</strong><span>Mengamuk, rasa bimbang, mood, keyakinan diri, dan cara anak bercakap tentang dirinya sendiri. Bidang ini amat penting tetapi paling jarang ditanya.</span></li>
+      <li><strong>Tumpuan dan pengurusan diri</strong><span>Mengekalkan fokus, menyiapkan apa yang dimulakan, mengingati arahan, menjaga barang. <a href="adhd-support-ms.html">Panduan ADHD dan tumpuan</a></span></li>
+      <li><strong>Membaca dan mengeja</strong><span>Bunyi huruf, menggabungkan bunyi, ketepatan dan daya tahan membaca, ejaan yang tetap tidak menentu. <a href="dyslexia-support-ms.html">Panduan disleksia</a></span></li>
+      <li><strong>Nombor dan matematik</strong><span>Rasa kuantiti, fakta nombor, nilai tempat, membaca jam, mengendalikan wang. <a href="dyscalculia-support-ms.html">Panduan diskalkulia</a></span></li>
+      <li><strong>Menulis dan tulisan tangan</strong><span>Cara memegang pensel, membentuk huruf, kelajuan, dan jurang antara apa yang anak boleh sebut dengan apa yang dapat ditulis. <a href="dysgraphia-support-ms.html">Panduan disgrafia</a></span></li>
+      <li><strong>Kelajuan belajar dan ingatan</strong><span>Berapa lama pembelajaran baharu mengambil masa untuk melekat, dan sama ada ia masih ada minggu depan. <a href="slow-learners-support-ms.html">Panduan belajar mengikut kadar sendiri</a></span></li>
+    </ul>
+
+    <h3>Mengapa kami tanya umur anak dahulu</h3>
+    <p>Kerana hampir tiada apa-apa di halaman ini bermakna tanpanya. Anak berumur empat tahun yang terkeliru antara b dan d sedang buat perkara yang memang biasa pada umur itu. Anak berumur sembilan tahun yang buat perkara sama sedang memberitahu anda sesuatu. Belum boleh membaca pada umur lima tahun bukan perkara luar biasa di Malaysia, kerana kanak-kanak mula membaca secara formal pada waktu berbeza bergantung kepada sistem sekolah. Belum boleh membaca pada umur lapan tahun wajar diberi perhatian.</p>
+    <p>Semakan ini menggunakan lima kumpulan umur, dan soalannya berubah sepenuhnya antara kumpulan. Bagi kanak-kanak bawah enam tahun, soalan mengikut pendekatan pencapaian tumbesaran yang diterbitkan secara terbuka oleh CDC dalam bahan "Learn the Signs. Act Early.", yang bertanya apa yang kebanyakan kanak-kanak seumur itu boleh buat, bukan apa yang anak yang bermasalah tidak boleh buat. Dari umur enam tahun ke atas, soalan beralih kepada berapa kerap sesuatu berlaku, kerana pada usia itu petunjuk yang berguna ialah kekerapan.</p>
+
+    <h3>Tiga soalan yang paling penting</h3>
+    <p>Di penghujung semakan, kami tanya tiga perkara yang nampak terlalu mudah. Ia ada di situ kerana ia hampir sama dengan apa yang ditimbang oleh profesional sebelum mempertimbangkan sebarang penilaian formal.</p>
+    <ol class="three">
+      <li><b>Sudah berapa lama ia berlaku?</b> Enam bulan ialah garis kasarnya. Di bawah itu, kehidupan biasa sudah cukup menjelaskan kebanyakan perkara. Adik baharu, pindah rumah, penggal yang sukar, guru yang tidak serasi.</li>
+      <li><b>Adakah ia berlaku di lebih daripada satu tempat?</b> Kesukaran yang muncul hanya di sekolah, atau hanya di rumah, biasanya menunjukkan sesuatu tentang tempat itu. Kesukaran yang mengikut anak ke mana-mana adalah lain ceritanya.</li>
+      <li><b>Adakah ia benar-benar menyusahkan?</b> Inilah yang selalu dilangkau. Seorang anak boleh menanda banyak kotak dan tetap gembira, tetap belajar, dan tetap baik-baik sahaja. Jika tiada apa yang hilang, mungkin tiada apa yang perlu dibaiki.</li>
+    </ol>
+    <p>Ketiga-tiganya perlu benar sebelum sesuatu corak itu wajar dibawa lebih jauh. Satu sahaja jarang bermakna apa-apa.</p>
+
+    <h3>Perkara yang nampak seperti masalah pembelajaran tetapi selalunya bukan</h3>
+    <div class="mimic">
+      <p>Sebelum sesiapa mencapai sesuatu label, perkara berikut wajar disingkirkan dahulu. Beberapa daripadanya murah atau percuma untuk diperiksa, dan amat kerap terlepas pandang.</p>
+      <ul>
+        <li><b>Pendengaran.</b> Telinga berair adalah biasa, datang dan pergi, dan menghasilkan anak yang nampak tidak fokus serta lambat bertindak balas apabila diajak bercakap. Ujian pendengaran di Klinik Kesihatan kosnya sangat rendah.</li>
+        <li><b>Penglihatan.</b> Rabun jauh yang tidak dikesan menjadikan bacaan tidak selesa secara fizikal, jadi anak mengelak daripada membaca. Saringan penglihatan di sekolah tidak semestinya menangkapnya.</li>
+        <li><b>Tidur.</b> Anak yang letih nampak seperti anak yang tidak menumpukan perhatian. Berdengkur, bernafas melalui mulut dan tidur yang tidak lena wajar disebut kepada doktor anda.</li>
+        <li><b>Beban bahasa.</b> Ramai kanak-kanak Malaysia menguruskan bahasa Inggeris, Bahasa Melayu dan bahasa rumah serentak, kadangkala Mandarin atau Tamil sekali. Perbendaharaan kata yang lebih perlahan dalam salah satu bahasa boleh jadi normal sepenuhnya. Yang penting ialah jumlah keseluruhan merentas semua bahasanya.</li>
+        <li><b>Umur dalam kelas yang sama.</b> Anak yang lahir pada bulan Disember hampir setahun lebih muda daripada rakan sekelas yang lahir pada bulan Januari, dan pada tahun-tahun awal jurang itu amat besar.</li>
+        <li><b>Kebimbangan.</b> Rasa risau kelihatan seperti hilang tumpuan, mengelak dan mudah lupa. Ia kerap disalah anggap sebagai masalah tumpuan, dan kadangkala sebaliknya pula.</li>
+      </ul>
+    </div>
+
+    <h3>Apa yang perlu dibuat dengan keputusan anda</h3>
+    <p>Keputusan ini bukan diagnosis dan sengaja tidak memberi sebarang markah. Ia hanya menyusun sepuluh bidang tadi kepada apa yang nampak baik dan apa yang mungkin wajar diperhatikan dengan lebih dekat, dan setakat itulah yang boleh dilakukan secara jujur oleh mana-mana soal selidik ibu bapa. Hanya profesional bertauliah boleh membuat diagnosis, dan mereka melakukannya melalui penilaian terus ke atas anak anda, bukan melalui borang.</p>
+    <p>Jika sesuatu bidang keluar sebagai wajar diperhatikan, langkah seterusnya yang munasabah selalunya bukan penilaian swasta yang mahal. Ia bermula dengan berbual dengan guru anak anda sama ada mereka nampak perkara yang sama, pemeriksaan pendengaran dan penglihatan, dan kemudian melihat betul-betul sama ada bantuan yang disasarkan mengubah apa-apa dalam tempoh satu penggal. Jika ia berubah, mungkin anda tidak perlukan apa-apa lagi. Jika tidak, itu sendiri menjadi bukti berguna untuk dibawa kepada pakar pediatrik atau ahli psikologi.</p>
+    <p>Kami sudi menjadi perbualan pertama itu, dan akan berterus terang jika kami rasa anda perlukan orang lain selain kami.</p>
+
+    <h2 style="margin-top:44px">Soalan lazim</h2>
+    <div class="faq-q"><h3>Adakah ini ujian saringan sebenar?</h3><p>Tidak, dan kami berhati-hati untuk tidak menamakannya begitu. Ia cara tersusun untuk menyusun apa yang anda sudah perasan. Instrumen saringan yang disahkan mempunyai hak cipta, memerlukan latihan untuk mentadbir dan menskor, dan tidak diterbitkan semula di sini atau di mana-mana halaman laman ini.</p></div>
+    <div class="faq-q"><h3>Anak saya menanda kotak dalam beberapa bidang. Adakah itu teruk?</h3><p>Belum tentu. Kesukaran pembelajaran banyak bertindih. Anak yang bergelut dalam satu bidang selalunya nampak goyah dalam bidang lain semata-mata kerana keyakinan yang hilang. Beberapa bidang yang ditanda adalah sebab untuk melihat dengan betul, bukan sebab untuk panik.</p></div>
+    <div class="faq-q"><h3>Semuanya nampak baik tetapi saya masih risau. Apa sekarang?</h3><p>Percayalah pada rasa risau itu. Ibu bapa selalunya betul bahawa ada sesuatu yang berbeza, walaupun tersilap tentang apa perkaranya. Soal selidik hanya bertanya apa yang terfikir untuk ditanya. Jika naluri anda berkata lain, berbincanglah dengan seseorang.</p></div>
+    <div class="faq-q"><h3>Perlukah diagnosis sebelum anak saya boleh belajar di sini?</h3><p>Tidak. Kebanyakan kanak-kanak yang bersama kami datang tanpa diagnosis, dan sebahagiannya tidak pernah mengejarnya. Sokongan dibina mengikut apa yang anak benar-benar rasa sukar, dan itu tidak memerlukan sebarang label.</p></div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -377,6 +461,14 @@ document.getElementById('sendWa').addEventListener('click',function(){
   if(window.gtag)gtag('event','screening_lead',{areas:areas.join(',')});
   window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
 });
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"ms-MY","mainEntity":[
+{"@type":"Question","name":"Adakah ini ujian saringan sebenar?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Ia cara tersusun untuk menyusun apa yang ibu bapa sudah perasan. Instrumen saringan yang disahkan mempunyai hak cipta, memerlukan latihan untuk mentadbir dan menskor, dan tidak diterbitkan semula di sini."}},
+{"@type":"Question","name":"Anak saya menanda kotak dalam beberapa bidang. Adakah itu teruk?","acceptedAnswer":{"@type":"Answer","text":"Belum tentu. Kesukaran pembelajaran banyak bertindih, dan anak yang bergelut dalam satu bidang selalunya nampak goyah dalam bidang lain kerana keyakinan yang hilang. Ia sebab untuk melihat dengan betul, bukan sebab untuk panik."}},
+{"@type":"Question","name":"Semuanya nampak baik tetapi saya masih risau. Apa sekarang?","acceptedAnswer":{"@type":"Answer","text":"Percayalah pada rasa risau itu. Ibu bapa selalunya betul bahawa ada sesuatu yang berbeza, walaupun tersilap tentang apa perkaranya. Berbincanglah dengan seseorang."}},
+{"@type":"Question","name":"Perlukah diagnosis sebelum anak saya boleh belajar di Lodestone?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Kebanyakan kanak-kanak yang bersama kami datang tanpa diagnosis. Sokongan dibina mengikut apa yang anak benar-benar rasa sukar, dan itu tidak memerlukan label."}}]}
 </script>
 </body>
 </html>

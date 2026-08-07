@@ -172,6 +172,31 @@
   .gate .scale{flex-wrap:wrap}
   .legend{font-size:.84rem;color:var(--ink-soft);background:#eef1fb;border-radius:10px;padding:10px 14px;margin:10px 0 4px}
   @media(max-width:700px){.qrow{grid-template-columns:1fr;gap:8px}.scale{width:100%}.scale label{flex:1}.scale span{display:block;text-align:center;padding:9px 4px}}
+  /* explainer */
+  .explain{background:var(--paper);border-top:1px solid var(--line);padding:54px 0 10px}
+  .explain .container{max-width:760px}
+  .explain h2{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 14px}
+  .explain h3{font-size:1.18rem;margin:34px 0 8px}
+  .explain p{color:var(--ink-soft);margin:0 0 14px;font-size:1.02rem}
+  .explain .lead{font-size:1.1rem;color:var(--ink)}
+  .areas{list-style:none;margin:18px 0 6px;padding:0;display:grid;gap:2px}
+  .areas li{border-top:1px solid var(--line);padding:15px 0}
+  .areas li:last-child{border-bottom:1px solid var(--line)}
+  .areas strong{display:block;font-family:var(--font-display);font-size:1.04rem;color:var(--ink);margin-bottom:3px}
+  .areas span{font-size:.96rem;color:var(--ink-soft)}
+  .areas a{color:var(--primary);font-weight:600;white-space:nowrap}
+  .three{counter-reset:t;list-style:none;padding:0;margin:16px 0}
+  .three li{counter-increment:t;position:relative;padding:0 0 16px 46px;color:var(--ink-soft);font-size:1rem}
+  .three li::before{content:counter(t);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:rgba(58,79,181,.09);color:var(--primary);font-weight:700;font-size:.9rem;display:grid;place-items:center;font-family:var(--font)}
+  .three b{color:var(--ink)}
+  .mimic{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:22px 26px;margin:20px 0}
+  .mimic ul{margin:10px 0 0;padding-left:20px}
+  .mimic li{color:var(--ink-soft);font-size:.97rem;margin-bottom:9px}
+  .faq-q{border-top:1px solid var(--line);padding:18px 0}
+  .faq-q h3{margin:0 0 6px;font-size:1.06rem}
+  .faq-q p{margin:0;font-size:.98rem}
+  @media(max-width:620px){.explain{padding:40px 0 6px}}
+
 </style>
 
 <script type="application/ld+json">
@@ -276,6 +301,65 @@
 
       <p style="font-size:.8rem;color:#8a90a8;margin-top:20px;border-top:1px solid var(--line);padding-top:14px;line-height:1.6">This check is written by our education team in plain language. Prompts for younger children follow the publicly available CDC "Learn the Signs. Act Early." milestone approach; school-age prompts reflect widely published clinical concepts around persistence, setting and impact. It is not a validated screening instrument, reproduces none, and gives no score or diagnosis.</p>
     </div>
+  </div>
+</section>
+
+<section class="explain">
+  <div class="container">
+    <h2>What this check is actually looking at</h2>
+    <p class="lead">Most parents arrive here with one worry. Reading, or talking, or sitting still. The check deliberately asks about ten areas instead, because the area you are worried about is often not the area causing the trouble.</p>
+    <p>A child who will not sit still for homework may have an attention difficulty. Or they may be a strong reader who finds the work far too easy, or a weak reader who has learned that the desk is where they feel stupid. The behaviour looks identical from the kitchen table. What separates them is the pattern across everything else, which is why we ask about all ten.</p>
+
+    <h3>The ten areas</h3>
+    <ul class="areas">
+      <li><strong>Communication and language</strong><span>Understanding what is said, finding words, being understood by people outside the family. In younger children this is the area that most often shows up first. <a href="guide-speech-delay.html">Speech and language guide</a></span></li>
+      <li><strong>Social and play</strong><span>Joining in, reading other children, managing change, shared attention. Difficulty here is not the same thing as shyness. <a href="guide-autism.html">Autism guide</a></span></li>
+      <li><strong>Movement and coordination</strong><span>Balance, running and climbing, and the fine control needed for buttons, cutlery, scissors and pencils.</span></li>
+      <li><strong>Everyday independence</strong><span>Dressing, eating, toileting, sleeping, managing their own things. A quiet but honest measure of how much scaffolding a child still needs.</span></li>
+      <li><strong>Emotions and wellbeing</strong><span>Meltdowns, worry, mood, confidence, how they talk about themselves. This one matters enormously and gets asked about least.</span></li>
+      <li><strong>Attention and organisation</strong><span>Holding focus, finishing what they start, remembering instructions, keeping track of belongings. <a href="guide-adhd.html">ADHD and focus guide</a></span></li>
+      <li><strong>Reading and spelling</strong><span>Letter sounds, blending, reading accuracy and stamina, spelling that stays unpredictable. <a href="guide-dyslexia.html">Dyslexia guide</a></span></li>
+      <li><strong>Numbers and maths</strong><span>Sense of quantity, number facts, place value, telling time, handling money. <a href="guide-dyscalculia.html">Dyscalculia guide</a></span></li>
+      <li><strong>Writing and handwriting</strong><span>Grip, letter formation, speed, and the gap between what a child can say and what they can get onto paper. <a href="guide-dysgraphia.html">Dysgraphia guide</a></span></li>
+      <li><strong>Pace and remembering</strong><span>How long new learning takes to stick, and whether it is still there next week. <a href="guide-slow-learners.html">Own-pace learning guide</a></span></li>
+    </ul>
+
+    <h3>Why we ask for your child's age first</h3>
+    <p>Because almost nothing on this page means anything without it. A four year old who mixes up b and d is doing exactly what four year olds do. A nine year old doing the same thing is telling you something. Not reading at five is unremarkable in Malaysia, where children start formal reading at different points depending on the school system. Not reading at eight is worth attention.</p>
+    <p>The check uses five age bands, and the questions change completely between them. For children under six the prompts follow the milestone approach used in the CDC's publicly available "Learn the Signs. Act Early." materials, which ask what most children that age can do rather than what a struggling child cannot. From six upwards the questions shift to how often something happens, because by then the useful signal is frequency rather than presence.</p>
+
+    <h3>The three questions that matter most</h3>
+    <p>At the end of the check we ask three things that feel almost too simple. They are there because they are close to what a professional weighs before considering any formal assessment.</p>
+    <ol class="three">
+      <li><b>How long has it been going on?</b> Six months is the rough line. Below that, ordinary life explains most things. A new sibling, a move, a bad term, a difficult teacher.</li>
+      <li><b>Does it happen in more than one place?</b> A difficulty that appears only at school, or only at home, usually points to something about that setting. A difficulty that travels with the child is different.</li>
+      <li><b>Is it actually causing difficulty?</b> This is the one people skip. A child can tick a great many boxes and still be happy, learning and getting on fine. If nothing is being lost, there may be nothing to fix.</li>
+    </ol>
+    <p>All three need to be true before a pattern is worth taking further. One on its own rarely means much.</p>
+
+    <h3>Things that look like a learning difficulty and usually are not</h3>
+    <div class="mimic">
+      <p>Before anyone reaches for a label, these are worth ruling out. Several are cheap or free to check and are missed surprisingly often.</p>
+      <ul>
+        <li><b>Hearing.</b> Glue ear is common, comes and goes, and produces a child who seems inattentive and slow to respond to speech. A hearing test at a Klinik Kesihatan costs very little.</li>
+        <li><b>Vision.</b> Undiagnosed long-sightedness makes reading physically uncomfortable, so children avoid it. School vision screening does not always catch it.</li>
+        <li><b>Sleep.</b> A tired child looks like an inattentive child. Snoring, mouth breathing and restless nights are worth mentioning to your doctor.</li>
+        <li><b>Language load.</b> Many Malaysian children are managing English, Bahasa Melayu and a home language at once, sometimes Mandarin or Tamil as well. Slower vocabulary in any one of them can be perfectly normal. What matters is the total across all their languages.</li>
+        <li><b>Age within the year.</b> A child born in December is nearly a year younger than a classmate born in January, and in the early years that gap is enormous.</li>
+        <li><b>Anxiety.</b> Worry looks like distraction, avoidance and forgetting. It is often mistaken for attention difficulty, and occasionally the other way round.</li>
+      </ul>
+    </div>
+
+    <h3>What to do with your result</h3>
+    <p>The result is not a diagnosis and gives no score, deliberately. It sorts the ten areas into what looks fine and what might be worth a closer look, and that is as far as any parent questionnaire can honestly go. Only a qualified professional can diagnose, and they do it with direct assessment of your child, not a form.</p>
+    <p>If something comes back as worth a closer look, the sensible next step is usually not an expensive private assessment. It is a conversation with your child's teacher about whether they see the same thing, a hearing and vision check, and then a proper look at whether targeted help changes anything over a term. If it does, you may not need anything further. If it does not, that itself is useful evidence to bring to a paediatrician or psychologist.</p>
+    <p>We are happy to be the first of those conversations, and to say plainly if we think you need someone other than us.</p>
+
+    <h2 style="margin-top:44px">Common questions</h2>
+    <div class="faq-q"><h3>Is this a real screening test?</h3><p>No, and we are careful not to call it one. It is a structured way of organising what you already notice. Validated screening instruments are copyrighted, require training to administer and score, and are not reproduced here or anywhere on this site.</p></div>
+    <div class="faq-q"><h3>My child ticked boxes in several areas. Is that bad?</h3><p>Not necessarily. Difficulties overlap a great deal. Roughly a third to a half of children with one learning difference have features of another, and a child who is struggling in one area often looks wobbly in others simply from lost confidence. Several flagged areas is a reason to look properly, not a reason to panic.</p></div>
+    <div class="faq-q"><h3>Everything came back fine but I am still worried. What now?</h3><p>Trust the worry. Parents are usually right that something is different, even when they are wrong about what it is. A questionnaire only asks what it thinks to ask. If your instinct says otherwise, talk to someone.</p></div>
+    <div class="faq-q"><h3>Do I need a diagnosis before you will work with my child?</h3><p>No. Most of the children we work with come to us without one, and some never pursue one. Support is built around what a child actually finds hard, which does not require a label.</p></div>
   </div>
 </section>
 
@@ -584,6 +668,14 @@ $('sendWa').onclick=function(){
   window.open('https://wa.me/60122127743?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
 };
 
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this a real screening test?","acceptedAnswer":{"@type":"Answer","text":"No. It is a structured way of organising what a parent already notices. Validated screening instruments are copyrighted, require training to administer and score, and are not reproduced here."}},
+{"@type":"Question","name":"My child ticked boxes in several areas. Is that bad?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Learning difficulties overlap a great deal, and a child struggling in one area often looks wobbly in others from lost confidence. Several flagged areas is a reason to look properly, not a reason to panic."}},
+{"@type":"Question","name":"Everything came back fine but I am still worried. What now?","acceptedAnswer":{"@type":"Answer","text":"Trust the worry. Parents are usually right that something is different, even when they are wrong about what it is. A questionnaire only asks what it thinks to ask."}},
+{"@type":"Question","name":"Do I need a diagnosis before Lodestone will work with my child?","acceptedAnswer":{"@type":"Answer","text":"No. Most children we work with come without a diagnosis and some never pursue one. Support is built around what a child actually finds hard, which does not require a label."}}]}
 </script>
 </body>
 </html>
