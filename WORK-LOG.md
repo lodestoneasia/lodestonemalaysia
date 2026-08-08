@@ -69,10 +69,8 @@ Don't re-request the same URL repeatedly — it burns quota and speeds nothing u
 
 ## What still needs doing — mine
 
-- **Roll the consolidated nav to the other 26 pages.** Only `index.html` and `index-ms.html` have the three grouped dropdowns. The rest still carry the old flat nav. (Mobile *behaviour* is now standard everywhere — see item 7 — but the dropdown *structure* is still homepage-only.)
 - **Malay versions** of `lodestone-evo.html`, `for-schools.html` and the three location pages.
 - **Per-guide social preview images.** All 14 guides currently share `og-image.png`.
-- **PDF download buttons** on the guide pages — the PDFs exist but aren't linked from the guides.
 - **Homepage section + sticky mobile bar** for the free check (proposed, never built).
 
 ---
@@ -237,6 +235,22 @@ The page could still be swiped sideways on a real phone even though the diagnost
 
 **Why the earlier diagnostic missed it:** it skipped `position:fixed` elements by design, and it measured pages inside an iframe. Neither fully represents a real mobile viewport with a resizing address bar. A clean result from that tool means "the document fits", not "the page cannot be swiped".
 
+### 8. Consolidated nav rolled out site-wide · `e35432e` · 40 files
+
+Every page now carries the same three grouped dropdowns (Support, Programs, Specialists) plus For Schools, replacing flat rows of up to ten links. Malay pages get Malay labels. `aria-current="page"` marks the current page in the menu.
+
+The desktop dropdown CSS was added to the 19 guide and screening pages that had never had it. Existing language switches, Easy read toggles and CTAs were preserved.
+
+**Two bugs found and fixed during the rollout:**
+
+**a. 80 cross-language links.** Malay pages linked to English pages throughout their navigation *and* body copy — `adhd-support-ms.html` pointed at `dyslexia-support.html`, `guides.html`, `screening-check.html` and others. A Malay-speaking parent was dumped into English after a single click. All repointed to their `-ms` equivalents. The EN/BM switcher is deliberately left crossing languages.
+
+**b. An unclosed `<div class="container">`** in the Specialists section of both homepages. Pre-existing, browsers auto-corrected it, but the section was nesting wrongly.
+
+### 9. Guide PDFs linked · 14 files
+
+The 14 guide PDFs had been sitting in the repo unlinked since they were generated. Each guide now carries a download card directly under its contents box — English guides link the English PDF, Malay guides the BM one. Placed near the top rather than the end, since a parent who wants to read it later decides that early.
+
 ---
 
 ## Site health at time of writing
@@ -253,6 +267,10 @@ JSON-LD blocks              139, all valid
 JS blocks parsing clean     128
 Mobile nav breakpoints      1 (was 4)
 Pages fitting at 360px      33 of 34
+Pages with the grouped nav  41 of 41
+Cross-language links         0
+Unbalanced HTML tags         0
+Guide PDFs linked           14 of 14
 ```
 
 ---
