@@ -4,6 +4,8 @@
 **Repo:** github.com/lodestoneasia/lodestonemalaysia (branch `main`)
 **Live:** thelodestonesolution.com
 
+> This log is updated automatically after every change. If work has been done, it's recorded here.
+
 ---
 
 ## What still needs doing — yours
@@ -67,7 +69,7 @@ Don't re-request the same URL repeatedly — it burns quota and speeds nothing u
 
 ## What still needs doing — mine
 
-- **Roll the consolidated nav to the other 26 pages.** Only `index.html` has it. The rest still carry the old flat nav, and mobile breakpoints are inconsistent (index 980px, support pages 900px, guides 820px).
+- **Roll the consolidated nav to the other 26 pages.** Only `index.html` and `index-ms.html` have the three grouped dropdowns. The rest still carry the old flat nav. (Mobile *behaviour* is now standard everywhere — see item 7 — but the dropdown *structure* is still homepage-only.)
 - **Malay versions** of `lodestone-evo.html`, `for-schools.html` and the three location pages.
 - **Per-guide social preview images.** All 14 guides currently share `og-image.png`.
 - **PDF download buttons** on the guide pages — the PDFs exist but aren't linked from the guides.
@@ -181,6 +183,46 @@ Each carries `lang=ms`, a self-referencing canonical, the full en-MY / ms-MY / x
 
 **Deliberately left in English:** book titles (*Overcoming Dyslexia*, *Uniquely Human*, *Make It Stick*), organisation names (NASOM, Hanen Centre, British Dyslexia Association, Child Mind Institute) and the brand itself.
 
+### 7. Mobile navigation fixed site-wide · `feb94f9`, `a194826` · 41 files
+
+Reported from an Android and an iOS device: the page scrolled sideways and the menu button sat off-screen to the right.
+
+**Three faults, one of them mine.**
+
+**a. The button row never collapsed.** Below 980px the nav *links* hid correctly, but the buttons beside them were never included in that rule, so they stayed at desktop size. On the homepage that made the bar roughly 714px wide inside a 360px viewport, pushing the hamburger about 320px off-screen.
+
+That row already held three buttons and was already overflowing before the nav change in `2173fd7`. I added a fourth — "Free 2-min check", the widest, with `white-space:nowrap` so it couldn't even shrink. I made an existing fault considerably worse and should have checked at phone width before pushing.
+
+**b. Nineteen pages had no mobile menu at all** — 14 guides, both guides hubs, both screening pages, Lodestone Evo. Their hamburger was wired to `location.href='#contact'` with no open-menu CSS or JS behind it. Below 900px the navigation simply disappeared. Pre-existing.
+
+**c. Lodestone Evo had no collapse rule whatsoever.**
+
+**Fixed:**
+
+- One breakpoint (980px) everywhere, replacing 980 / 900 / 820 / 760
+- Collapsed bar now carries only logo + gold check + hamburger
+- Easy read, language switch and Book a call are **moved** into the open panel by JS on phones and moved back on desktop. Moved rather than cloned, so the Easy read toggle keeps its single ID
+- Real working menu on the 19 pages that had none; the old onclick is stripped at runtime
+- Homepage dropdowns become tap-to-expand accordions on touch
+- Removed a duplicate mobile-menu script from `index` and `index-ms` that would have double-toggled and cancelled itself out
+- `body{overflow-x:clip}` rather than `overflow-x:hidden`, which would have broken `position:sticky` on the nav bar
+
+**Measured on a real device afterwards** (a temporary diagnostic page, since the sandbox blocks headless browsers):
+
+```
+index.html        360px in a 360px screen   fits
+lodestone-evo     360px                     fits
+guides, guide-*, screening ×2,
+adhd-support, for-schools                   fits
+index-ms.html     362px                     2px, sub-pixel rounding
+```
+
+Every oversized decorative element — the 400px spotlight, the 5,269px marquee track, the Evo mountain layers — is now clipped by its container rather than dragging the page sideways.
+
+The diagnostic page was deleted afterwards (`a194826`).
+
+**Left alone by decision:** the two floating buttons, "Urgent? Call us now" and WhatsApp, stay as separate buttons.
+
 ---
 
 ## Site health at time of writing
@@ -193,7 +235,10 @@ Pages missing from sitemap  0
 Titles over 60 chars        0
 Sitemap URLs               45
 Sitemap XML                 valid
-JSON-LD blocks              all valid
+JSON-LD blocks              139, all valid
+JS blocks parsing clean     128
+Mobile nav breakpoints      1 (was 4)
+Pages fitting at 360px      33 of 34
 ```
 
 ---
@@ -207,3 +252,9 @@ JSON-LD blocks              all valid
 **JavaScript-built content is close to invisible.** If a future page generates its content with JS, it needs static prose alongside it or Google won't index it.
 
 **Google Business Profile outweighs almost everything for brand searches.** Make sure the GBP name is exactly "The Lodestone Centre" and its website field points at the bare homepage.
+
+**Check phone width before pushing any nav or layout change.** The 980px collapse rule must cover *every* item in the header, not just the links. Drag a desktop browser narrow, or use the device toolbar in dev tools.
+
+**If the layout misbehaves on mobile again**, the fastest route is a temporary diagnostic page that iframes the site at 360px and reports which elements exceed the viewport and whether an ancestor already clips them. It takes one tap on a real phone and removes all the guesswork. Rebuild it rather than reasoning from the CSS.
+
+**`overflow-x: hidden` on `html` or `body` breaks `position:sticky`.** Use `overflow-x: clip` instead.
