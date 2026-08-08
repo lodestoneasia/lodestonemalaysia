@@ -201,6 +201,20 @@ img,svg,video,iframe{max-width:100%}
   .nav-check{padding:8px 11px;font-size:.74rem}
   .nav-inner{gap:8px}
 }
+
+  /* desktop dropdown nav */
+  .nav-dd{position:relative;display:inline-flex;align-items:center}
+  .nav-dd-toggle{display:inline-flex;align-items:center;gap:5px;font-size:.94rem;font-weight:500;color:var(--ink-soft);cursor:pointer;transition:color .2s}
+  .nav-dd:hover .nav-dd-toggle{color:var(--ink)}
+  .nav-dd-toggle svg{width:11px;height:11px;transition:transform .25s var(--ease)}
+  .nav-dd:hover .nav-dd-toggle svg{transform:rotate(180deg)}
+  .nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);min-width:204px;background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:8px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transition:opacity .2s var(--ease),transform .2s var(--ease);z-index:60}
+  .nav-dd-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
+  .nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(6px)}
+  .nav-dd-menu a{padding:9px 13px;border-radius:10px;font-size:.9rem;font-weight:500;color:var(--ink-soft);white-space:nowrap}
+  .nav-dd-menu a:hover{background:rgba(58,79,181,.07);color:var(--primary)}
+  .nav-dd-menu .dd-head{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#9aa0b5;padding:7px 13px 3px;display:block}
+  .nav-dd-menu .dd-sep{display:block;height:1px;background:var(--line);margin:6px 4px}
 </style>
 
 <script type="application/ld+json">
@@ -242,10 +256,46 @@ img,svg,video,iframe{max-width:100%}
       <span class="wordmark"><span class="wm-the">The</span><span class="wm-name">Lodestone</span><span class="wm-tag">Etiquette &middot; Virtue &middot; Order</span></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html#programs">Programs</a>
-      <a href="guides.html">Parent Guides</a>
-      <a href="index.html#support">Support</a>
-      <a href="screening-check.html">Free Check</a>
+      <div class="nav-dd">
+        <a href="index.html#support" class="nav-dd-toggle">Support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="nav-dd-menu">
+          <span class="dd-head">By your child's need</span>
+          <a href="adhd-support.html">ADHD &amp; focus</a>
+          <a href="dyslexia-support.html">Dyslexia &amp; reading</a>
+          <a href="dyscalculia-support.html">Dyscalculia &amp; maths</a>
+          <a href="dysgraphia-support.html">Dysgraphia &amp; writing</a>
+          <a href="autism-support.html">Autism</a>
+          <a href="speech-delay-support.html">Speech delay</a>
+          <a href="slow-learners-support.html">Learning at own pace</a>
+          <span class="dd-sep"></span>
+          <span class="dd-head">Not sure yet?</span>
+          <a href="index.html#finder"><strong>Find your path</strong> &middot; 30-sec quiz</a>
+          <a href="guides.html"><strong>Parent Guides &rarr;</strong></a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <a href="index.html#programs" class="nav-dd-toggle">Programs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="nav-dd-menu">
+          <a href="index.html#programs">Say Play (Speech)</a>
+          <a href="index.html#programs">SEL Program</a>
+          <a href="index.html#programs">Screening</a>
+          <a href="index.html#programs">Math Program</a>
+          <a href="index.html#programs">Progressive Coding</a>
+          <a href="index.html#programs">IGCSE Crash Course</a>
+          <span class="dd-sep"></span>
+          <a href="lodestone-evo.html"><strong>Lodestone Evo</strong> &middot; ages 2&ndash;6</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <a href="index.html#team" class="nav-dd-toggle">Specialists <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="nav-dd-menu">
+          <a href="index.html#team">Our specialists</a>
+          <a href="index.html#process">How it works</a>
+          <a href="index.html#about">About the centre</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+      </div>
+      <a href="for-schools.html">For Schools</a>
       <button class="a11y" id="easyToggle" aria-pressed="false" title="Easier reading">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h12M4 17h8"/></svg>Easy read
       </button>

@@ -142,6 +142,20 @@ img,svg,video,iframe{max-width:100%}
   .nav-check{padding:8px 11px;font-size:.74rem}
   .nav-inner{gap:8px}
 }
+
+  /* desktop dropdown nav */
+  .nav-dd{position:relative;display:inline-flex;align-items:center}
+  .nav-dd-toggle{display:inline-flex;align-items:center;gap:5px;font-size:.94rem;font-weight:500;color:var(--ink-soft);cursor:pointer;transition:color .2s}
+  .nav-dd:hover .nav-dd-toggle{color:var(--ink)}
+  .nav-dd-toggle svg{width:11px;height:11px;transition:transform .25s var(--ease)}
+  .nav-dd:hover .nav-dd-toggle svg{transform:rotate(180deg)}
+  .nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);min-width:204px;background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:8px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transition:opacity .2s var(--ease),transform .2s var(--ease);z-index:60}
+  .nav-dd-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
+  .nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(6px)}
+  .nav-dd-menu a{padding:9px 13px;border-radius:10px;font-size:.9rem;font-weight:500;color:var(--ink-soft);white-space:nowrap}
+  .nav-dd-menu a:hover{background:rgba(58,79,181,.07);color:var(--primary)}
+  .nav-dd-menu .dd-head{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#9aa0b5;padding:7px 13px 3px;display:block}
+  .nav-dd-menu .dd-sep{display:block;height:1px;background:var(--line);margin:6px 4px}
 </style>
 
 <script type="application/ld+json">
@@ -169,10 +183,46 @@ img,svg,video,iframe{max-width:100%}
       <span class="wordmark"><span class="wm-the">The</span><span class="wm-name">Lodestone</span><span class="wm-tag">Etiquette &middot; Virtue &middot; Order</span></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index-ms.html#programs">Program</a>
-      <a href="guides-ms.html">Panduan Ibu Bapa</a>
-      <a href="index-ms.html#support">Sokongan</a>
-      <a href="screening-check-ms.html">Semakan Percuma</a>
+      <div class="nav-dd">
+        <a href="index-ms.html#support" class="nav-dd-toggle">Sokongan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="nav-dd-menu">
+          <span class="dd-head">Mengikut keperluan anak</span>
+          <a href="adhd-support-ms.html">ADHD &amp; tumpuan</a>
+          <a href="dyslexia-support-ms.html">Disleksia &amp; membaca</a>
+          <a href="dyscalculia-support-ms.html">Diskalkulia &amp; matematik</a>
+          <a href="dysgraphia-support-ms.html">Disgrafia &amp; menulis</a>
+          <a href="autism-support-ms.html">Autisme</a>
+          <a href="speech-delay-support-ms.html">Lewat bertutur</a>
+          <a href="slow-learners-support-ms.html">Belajar ikut rentak sendiri</a>
+          <span class="dd-sep"></span>
+          <span class="dd-head">Belum pasti?</span>
+          <a href="index-ms.html#finder"><strong>Cari hala tuju</strong> &middot; kuiz 30 saat</a>
+          <a href="guides-ms.html"><strong>Panduan Ibu Bapa &rarr;</strong></a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <a href="index-ms.html#programs" class="nav-dd-toggle">Program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="nav-dd-menu">
+          <a href="index-ms.html#programs">Say Play (Pertuturan)</a>
+          <a href="index-ms.html#programs">Program SEL</a>
+          <a href="index-ms.html#programs">Saringan</a>
+          <a href="index-ms.html#programs">Program Matematik</a>
+          <a href="index-ms.html#programs">Pengekodan Progresif</a>
+          <a href="index-ms.html#programs">Kursus Intensif IGCSE</a>
+          <span class="dd-sep"></span>
+          <a href="lodestone-evo.html"><strong>Lodestone Evo</strong> &middot; umur 2&ndash;6</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <a href="index-ms.html#team" class="nav-dd-toggle">Pakar Kami <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="nav-dd-menu">
+          <a href="index-ms.html#team">Pakar kami</a>
+          <a href="index-ms.html#process">Cara ia berfungsi</a>
+          <a href="index-ms.html#about">Tentang pusat kami</a>
+          <a href="index-ms.html#faq">Soalan Lazim</a>
+        </div>
+      </div>
+      <a href="for-schools.html">Untuk Sekolah</a>
       <a href="guides.html" class="lang-switch" aria-label="English version">EN</a>
       <a href="index-ms.html#contact" class="nav-cta">Tempah panggilan percuma</a>
     </nav>
@@ -268,7 +318,7 @@ img,svg,video,iframe{max-width:100%}
 <footer>
   <div class="container">
     <div class="footer-brand">
-      <a href="index.html" aria-label="The Lodestone Centre home"><img src="logo.png" alt="The Lodestone Centre logo" class="footer-logo-img"></a>
+      <a href="index-ms.html" aria-label="The Lodestone Centre home"><img src="logo.png" alt="The Lodestone Centre logo" class="footer-logo-img"></a>
       <p>Pendidikan diperibadikan untuk setiap anak. Mengutamakan kekuatan, mengikut rentak individu, tidak pernah satu-saiz-untuk-semua.</p>
     </div>
     <div class="footer-disclaimer">The Lodestone Centre offers personalised, strengths-first support for children with ADHD, dyscalculia, dyslexia and other learning differences in Subang Jaya, Petaling Jaya and the Klang Valley, including dysgraphia, autism, speech delay and slower learning, as well as gifted children and those who simply learn at their own pace. Every program is built around the individual child. The Lodestone Centre is an inclusive provider of non-curricular teaching, personal development training, motivational courses, educational support workshops and character development workshops. These guides are for general information. Our screening and programs are designed to support learning and growth, and are not a substitute for formal schooling or clinical diagnosis.</div>
