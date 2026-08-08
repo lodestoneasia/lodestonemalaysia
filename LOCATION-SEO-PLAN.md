@@ -155,3 +155,33 @@ If time is limited, the order I'd put them in:
 2. More parent guides
 3. Fixing the three existing location pages
 4. New location pages
+
+---
+
+## 10. Progress log
+
+**8 Aug 2026 — Phase 1, first pass. Commit `pending`.**
+
+Added a per-area "Getting a formal assessment in [Area]" section to all three pages, built on
+verified government facility details (see `_build/location-facts.md`), plus three area-specific
+FAQ answers per page.
+
+```
+                    unique sentences        pages identical to each other
+before                  ~15%                        85-86%
+after                   35-40%                      59-64%
+```
+
+Still short of the 50% target. **The remaining gap needs material only Roshan has:**
+
+1. **Schools you actually work with in each area**, named, with permission. One or two per page.
+2. **One anonymised family per area**, in the style of the guides. This alone would add 6-8
+   unique sentences per page and is the single highest-value addition.
+3. **Which concerns come up most from each area**, if there's a pattern you've noticed. Puchong
+   parents may ask about different things from Shah Alam parents.
+4. **Whether the travel times and neighbourhoods I wrote are accurate.** I inferred routes from
+   maps, not from experience. Correct them.
+
+Once those go in, the pages will clear 50% comfortably and can be considered done.
+
+**Do not add a fourth location page until the three existing ones clear 50%.**
