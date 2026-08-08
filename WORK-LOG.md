@@ -69,7 +69,8 @@ Don't re-request the same URL repeatedly — it burns quota and speeds nothing u
 
 ## What still needs doing — mine
 
-- **Malay versions of the three location pages** (Petaling Jaya, Puchong, Shah Alam). The reusable pipeline is in `_build/` — see `_build/README-RESUME.md`.
+- **Rewrite the three existing location pages so they aren't 85% identical.** See `LOCATION-SEO-PLAN.md` — they currently look like doorway pages to Google. This should happen *before* any new location page or their Malay versions.
+- **Malay versions of the three location pages** — only after the English ones are genuinely distinct. The reusable pipeline is in `_build/` — see `_build/README-RESUME.md`.
 - **Per-guide social preview images.** All 14 guides currently share `og-image.png`.
 - **Homepage section + sticky mobile bar** for the free check (proposed, never built).
 
