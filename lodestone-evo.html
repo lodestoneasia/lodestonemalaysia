@@ -1109,6 +1109,68 @@
   .evo-ws-cta .btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.45)}
   @media(max-width:860px){.evo-ws-grid{grid-template-columns:1fr 1fr}.evo-ws-panel{flex-direction:column;align-items:flex-start}.evo-ws-cta{width:100%}}
   @media(max-width:520px){.evo-ws-grid{grid-template-columns:1fr}}
+
+/* ===== MOBILE NAV, standardised 980px (added 8 Aug 2026) ===== */
+html,body{max-width:100%}
+body{overflow-x:clip}
+img,svg,video,iframe{max-width:100%}
+@media(max-width:980px){
+  .nav-inner{padding-left:16px;padding-right:16px;gap:10px}
+  .nav-links{display:none}
+  .menu-toggle{display:grid!important;place-items:center;width:40px;height:40px;flex:0 0 40px;
+    border-radius:10px;background:var(--paper);box-shadow:var(--shadow-sm);color:var(--ink)}
+  .menu-toggle svg{width:22px;height:22px}
+  /* shrink the wordmark so the bar has room */
+  .logo{gap:8px;min-width:0}
+  .logo-mark{width:32px;height:32px;flex:0 0 32px}
+  .logo .wm-name{font-size:1.15rem}
+  .logo .wm-the{font-size:.5rem;letter-spacing:.3em}
+  .logo .wm-tag{display:none}
+  /* collapsed bar keeps only the gold check */
+  .nav-actions{gap:8px;flex:0 0 auto}
+  .nav-actions .a11y-toggle,
+  .nav-actions .lang-switch,
+  .nav-actions .nav-cta{display:none}
+  .nav-check{padding:9px 13px;font-size:.8rem;box-shadow:0 3px 10px rgba(247,163,37,.32)}
+  /* the open panel */
+  .nav.nav-open .nav-links{
+    display:flex;flex-direction:column;align-items:stretch;gap:2px;
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--paper);padding:14px 18px 20px;
+    box-shadow:var(--shadow-lg);border-top:1px solid var(--line);
+    max-height:calc(100vh - 68px);overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .nav.nav-open .nav-links>a{padding:12px 2px;font-size:1.02rem;border-bottom:1px solid var(--line)}
+  .nav.nav-open .nav-dd{width:100%;display:block}
+  .nav.nav-open .nav-dd-toggle{display:flex;justify-content:space-between;align-items:center;
+    width:100%;padding:12px 2px;font-size:1.02rem;font-weight:600;border-bottom:1px solid var(--line)}
+  .nav.nav-open .nav-dd-toggle svg{display:none}
+  .nav.nav-open .nav-dd-menu{position:static;transform:none!important;opacity:1;visibility:visible;
+    box-shadow:none;border:0;background:transparent;padding:6px 0 10px 12px;min-width:0;display:block}
+  .nav.nav-open .nav-dd-menu a{display:block;padding:9px 0;font-size:.95rem}
+  .nav.nav-open .dd-head{padding:8px 0 2px}
+  /* controls moved into the panel by JS */
+  .nav-mobile-extra{display:flex;flex-wrap:wrap;gap:10px;padding-top:16px;margin-top:6px;
+    border-top:1px solid var(--line)}
+  .nav-mobile-extra .a11y-toggle,
+  .nav-mobile-extra .lang-switch,
+  .nav-mobile-extra .nav-cta{display:inline-flex!important;align-items:center}
+  .nav-mobile-extra .nav-cta{flex:1 1 auto;justify-content:center}
+}
+@media(max-width:400px){
+  .logo .wm-name{font-size:1rem}
+  .nav-check{padding:8px 11px;font-size:.74rem}
+  .nav-inner{gap:8px}
+}
+
+@media(max-width:980px){
+  .nav-inner{padding-left:16px;padding-right:16px;gap:10px}
+  .nav-actions a[href="guides.html"],
+  .nav-actions a[href="screening-check.html"]{display:none}
+  .nav-actions .nav-cta{padding:9px 14px;font-size:.85rem;white-space:nowrap}
+  .back-link .arrow{font-size:.62rem}
+  .back-link strong{font-size:.95rem}
+}
+@media(max-width:400px){ .nav-actions .nav-cta{padding:8px 12px;font-size:.78rem} }
 </style>
 <section class="evo-workshop" id="workshop">
   <div class="container">
@@ -1635,6 +1697,78 @@
       setTimeout(function(){ btn.classList.remove('success'); form.reset(); }, 2500);
     }
   }, true);
+})();
+</script>
+<script>
+
+/* ===== Mobile nav, standardised (added 8 Aug 2026) ===== */
+(function(){
+  var nav = document.getElementById('nav') || document.querySelector('header.nav') || document.querySelector('.nav');
+  if(!nav) return;
+  var toggle = nav.querySelector('.menu-toggle');
+  var links  = nav.querySelector('.nav-links');
+  if(!toggle || !links) return;
+
+  /* the button may have been wired to jump to #contact; drop that */
+  if(toggle.getAttribute('onclick')) toggle.removeAttribute('onclick');
+  toggle.setAttribute('aria-expanded','false');
+  toggle.setAttribute('aria-label','Open menu');
+
+  /* move Easy read / language switch / Book a call into the panel on phones */
+  var actions = nav.querySelector('.nav-actions');
+  var extra = null, parked = [];
+  if(actions){
+    extra = document.createElement('div');
+    extra.className = 'nav-mobile-extra';
+    links.appendChild(extra);
+  }
+  var mq = window.matchMedia('(max-width:980px)');
+  function place(){
+    if(!actions || !extra) return;
+    if(mq.matches){
+      if(parked.length) return;
+      Array.prototype.slice.call(actions.children).forEach(function(el){
+        if(el === toggle) return;
+        if(el.classList.contains('nav-check')) return;   /* gold check stays in the bar */
+        parked.push([el, el.nextSibling]);
+        extra.appendChild(el);
+      });
+    } else if(parked.length){
+      parked.forEach(function(p){ actions.insertBefore(p[0], p[1]); });
+      parked = [];
+    }
+  }
+  place();
+  if(mq.addEventListener) mq.addEventListener('change', place);
+  else if(mq.addListener) mq.addListener(place);
+
+  function setOpen(open){
+    nav.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  toggle.addEventListener('click', function(e){
+    e.preventDefault(); e.stopPropagation();
+    setOpen(!nav.classList.contains('nav-open'));
+  });
+  /* on phones a dropdown heading opens its own submenu instead of navigating */
+  links.addEventListener('click', function(e){
+    var t = e.target.closest('.nav-dd-toggle');
+    if(t && mq.matches){
+      e.preventDefault();
+      var dd = t.parentNode;
+      var open = dd.classList.contains('dd-open');
+      dd.classList.toggle('dd-open', !open);
+      var menu = dd.querySelector('.nav-dd-menu');
+      if(menu) menu.style.display = open ? 'none' : 'block';
+      return;
+    }
+    if(e.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('click', function(e){
+    if(nav.classList.contains('nav-open') && !nav.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
 })();
 </script>
 </body>
