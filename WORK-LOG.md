@@ -223,6 +223,20 @@ The diagnostic page was deleted afterwards (`a194826`).
 
 **Left alone by decision:** the two floating buttons, "Urgent? Call us now" and WhatsApp, stay as separate buttons.
 
+### 7b. Overflow guard moved to the root element · `917413b` · 41 files
+
+The page could still be swiped sideways on a real phone even though the diagnostic reported 360px.
+
+**Cause:** the guard was on `body` alone. When `overflow` is set on `body` while `html` stays at its default, the browser **propagates that value to the viewport and resets `body` to visible**. Body therefore stops clipping, and whether the viewport honours `clip` varies between browsers. In practice there was often no guard at all.
+
+**Fixed:**
+
+- `overflow-x: clip` now on `html` as well as `body`, so it cannot be propagated away. Still `clip` rather than `hidden`, so `position:sticky` on the nav bar survives
+- `overscroll-behavior-x: none` on `body`, which stops the horizontal rubber-band gesture itself
+- `.float-actions` capped to `calc(100vw - 28px)` on the three pages with floating buttons
+
+**Why the earlier diagnostic missed it:** it skipped `position:fixed` elements by design, and it measured pages inside an iframe. Neither fully represents a real mobile viewport with a resizing address bar. A clean result from that tool means "the document fits", not "the page cannot be swiped".
+
 ---
 
 ## Site health at time of writing
