@@ -69,7 +69,7 @@ Don't re-request the same URL repeatedly — it burns quota and speeds nothing u
 
 ## What still needs doing — mine
 
-- **Finish differentiating the three location pages.** First pass done 8 Aug: 15% unique -> 35-40%, 85% identical -> ~60%. The remaining gap needs material only Roshan has (local schools, one family story per area, verified travel times). See section 10 of `LOCATION-SEO-PLAN.md`. **No fourth location page until these clear 50%.**
+- **A Subang Jaya location page.** Now unblocked: the three existing pages reached 48-50% unique on 8 Aug (from 15%), so a fourth can be built without compounding a duplication problem. Subang Jaya is the obvious gap since the centre is physically there.
 - **Malay versions of the three location pages** — only after the English ones are genuinely distinct. The reusable pipeline is in `_build/` — see `_build/README-RESUME.md`.
 - **Per-guide social preview images.** All 14 guides currently share `og-image.png`.
 - **Homepage section + sticky mobile bar** for the free check (proposed, never built).

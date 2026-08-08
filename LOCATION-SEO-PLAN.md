@@ -185,3 +185,31 @@ Still short of the 50% target. **The remaining gap needs material only Roshan ha
 Once those go in, the pages will clear 50% comfortably and can be considered done.
 
 **Do not add a fourth location page until the three existing ones clear 50%.**
+
+**8 Aug 2026 — Phase 1, second pass. Commit `6ec51a0`.**
+
+Three further per-area sections added: getting here without a car, the school mix and what it
+causes to be missed, and nearest support organisations.
+
+```
+                    unique sentences        identical to each other
+before                  ~15%                        85-86%
+first pass              35-40%                      59-64%
+second pass             48-50%                      49-53%
+```
+
+Petaling Jaya 50%, Puchong 49%, Shah Alam 48%. **At target.** Every sentence added is local
+substance, not padding.
+
+The transit section is the strongest single addition: three genuinely different journeys, all
+verified. PJ rides the Kelana Jaya line straight to Taipan with no change; Puchong goes via the
+Putra Heights interchange; Shah Alam takes KTM Komuter to Subang Jaya. Nobody else's location
+pages carry this.
+
+**Still worth adding when available**, and it would push each page past 60%:
+
+1. One anonymised family per area, guide-style. Highest value remaining.
+2. Named local schools you work with, with permission.
+3. Verification of the travel times and neighbourhoods — inferred from maps, not experience.
+
+**Phase 2 is now unblocked.** A Subang Jaya page can be built, using the same structure.
