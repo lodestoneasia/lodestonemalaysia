@@ -50,6 +50,22 @@ function describe(el){
   return t + i + c;
 }
 
+/* full path up to body, and whether any ancestor already clips it */
+function pathOf(el, win){
+  var parts = [], clipped = false, n = el, depth = 0;
+  while (n && n.tagName && n.tagName.toLowerCase() !== 'body' && depth < 8){
+    parts.unshift(describe(n));
+    n = n.parentElement; depth++;
+  }
+  n = el.parentElement;
+  while (n && n.tagName && n.tagName.toLowerCase() !== 'html'){
+    var o = win.getComputedStyle(n).overflowX;
+    if (o === 'hidden' || o === 'clip' || o === 'auto' || o === 'scroll'){ clipped = true; break; }
+    n = n.parentElement;
+  }
+  return { path: parts.join(' > '), clipped: clipped };
+}
+
 function checkDoc(doc, win, limit){
   var hits = [], all = doc.body.getElementsByTagName('*');
   for (var i = 0; i < all.length; i++){
@@ -95,8 +111,12 @@ document.getElementById('go').onclick = function(){
         } else {
           msg = '<span class="bad">✗ page scrolls to <span class="w">' + docW + 'px</span> in a ' + limit + 'px screen</span>';
           hits.forEach(function(h){
-            msg += '<div class="hit">' + describe(h.el) +
-                   '<br>width <span class="w">' + h.width + 'px</span>, right edge at <span class="w">' + h.right + 'px</span></div>';
+            var p = pathOf(h.el, w);
+            msg += '<div class="hit">' + p.path +
+                   '<br>width <span class="w">' + h.width + 'px</span>, right edge <span class="w">' + h.right + 'px</span>' +
+                   '<br>' + (p.clipped ? '<span style="color:#6BE3A2">clipped by an ancestor — harmless</span>'
+                                       : '<span style="color:#FF8B8B">NOT clipped — this one widens the page</span>') +
+                   '</div>';
           });
           if (!hits.length) msg += '<div class="hit">no single element identified — likely a margin or a fixed bar</div>';
         }
