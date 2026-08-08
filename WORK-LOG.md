@@ -69,7 +69,7 @@ Don't re-request the same URL repeatedly — it burns quota and speeds nothing u
 
 ## What still needs doing — mine
 
-- **Malay versions** of `lodestone-evo.html`, `for-schools.html` and the three location pages.
+- **Malay versions of the three location pages** (Petaling Jaya, Puchong, Shah Alam). The reusable pipeline is in `_build/` — see `_build/README-RESUME.md`.
 - **Per-guide social preview images.** All 14 guides currently share `og-image.png`.
 - **Homepage section + sticky mobile bar** for the free check (proposed, never built).
 
@@ -251,23 +251,42 @@ The desktop dropdown CSS was added to the 19 guide and screening pages that had 
 
 The 14 guide PDFs had been sitting in the repo unlinked since they were generated. Each guide now carries a download card directly under its contents box — English guides link the English PDF, Malay guides the BM one. Placed near the top rather than the end, since a parent who wants to read it later decides that early.
 
+### 10. Malay For Schools and Lodestone Evo · `3c264ae`, `da8f1f4`
+
+| Page | Words |
+|---|---|
+| for-schools-ms.html | 1,555 |
+| lodestone-evo-ms.html | 1,485 |
+
+Built through a resumable pipeline in `_build/` (gitignored) so the job could survive an interruption: one translation file per page, an idempotent builder, and a state table in `_build/README-RESUME.md`. Each page was pushed on completion rather than at the end.
+
+Japanese terms and kanji on the Evo page were left as they are — they're the substance of the programme, not translatable labels.
+
+**Three further fixes found along the way:**
+
+- `for-schools.html` already carried hreflang tags where `ms-MY` pointed at **itself**. Both pages now declare the correct trio exactly once.
+- The three location pages declared a Malay alternate pointing back at their own English selves, telling Google a Malay version existed when none did. Removed.
+- An English typo on the Evo page: *"Evo is an character and virtue programme"* → *"a character"*.
+- Both Evo pages had no language switch at all. Added.
+
 ---
 
 ## Site health at time of writing
 
 ```
-Total pages                34
+Total pages                43
 Broken internal links       0
 Orphan pages                0
 Pages missing from sitemap  0
 Titles over 60 chars        0
-Sitemap URLs               45
+Sitemap URLs               47
 Sitemap XML                 valid
 JSON-LD blocks              139, all valid
 JS blocks parsing clean     128
 Mobile nav breakpoints      1 (was 4)
 Pages fitting at 360px      33 of 34
-Pages with the grouped nav  41 of 41
+hreflang problems            0
+Pages with the grouped nav  41 of 43 (Evo uses a Back link)
 Cross-language links         0
 Unbalanced HTML tags         0
 Guide PDFs linked           14 of 14
