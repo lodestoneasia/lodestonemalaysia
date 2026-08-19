@@ -3484,6 +3484,10 @@ html{scroll-padding-top:88px}
     var EASE_MICRO = 'power3.out';
 
     /* ---------- Lenis smooth-scroll spine ---------- */
+    function navOff(){
+      var n = document.querySelector('.nav');
+      return n ? -(n.offsetHeight + 12) : -88;
+    }
     if (window.Lenis){
       var lenis = new Lenis({
         duration: 1.1, easing: function(t){ return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true, smoothTouch: false
@@ -3497,9 +3501,28 @@ html{scroll-padding-top:88px}
           var id = a.getAttribute('href');
           if (id.length <= 1) return;
           var tg = document.querySelector(id);
-          if (tg){ e.preventDefault(); lenis.scrollTo(tg, {offset: -20}); }
+          if (tg){ e.preventDefault(); lenis.scrollTo(tg, {offset: navOff()}); }
         });
       });
+
+      /* Arriving with a #hash. Lenis owns the scroll position and re-applies it
+         every frame, so a native scrollIntoView is wiped on the next tick.
+         Drive Lenis instead, and repeat as fonts and images settle. */
+      window.__lenis = lenis;
+      if (window.location.hash.length > 1){
+        var tgt = null;
+        try { tgt = document.querySelector(window.location.hash); } catch(e){}
+        if (tgt){
+          var settle = function(){ lenis.scrollTo(tgt, {offset: navOff(), immediate: true}); };
+          settle();
+          requestAnimationFrame(settle);
+          setTimeout(settle, 250);
+          window.addEventListener('load', function(){ setTimeout(settle, 60); });
+          if (document.fonts && document.fonts.ready){
+            document.fonts.ready.then(function(){ setTimeout(settle, 60); });
+          }
+        }
+      }
     }
 
     /* ---------- Headline clip reveals ---------- */
@@ -3802,6 +3825,7 @@ html{scroll-padding-top:88px}
   if(!window.location.hash) return;
   var id = decodeURIComponent(window.location.hash.slice(1));
   function jump(){
+    if (window.__lenis) return;   /* Lenis handles it; see the motion layer */
     var el = document.getElementById(id);
     if(!el) return;
     var prev = document.documentElement.style.scrollBehavior;

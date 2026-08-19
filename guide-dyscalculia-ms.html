@@ -639,6 +639,7 @@ html{scroll-padding-top:88px}
   if(!window.location.hash) return;
   var id = decodeURIComponent(window.location.hash.slice(1));
   function jump(){
+    if (window.__lenis) return;   /* Lenis handles it; see the motion layer */
     var el = document.getElementById(id);
     if(!el) return;
     var prev = document.documentElement.style.scrollBehavior;
