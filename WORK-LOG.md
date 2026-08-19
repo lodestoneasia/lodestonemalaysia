@@ -15,55 +15,12 @@
 | 1 | **Revoke the GitHub token** | It's been used nine times and is sitting in plain text in a chat log. github.com → Settings → Developer settings → Personal access tokens → Fine-grained → Revoke. |
 | 2 | **Move `_internal/` and `Lodestone_Master_Student_List.xlsx` out of the website folder** | That spreadsheet holds children's personal data and currently lives one careless drag away from a public repo. `.gitignore` protects you, but only until it doesn't. |
 | 3 | **Fix the sitemap submission in Search Console** | If it still shows *"appears to be an HTML page"*, delete the entry and type only `sitemap.xml` into the box — not the full URL. |
-| 4 | **Request indexing, ~10 URLs a day** | See the priority order below. |
+| 4 | **Request indexing, ~10 URLs a day** | Full batches and step-by-step are in `ANALYTICS.md`. |
+| 5 | **Mark `screening_lead` as a key event in GA4** | Admin → Events → toggle. It is your actual enquiry count and is currently buried. |
 
-### Search Console indexing priority
+### Search Console indexing
 
-**Batch 1 — brand fix and thin-content fix**
-
-```
-thelodestonesolution.com/
-thelodestonesolution.com/lodestone-evo.html
-thelodestonesolution.com/screening-check.html
-thelodestonesolution.com/guides.html
-thelodestonesolution.com/guide-adhd.html
-thelodestonesolution.com/guide-dyslexia.html
-thelodestonesolution.com/guide-autism.html
-thelodestonesolution.com/guide-speech-delay.html
-thelodestonesolution.com/guide-dyscalculia.html
-thelodestonesolution.com/guide-dysgraphia.html
-```
-
-**Batch 2 — retitled pages**
-
-```
-thelodestonesolution.com/guide-slow-learners.html
-thelodestonesolution.com/adhd-support.html
-thelodestonesolution.com/dyslexia-support.html
-thelodestonesolution.com/dyscalculia-support.html
-thelodestonesolution.com/autism-support.html
-thelodestonesolution.com/speech-delay-support.html
-thelodestonesolution.com/slow-learners-support.html
-thelodestonesolution.com/dysgraphia-support.html
-thelodestonesolution.com/early-intervention.html
-thelodestonesolution.com/for-schools.html
-```
-
-**Batch 3 — the new Malay guides**
-
-```
-thelodestonesolution.com/guides-ms.html
-thelodestonesolution.com/guide-dyslexia-ms.html
-thelodestonesolution.com/guide-adhd-ms.html
-thelodestonesolution.com/guide-dyscalculia-ms.html
-thelodestonesolution.com/guide-dysgraphia-ms.html
-thelodestonesolution.com/guide-autism-ms.html
-thelodestonesolution.com/guide-speech-delay-ms.html
-thelodestonesolution.com/guide-slow-learners-ms.html
-thelodestonesolution.com/screening-check-ms.html
-```
-
-Don't re-request the same URL repeatedly — it burns quota and speeds nothing up.
+Moved to **`ANALYTICS.md`**, which has the four batches, the sitemap fix, the GA4 setup step, and the 19 Aug traffic baseline to compare against.
 
 ---
 
