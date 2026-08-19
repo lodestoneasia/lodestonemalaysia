@@ -245,6 +245,44 @@ Japanese terms and kanji on the Evo page were left as they are — they're the s
 
 ---
 
+### 11. Legacy 404s redirected, and anchor links fixed site-wide · 43 files
+
+Search Console reported three "Not found (404)" URLs left over from an earlier version of the
+site: `/contact`, `/about` and `/programs`. The current site uses homepage anchors instead.
+
+Added a small stub at each path that carries a canonical to the right anchor, an instant redirect,
+and `noindex, follow` so it never competes with the homepage in results. Deliberately **not** added
+to the sitemap, since they are redirects rather than pages.
+
+**Then Roshan reported the redirect landed on the homepage but stayed at the top.** Two rounds to
+get this right, and the first diagnosis was wrong.
+
+*First attempt* blamed font loading — the browser jumping to the anchor before Fraunces and Inter
+swapped in and changed every heading height. Plausible, and a real effect, but not what was
+happening here.
+
+*The actual cause* was **Lenis**, a smooth-scroll library the homepage loads alongside GSAP. Lenis
+does not use native scrolling at all. It holds its own virtual scroll position and re-applies it
+every animation frame via the GSAP ticker. A native `scrollIntoView` therefore moved the page for
+exactly one frame before Lenis put it back to zero. Fixed by driving Lenis directly with
+`lenis.scrollTo(..., {immediate:true})`, repeated after `requestAnimationFrame`, after `load` and
+after `document.fonts.ready` so it survives layout shifting as fonts arrive.
+
+**Two things this turned up that were affecting the whole site, not just the redirects:**
+
+- **No `scroll-padding-top` anywhere.** Every in-page anchor landed underneath the sticky nav —
+  including the "What's in this guide" contents links on all 14 guides. A parent clicking
+  "The signs, by age" got that heading hidden behind the nav bar. Added, 88px desktop / 72px mobile.
+- **The homepage anchor handler used a fixed `offset: -20`**, under a quarter of the nav height.
+  Replaced with `navOff()`, which measures the nav element live, so it stays correct on mobile and
+  if the nav height ever changes again.
+
+Only the two homepages load Lenis. The other 41 pages use a plain end-of-body fallback, which now
+stands down when `window.__lenis` exists so the two never fight.
+
+**For Roshan:** in Search Console → Indexing → Pages → Not found (404), click **VALIDATE FIX**.
+
+
 ## Site health at time of writing
 
 ```
