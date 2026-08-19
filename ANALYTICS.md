@@ -174,7 +174,7 @@ Event count         1.1K
 
 **The title change is visible in the data.** The homepage and autism pages each appear twice — old title and new. Those rows will merge over the coming weeks. Not a traffic drop.
 
-**Autism is disproportionately popular.** 56 views against 16 for dyscalculia. Real demand, unprompted. Worth prioritising.
+**Autism is disproportionately popular.** 56 views against 16 for dyscalculia. Real demand, unprompted. The centre has since chosen to lead with ADHD, dyslexia, dyscalculia and slower learning instead — a deliberate call against this number. Autism keeps its page and guide but is not promoted. Revisit after the four have had a fair run at being indexed.
 
 **Condition pages hold attention far better than the homepage.** Bounce roughly 12–13% on dyscalculia and slow learners against 45–49% on the homepage. Strong support for the strategy: homepage owns the brand, condition pages own the searches.
 
