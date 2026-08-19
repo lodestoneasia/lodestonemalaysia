@@ -221,6 +221,10 @@ img,svg,video,iframe{max-width:100%}
   .pdf-grab span{font-size:.88rem;color:var(--ink-soft)}
   .pdf-grab a{color:var(--primary);font-weight:700;font-size:.9rem;white-space:nowrap}
   @media(max-width:520px){.pdf-grab{flex-wrap:wrap;gap:10px}.pdf-grab a{width:100%}}
+
+/* anchors must clear the sticky nav (added 19 Aug 2026) */
+html{scroll-padding-top:88px}
+@media(max-width:980px){html{scroll-padding-top:72px}}
 </style>
 
 <script type="application/ld+json">
@@ -593,6 +597,27 @@ img,svg,video,iframe{max-width:100%}
     if(nav.classList.contains('nav-open') && !nav.contains(e.target)) setOpen(false);
   });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+})();
+</script>
+<script>
+/* Arriving with a #hash: wait for fonts and images before jumping, or the
+   target lands in the wrong place once layout settles. (added 19 Aug 2026) */
+(function(){
+  if(!window.location.hash) return;
+  var id = decodeURIComponent(window.location.hash.slice(1));
+  function jump(){
+    var el = document.getElementById(id);
+    if(!el) return;
+    var prev = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    el.scrollIntoView({block:'start'});
+    document.documentElement.style.scrollBehavior = prev;
+  }
+  window.addEventListener('load', function(){
+    jump();
+    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(function(){ setTimeout(jump, 60); }); }
+    else { setTimeout(jump, 300); }
+  });
 })();
 </script>
 </body>

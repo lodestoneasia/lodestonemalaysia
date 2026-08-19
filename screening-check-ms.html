@@ -264,6 +264,10 @@ img,svg,video,iframe{max-width:100%}
   .nav-dd-menu a:hover{background:rgba(58,79,181,.07);color:var(--primary)}
   .nav-dd-menu .dd-head{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#9aa0b5;padding:7px 13px 3px;display:block}
   .nav-dd-menu .dd-sep{display:block;height:1px;background:var(--line);margin:6px 4px}
+
+/* anchors must clear the sticky nav (added 19 Aug 2026) */
+html{scroll-padding-top:88px}
+@media(max-width:980px){html{scroll-padding-top:72px}}
 </style>
 
 <script type="application/ld+json">
@@ -851,6 +855,27 @@ $('sendWa').onclick=function(){
     if(nav.classList.contains('nav-open') && !nav.contains(e.target)) setOpen(false);
   });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setOpen(false); });
+})();
+</script>
+<script>
+/* Arriving with a #hash: wait for fonts and images before jumping, or the
+   target lands in the wrong place once layout settles. (added 19 Aug 2026) */
+(function(){
+  if(!window.location.hash) return;
+  var id = decodeURIComponent(window.location.hash.slice(1));
+  function jump(){
+    var el = document.getElementById(id);
+    if(!el) return;
+    var prev = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    el.scrollIntoView({block:'start'});
+    document.documentElement.style.scrollBehavior = prev;
+  }
+  window.addEventListener('load', function(){
+    jump();
+    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(function(){ setTimeout(jump, 60); }); }
+    else { setTimeout(jump, 300); }
+  });
 })();
 </script>
 </body>
