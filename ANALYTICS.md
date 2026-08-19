@@ -92,6 +92,28 @@ thelodestonesolution.com/early-intervention-ms.html
 
 **Don't re-request the same URL repeatedly.** It burns quota and speeds nothing up.
 
+### Progress
+
+**19 Aug 2026 — batch 1 complete, batch 2 complete up to `early-intervention.html`.** Quota hit
+there. Roughly 18 URLs requested in one sitting.
+
+Remaining, in priority order:
+
+```
+for-schools.html                     (finishes batch 2)
+early-intervention.html              (if it was not completed)
+batch 3, the Malay pages             (10)
+batch 4, the rest                    (6)
+```
+
+**These remaining ones are genuinely optional.** The four priority conditions, their guides, the
+guides hub and the homepage are all requested. The Malay and location pages will be crawled through
+the sitemap in their own time — requesting only speeds that up, and they are not where the demand
+is right now.
+
+Expect the requested pages to move from "Discovered" to "Indexed" over roughly one to two weeks.
+Check **Indexing → Pages** around **2 September** and compare against 13 indexed / 32 discovered.
+
 
 ### A note on priority, 19 Aug 2026
 
