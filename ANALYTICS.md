@@ -37,34 +37,32 @@ Should return **Success** with 43 pages discovered.
 
 **URL Inspection** → paste a URL → **Request indexing**. Roughly 10–12 a day. It takes about 30 seconds each and you're looking for "Indexing requested".
 
-**Batch 1 — the priority.** Brand fix, plus the guides that are currently invisible.
+**Batch 1 — the four priorities, plus the brand fix.**
 
 ```
 thelodestonesolution.com/
-thelodestonesolution.com/lodestone-evo.html
-thelodestonesolution.com/screening-check.html
 thelodestonesolution.com/guides.html
-thelodestonesolution.com/guide-autism.html
 thelodestonesolution.com/guide-adhd.html
 thelodestonesolution.com/guide-dyslexia.html
-thelodestonesolution.com/guide-speech-delay.html
 thelodestonesolution.com/guide-dyscalculia.html
-thelodestonesolution.com/guide-dysgraphia.html
-```
-
-*(guide-autism is deliberately high — see the baseline below, autism is your second-most-viewed page.)*
-
-**Batch 2 — retitled pages**
-
-```
 thelodestonesolution.com/guide-slow-learners.html
 thelodestonesolution.com/adhd-support.html
-thelodestonesolution.com/autism-support.html
 thelodestonesolution.com/dyslexia-support.html
 thelodestonesolution.com/dyscalculia-support.html
-thelodestonesolution.com/speech-delay-support.html
 thelodestonesolution.com/slow-learners-support.html
+```
+
+**Batch 2 — the screening tool, Evo, and the remaining conditions**
+
+```
+thelodestonesolution.com/screening-check.html
+thelodestonesolution.com/lodestone-evo.html
+thelodestonesolution.com/guide-autism.html
+thelodestonesolution.com/guide-dysgraphia.html
+thelodestonesolution.com/guide-speech-delay.html
+thelodestonesolution.com/autism-support.html
 thelodestonesolution.com/dysgraphia-support.html
+thelodestonesolution.com/speech-delay-support.html
 thelodestonesolution.com/early-intervention.html
 thelodestonesolution.com/for-schools.html
 ```
@@ -96,6 +94,20 @@ thelodestonesolution.com/early-intervention-ms.html
 ```
 
 **Don't re-request the same URL repeatedly.** It burns quota and speeds nothing up.
+
+
+### A note on priority, 19 Aug 2026
+
+The centre's focus is **ADHD, dyslexia, dyscalculia and slower learning**. Those four lead the
+navigation, the footer, the homepage copy and the indexing queue.
+
+**This is a deliberate choice against the traffic data.** Autism was the second-most-viewed page
+in the 90-day baseline — 56 views against 16 for dyscalculia and 15 for slow learners. Autism keeps
+its page, its guide and its place in the nav; it simply is not promoted ahead of the four.
+
+**Worth watching:** if autism keeps out-performing the four after they have been indexed and given
+a fair run, that is a genuine signal about where demand sits, and worth revisiting. Give it a full
+quarter before drawing any conclusion.
 
 ### 1c. Reading Search Console once it has data
 

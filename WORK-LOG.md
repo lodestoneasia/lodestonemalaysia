@@ -24,6 +24,22 @@ Moved to **`ANALYTICS.md`**, which has the four batches, the sitemap fix, the GA
 
 ---
 
+## Focus: the four priority conditions
+
+**Set 19 August 2026.** The centre leads with **ADHD, dyslexia, dyscalculia and slower learning**.
+
+Applied to: nav dropdown order on all 40 pages, the footer "Support by need" column, the homepage
+lede, and the Search Console indexing batches in `ANALYTICS.md`.
+
+**New guides and articles cover these four before anything else.**
+
+Autism, dysgraphia and speech delay keep their pages, guides and quality. They are simply not
+promoted ahead of the four. Note that this runs against the traffic data — autism was the
+second-most-viewed page in the August baseline — so it is worth revisiting after the four have had
+a fair run at being indexed. See the note in `ANALYTICS.md`.
+
+---
+
 ## What still needs doing — mine
 
 - **A Subang Jaya location page.** Now unblocked: the three existing pages reached 48-50% unique on 8 Aug (from 15%), so a fourth can be built without compounding a duplication problem. Subang Jaya is the obvious gap since the centre is physically there.
