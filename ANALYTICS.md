@@ -12,26 +12,23 @@ Two tools, two different questions. Keep them straight and both become useful.
 
 ## Part 1 — Search Console
 
-### 1a. Fix the sitemap submission
+### 1a. Sitemap — confirmed working, leave it alone
 
-If Sitemaps still shows *"Your Sitemap appears to be an HTML page"*, the address submitted is wrong, not the file. The file is fine: 43 pages, 43 URLs, valid XML, served as `application/xml`.
+**Status as of 19 Aug 2026: the sitemap is submitted and Google is reading it.** Confirmed from a
+URL inspection, which listed `Discovery → Sitemaps: thelodestonesolution.com/sitemap.xml`. That line
+only appears when Google has found the URL through the sitemap.
 
-The trap: the box already shows your domain as a fixed grey prefix.
+**Do not remove and re-add a working sitemap.** It gains nothing and discards the processing
+history Google has built up against it. When the file changes, Google re-fetches on its own
+schedule, and the refreshed `lastmod` dates are the signal that prompts it.
 
-```
-https://thelodestonesolution.com/  [ ................ ]
-```
+The file itself: 43 URLs matching 43 real pages, valid XML, served as `application/xml`.
 
-Paste the full URL and Google glues them together and fetches
-`https://thelodestonesolution.com/https://thelodestonesolution.com/sitemap.xml`,
-which doesn't exist.
-
-1. Search Console → **Sitemaps**
-2. Delete the failed entry
-3. Type only these eleven characters: `sitemap.xml`
-4. Submit
-
-Should return **Success** with 43 pages discovered.
+**Only if it ever shows an error** — most likely *"Your Sitemap appears to be an HTML page"* — is the
+submission wrong. That error means the full URL was pasted into a box that already carries the
+domain as a grey prefix, so Google fetched
+`https://thelodestonesolution.com/https://thelodestonesolution.com/sitemap.xml`. The fix is to
+delete the entry and type only `sitemap.xml`, eleven characters.
 
 ### 1b. Request indexing
 
