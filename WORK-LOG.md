@@ -283,6 +283,43 @@ stands down when `window.__lenis` exists so the two never fight.
 **For Roshan:** in Search Console → Indexing → Pages → Not found (404), click **VALIDATE FIX**.
 
 
+### 12. /contact/ made a real page, replacing the redirect
+
+Three attempts at making the redirect scroll to the homepage contact section failed. Roshan called
+it: stop guessing and suggest before implementing. The right answer was to remove the problem
+rather than fight it. **A contact page has nothing to scroll to, so the bug cannot occur.**
+
+It is also worth more. As a `noindex` redirect that URL told Google nothing. As a page it can rank
+for "lodestone centre address", "learning centre subang jaya contact" and similar, and it carries a
+full `LocalBusiness` record with address, geo, opening hours and areaServed.
+
+**877 words, no invented detail.** Address, hours, phone, email, WhatsApp, getting here by car and
+by LRT, areas served, and what happens after you get in touch. Everything is taken from the
+`LocalBusiness` schema already on the homepage or the verified transit research behind the location
+pages. **Parking is deliberately not described** because it was never verified; the page offers to
+send directions on WhatsApp instead.
+
+**Built for more locations, as asked.** The location card is one marked HTML block with a
+duplicate-me comment, and the schema graph takes one extra `LocalBusiness` node per centre. Adding
+a second centre touches nothing else on the page. The builder is `_build/contact_page.py` and is
+idempotent.
+
+Built from `for-schools.html` so nav, footer, fonts and the mobile fixes stay in step. **No GSAP and
+no Lenis on this page.** Relative paths rewritten to root-absolute since it lives in a subfolder.
+
+14 internal links added so Google can find it; sitemap now 44 URLs. Left out of the Malay footers
+on purpose, since no Malay contact page exists yet and Malay pages should not link out to English
+ones. `/about` and `/programs` stay as redirects, since they genuinely duplicate the homepage.
+
+**Not visually verified.** The Chrome extension was not connected, so the checks were structural
+only: balanced markup, valid JSON-LD, no relative paths left, no `noindex`, valid sitemap. Roshan
+to eyeball it.
+
+**Lesson recorded:** three failed pushes on confident diagnoses. Fonts, then Lenis, then Lenis
+timing. Each was plausible and each was untested. When a fix cannot be verified before pushing, say
+so and offer options instead of shipping the guess.
+
+
 ## Site health at time of writing
 
 ```
