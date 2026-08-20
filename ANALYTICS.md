@@ -94,25 +94,64 @@ thelodestonesolution.com/early-intervention-ms.html
 
 ### Progress
 
-**19 Aug 2026 — batch 1 complete, batch 2 complete up to `early-intervention.html`.** Quota hit
-there. Roughly 18 URLs requested in one sitting.
+**19 done. 25 left of 44.**
 
-Remaining, in priority order:
+Batch 1 complete. Batch 2 complete up to and including `early-intervention.html`, where the daily
+quota ran out.
+
+**Correction, 20 Aug 2026:** the four batches above only ever covered 36 of the 43 pages. **Seven
+Malay condition pages were missing from them entirely** — my omission when the batches were
+written, not something Roshan skipped. They are listed below. With `/contact/` added on 20 August
+the site is 44 URLs.
+
+#### Do these two
 
 ```
-for-schools.html                     (finishes batch 2)
-early-intervention.html              (if it was not completed)
-batch 3, the Malay pages             (10)
-batch 4, the rest                    (6)
+thelodestonesolution.com/contact/            <- new page, replaces a 404
+thelodestonesolution.com/for-schools.html    <- finishes batch 2
 ```
 
-**These remaining ones are genuinely optional.** The four priority conditions, their guides, the
-guides hub and the homepage are all requested. The Malay and location pages will be crawled through
-the sitemap in their own time — requesting only speeds that up, and they are not where the demand
-is right now.
+`/contact/` is the only one with any urgency. It replaced a URL Google currently has recorded as a
+404, so a manual request is the fastest way to get that corrected.
 
-Expect the requested pages to move from "Discovered" to "Indexed" over roughly one to two weeks.
-Check **Indexing → Pages** around **2 September** and compare against 13 indexed / 32 discovered.
+#### Everything else — optional, in priority order
+
+```
+Malay condition pages (7, missing from the original batches)
+  adhd-support-ms.html          dyslexia-support-ms.html
+  dyscalculia-support-ms.html   slow-learners-support-ms.html
+  autism-support-ms.html        dysgraphia-support-ms.html
+  speech-delay-support-ms.html
+
+Malay guides and screening tool (9)
+  guides-ms.html                guide-adhd-ms.html
+  guide-dyslexia-ms.html        guide-dyscalculia-ms.html
+  guide-slow-learners-ms.html   guide-autism-ms.html
+  guide-dysgraphia-ms.html      guide-speech-delay-ms.html
+  screening-check-ms.html
+
+Location pages (3)
+  screening-petaling-jaya.html  screening-puchong.html
+  screening-shah-alam.html
+
+The rest (4)
+  index-ms.html                 early-intervention-ms.html
+  for-schools-ms.html           lodestone-evo-ms.html
+```
+
+**These 23 do not need requesting.** They are all in the sitemap and Google will reach them on its
+own. Requesting only moves them up the queue, and none of them is where demand sits right now. The
+four priority conditions, their guides, the guides hub and the homepage are all done.
+
+#### Also in Search Console
+
+- **Not found (404)** → click **VALIDATE FIX**. `/contact` is now a real page; `/about` and
+  `/programs` redirect to the homepage.
+- **Crawled — currently not indexed (2 pages)** → click in and note which two. This one is a
+  quality signal rather than a queue, so it is the only row that might mean something.
+
+Expect requested pages to move from "Discovered" to "Indexed" over one to two weeks. Check
+**Indexing → Pages** around **2 September** against the 13 indexed / 32 discovered baseline.
 
 
 ### A note on priority, 19 Aug 2026
