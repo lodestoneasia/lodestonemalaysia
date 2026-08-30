@@ -1,6 +1,6 @@
 # Lodestone website — work log
 
-**Last updated:** 20 August 2026
+**Last updated:** 30 August 2026
 **Repo:** github.com/lodestoneasia/lodestonemalaysia (branch `main`)
 **Live:** thelodestonesolution.com
 
@@ -12,7 +12,7 @@
 
 | # | Task | Why it matters |
 |---|---|---|
-| 1 | **Revoke the GitHub token** | It's been used nine times and is sitting in plain text in a chat log. github.com → Settings → Developer settings → Personal access tokens → Fine-grained → Revoke. |
+| 1 | ~~Revoke the GitHub token~~ **Closed 30 Aug 2026** | Confirmed set to expire in October, so the exposure window is bounded and closes itself. Revoking early was judged not worth the friction of regenerating. **Note:** pushes will simply start failing once it expires — that is expected, not a fault. Generate the next one with a 30-day expiry. |
 | 2 | **Move `_internal/` and `Lodestone_Master_Student_List.xlsx` out of the website folder** | That spreadsheet holds children's personal data and currently lives one careless drag away from a public repo. `.gitignore` protects you, but only until it doesn't. |
 | 3 | **Click VALIDATE FIX on the 404 report** | Search Console → Indexing → Pages → Not found (404). All three are handled: `/contact` is a real page now, `/about` and `/programs` redirect. |
 | 4 | **Request indexing for `/contact/` and `for-schools.html`** | Only these two matter. The other 23 are in the sitemap and will be crawled anyway. Full list in `ANALYTICS.md`. |
