@@ -47,6 +47,7 @@ a fair run at being indexed. See the note in `ANALYTICS.md`.
 - **Malay versions of the three location pages** — only after the English ones are genuinely distinct. The reusable pipeline is in `_build/` — see `_build/README-RESUME.md`.
 - **Per-guide social preview images.** All 14 guides currently share `og-image.png`.
 - **Homepage section + sticky mobile bar** for the free check (proposed, never built).
+- **Language switchers** on the eight Malay guides and `for-schools-ms.html` — currently absent.
 - **A Malay contact page** (`/hubungi/`). `/contact/` is English-only, so it is deliberately absent from the Malay footers — Malay pages should not link out to English ones.
 - **Parking detail for the contact page.** Left out on purpose because it was never verified. Roshan to confirm.
 
@@ -321,6 +322,55 @@ to eyeball it.
 **Lesson recorded:** three failed pushes on confident diagnoses. Fonts, then Lenis, then Lenis
 timing. Each was plausible and each was untested. When a fix cannot be verified before pushing, say
 so and offer options instead of shipping the guess.
+
+
+### 13. PDPA privacy notice, English and Bahasa Malaysia · 47 files
+
+The site collects a parent's name, phone, email, their child's age and a description of the child's
+difficulties, and had **no privacy notice at all**. PDPA 2010 s.7 requires a written notice at the
+point of first collection, **in both English and Bahasa Malaysia**. Hence two pages, not one.
+
+**Grounded in an audit of what the code actually does**, not boilerplate. The audit found:
+
+```
+no server, no database, no form action, no fetch or POST anywhere
+the site sets no cookies of its own, and uses no localStorage
+all forms pre-fill a WhatsApp message; nothing sends until the user taps Send
+screening answers never leave the browser unless the user chooses to send them
+third parties actually contacted: GA4, Google Fonts, Cloudflare, GitHub Pages, Meta via WhatsApp
+no iframes, so no embedded maps or videos
+```
+
+That is an unusually clean data story and the notice says so plainly rather than hedging.
+
+Covers the s.7 content: what is collected and why, that supply is voluntary and what follows from
+declining, third parties, retention, and the rights of access, correction, deletion and withdrawal
+of consent, with the Commissioner named for complaints. **Deletion on request is stated plainly**,
+per Roshan.
+
+Linked at the point of collection: the note under all **24 forms** carries it, plus a footer link on
+all **46 pages** — English pages to the English notice, Malay pages to the Malay one. Sitemap now 46
+URLs. Builder: `_build/privacy_pages.py`, idempotent.
+
+**Three bugs found along the way, one of them mine:**
+
+- **61 cross-language links across 21 Malay pages** pointed at the English For Schools and Lodestone
+  Evo pages when Malay versions exist. Missed in the earlier cross-language sweep.
+- **That bulk fix then broke the EN switcher on `lodestone-evo-ms.html`**, which briefly pointed at
+  itself. Caught by a follow-up check and repaired. A bulk find-and-replace across a whole language
+  is worth a switcher audit afterwards every time.
+- **`privacy.html` inherited its switcher and CTA from the for-schools template**, pointing at
+  `for-schools-ms.html` and a `#contact` section that does not exist on the page. Both repointed,
+  and the builder patched so a rebuild cannot reintroduce them.
+
+Malay checked against 37 Indonesian-form markers, none found. 190 JS blocks parse clean, JSON-LD
+valid, markup balanced.
+
+**Not legal advice.** A Malaysian firm should review the wording, since this concerns children's
+data. The draft gives them something to correct rather than write from scratch.
+
+**Still open, and pre-existing:** eight Malay guide pages and `for-schools-ms.html` have **no
+language switcher at all**, so a parent reading a Malay guide cannot get to the English one.
 
 
 ## Site health at time of writing
