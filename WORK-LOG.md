@@ -1,6 +1,6 @@
 # Lodestone website — work log
 
-**Last updated:** 19 August 2026
+**Last updated:** 20 August 2026
 **Repo:** github.com/lodestoneasia/lodestonemalaysia (branch `main`)
 **Live:** thelodestonesolution.com
 
@@ -14,8 +14,9 @@
 |---|---|---|
 | 1 | **Revoke the GitHub token** | It's been used nine times and is sitting in plain text in a chat log. github.com → Settings → Developer settings → Personal access tokens → Fine-grained → Revoke. |
 | 2 | **Move `_internal/` and `Lodestone_Master_Student_List.xlsx` out of the website folder** | That spreadsheet holds children's personal data and currently lives one careless drag away from a public repo. `.gitignore` protects you, but only until it doesn't. |
-| 3 | **Fix the sitemap submission in Search Console** | If it still shows *"appears to be an HTML page"*, delete the entry and type only `sitemap.xml` into the box — not the full URL. |
-| 4 | **Request indexing, ~10 URLs a day** | Full batches and step-by-step are in `ANALYTICS.md`. |
+| 3 | **Click VALIDATE FIX on the 404 report** | Search Console → Indexing → Pages → Not found (404). All three are handled: `/contact` is a real page now, `/about` and `/programs` redirect. |
+| 4 | **Request indexing for `/contact/` and `for-schools.html`** | Only these two matter. The other 23 are in the sitemap and will be crawled anyway. Full list in `ANALYTICS.md`. |
+| 6 | **Report which two pages are "Crawled — currently not indexed"** | The one row on that report that is a judgement rather than a queue, so the only one that might need acting on. |
 | 5 | **Mark `screening_lead` as a key event in GA4** | Admin → Events → toggle. It is your actual enquiry count and is currently buried. |
 
 ### Search Console indexing
@@ -46,6 +47,8 @@ a fair run at being indexed. See the note in `ANALYTICS.md`.
 - **Malay versions of the three location pages** — only after the English ones are genuinely distinct. The reusable pipeline is in `_build/` — see `_build/README-RESUME.md`.
 - **Per-guide social preview images.** All 14 guides currently share `og-image.png`.
 - **Homepage section + sticky mobile bar** for the free check (proposed, never built).
+- **A Malay contact page** (`/hubungi/`). `/contact/` is English-only, so it is deliberately absent from the Malay footers — Malay pages should not link out to English ones.
+- **Parking detail for the contact page.** Left out on purpose because it was never verified. Roshan to confirm.
 
 ---
 
