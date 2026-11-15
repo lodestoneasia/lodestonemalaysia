@@ -59,13 +59,14 @@
   .nav-links a:hover{color:var(--ink)}
   .nav-cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:.9rem;font-weight:500}
   .nav-cta:hover{background:var(--primary)}
+  .lang-switch{font-size:.82rem;font-weight:700;color:var(--ink-soft);border:1.5px solid var(--line);padding:6px 11px;border-radius:999px;letter-spacing:.04em;transition:.2s}.lang-switch:hover{border-color:var(--primary);color:var(--primary)}.nav-links{gap:16px}.nav-links a,.nav-links button{white-space:nowrap}.nav-links .nav-cta{color:#fff}.lang-alt{display:none;font-size:.82rem;padding-top:6px}.lang-alt a{color:var(--primary);font-weight:600;text-decoration:underline}@media(max-width:1100px){.nav-links .nav-cta{display:none}}@media(max-width:900px){.lang-alt{display:block}}
   .a11y{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--ink-soft);border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 13px;cursor:pointer;font-family:inherit}
   .a11y:hover{border-color:var(--primary);color:var(--primary)}
   .a11y[aria-pressed="true"]{background:var(--primary);color:#fff;border-color:var(--primary)}
   .menu-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--ink)}
   .crumb{font-size:.82rem;color:var(--ink-soft);padding-top:18px}
   .crumb a:hover{color:var(--primary)}
-  .art-head{padding:26px 0 6px}
+  .art-head{padding:26px 24px 6px}
   .art-head h1{font-size:clamp(1.9rem,4vw,2.7rem);margin:14px 0 0}
   .art-standfirst{font-size:1.16rem;color:var(--ink-soft);margin-top:16px}
   .byline{display:flex;align-items:center;gap:14px;margin:24px 0 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.9rem;color:var(--ink-soft)}
@@ -234,7 +235,7 @@ html{scroll-padding-top:88px}
 .footer-bottom .privacy-link{color:inherit;text-decoration:underline;opacity:.85}.footer-bottom .privacy-link:hover{opacity:1}</style>
 
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Laman Utama", "item": "https://thelodestonesolution.com/index-ms.html"}, {"@type": "ListItem", "position": 2, "name": "Parent Guides", "item": "https://thelodestonesolution.com/guides-ms.html"}, {"@type": "ListItem", "position": 3, "name": "Speech delay", "item": "https://thelodestonesolution.com/guide-speech-delay-ms.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Laman Utama", "item": "https://thelodestonesolution.com/index-ms.html"}, {"@type": "ListItem", "position": 2, "name": "Panduan Ibu Bapa", "item": "https://thelodestonesolution.com/guides-ms.html"}, {"@type": "ListItem", "position": 3, "name": "Speech delay", "item": "https://thelodestonesolution.com/guide-speech-delay-ms.html"}]}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Article", "headline": "Lewat Bertutur: Pencapaian Mengikut Usia, dan Apa yang Membantu", "description": "Pencapaian pertuturan mengikut usia, strategi rumah yang disokong bukti, dan laluan terapi pertuturan di Malaysia.", "image": "https://thelodestonesolution.com/og-image.png", "datePublished": "2026-08-04", "dateModified": "2026-08-04", "inLanguage": "ms-MY", "author": {"@type": "Organization", "name": "Pasukan Pendidikan The Lodestone", "url": "https://thelodestonesolution.com/"}, "publisher": {"@type": "Organization", "name": "The Lodestone Centre", "url": "https://thelodestonesolution.com/", "logo": {"@type": "ImageObject", "url": "https://thelodestonesolution.com/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://thelodestonesolution.com/guide-speech-delay-ms.html"}, "about": {"@type": "Thing", "name": "Speech delay"}}
@@ -300,15 +301,15 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
       </div>
       <a href="for-schools-ms.html">Untuk Sekolah</a>
       <button class="a11y" id="easyToggle" aria-pressed="false" title="Easier reading">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h12M4 17h8"/></svg>Easy read
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h12M4 17h8"/></svg>Bacaan mudah
       </button>
-      <a href="index-ms.html#contact" class="nav-cta">Tempah panggilan percuma</a>
+      <a href="guide-speech-delay.html" class="lang-switch" aria-label="English version">EN</a><a href="index-ms.html#contact" class="nav-cta">Tempah panggilan percuma</a>
     </nav>
     <button class="menu-toggle" aria-label="Menu" onclick="location.href='index.html#contact'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
   </div>
 </header>
 
-<div class="article-wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="index-ms.html">Laman Utama</a> &rsaquo; <a href="guides-ms.html">Panduan Ibu Bapa</a> &rsaquo; <span>Speech delay</span></nav></div>
+<div class="article-wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="index-ms.html">Laman Utama</a> &rsaquo; <a href="guides-ms.html">Panduan Ibu Bapa</a> &rsaquo; <span>Speech delay</span></nav><p class="lang-alt"><a href="guide-speech-delay.html">Read this guide in English</a></p></div>
 
 <div class="article-wrap art-head">
   <span class="eyebrow">Panduan ibu bapa &middot; Pertuturan &amp; bahasa</span>
@@ -328,8 +329,8 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <p>"Nanti dia cakap bila dah sedia" ialah ayat paling biasa yang didengar ibu bapa yang risau, selalunya daripada orang yang menyayangi mereka. Kadangkala ia benar. Tetapi tahun-tahun awal ialah waktu bahasa berkembang paling pantas, dan hampir tidak pernah ada keburukan memeriksanya awal. Jika naluri anda berkata ada sesuatu yang tidak kena, naluri itu wajar ditindaki.</p>
 
   <div class="toc">
-    <strong>In this guide</strong>
-    <a href="#what">Apa sebenarnya ia</a>
+    <strong>Kandungan panduan ini</strong>
+    <a href="#what">Apa sebenarnya lewat bertutur</a>
     <a href="#ages">Apa yang perlu diperhatikan, mengikut usia</a>
     <a href="#notx">Bila ia nampak begini tetapi bukan</a>
     <a href="#checklist">Senarai semak pemerhatian</a>
@@ -341,9 +342,9 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
 <div class="pdf-grab"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><div><b>Lebih suka versi bercetak?</b><span>Versi 2 muka surat panduan ini, percuma.</span></div><a href="Lodestone-Guide-Speech-Delay-BM.pdf" download>Muat turun PDF &darr;</a></div>
 
 
-  <h2 id="what">Apa sebenarnya ia</h2>
+  <h2 id="what">Apa sebenarnya lewat bertutur</h2>
   <p>Lewat pertuturan atau bahasa bermaksud komunikasi berkembang lebih perlahan daripada yang dijangka bagi usia seorang anak. Wajar diasingkan dua perkara yang kerap dicampuradukkan.</p>
-  <p><strong>Speech</strong> ialah penghasilan bunyi secara fizikal: sama ada seorang anak boleh menghasilkan dan menyusun bunyi yang membentuk perkataan dengan jelas. <strong>Language</strong> ialah sistem di sebaliknya: memahami apa yang diperkatakan (reseptif) dan menyusun perkataan untuk menyampaikan makna (ekspresif). Seorang anak boleh menghadapi kesukaran dengan salah satu, yang satu lagi, atau kedua-duanya, dan sokongannya berbeza.</p>
+  <p><strong>Pertuturan</strong> ialah penghasilan bunyi secara fizikal: sama ada seorang anak boleh menghasilkan dan menyusun bunyi yang membentuk perkataan dengan jelas. <strong>Bahasa</strong> ialah sistem di sebaliknya: memahami apa yang diperkatakan (reseptif) dan menyusun perkataan untuk menyampaikan makna (ekspresif). Seorang anak boleh menghadapi kesukaran dengan salah satu, yang satu lagi, atau kedua-duanya, dan sokongannya berbeza.</p>
   <p>Kelewatan ini biasa dan bukan tanda kecerdasan yang rendah. Ramai anak yang lewat bercakap akhirnya mengejar. Tetapi kita tidak dapat tahu lebih awal anak yang mana akan mengejar, dan mereka yang tidak akan kehilangan tapak yang lebih sukar dipulihkan kemudian. Ketidakseimbangan itulah keseluruhan hujah untuk memeriksa awal dan bukan menunggu.</p>
 
   <div class="myth">
@@ -355,7 +356,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <p>Setiap anak berbeza. Yang penting ialah sama ada perkara ini <strong>kerap berlaku, tidak selaras dengan rakan sebaya, dan benar-benar menyusahkan</strong>.</p>
   <div class="agebox">
     <div class="agerow">
-      <h3>By 12 months</h3>
+      <h3>Menjelang 12 bulan</h3>
       <p>Batu asasnya tiba sebelum perkataan.</p>
       <ul><li>Berceloteh dengan pelbagai bunyi (bababa, dadada)</li><li>Menggunakan isyarat: menunjuk, melambai, menghulur tangan minta didukung</li><li>Menyahut apabila dipanggil namanya</li><li>Memandang ke arah yang anda tunjuk</li><li>Suka permainan berbalas seperti cak cak</li><li><em>Wajar diperiksa:</em> tiada celoteh, tiada isyarat tangan, tidak menyahut apabila dipanggil nama</li></ul>
     </div>
@@ -365,12 +366,12 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
       <ul><li>Sekitar 50 perkataan atau lebih menjelang umur dua tahun</li><li>Mula menggabungkan dua perkataan: "nak susu," "ayah pergi"</li><li>Mengikut arahan mudah tanpa isyarat tangan</li><li>Menunjuk untuk menamakan objek biasa dan anggota badan</li><li><em>Wajar diperiksa:</em> kurang daripada 50 perkataan pada umur dua tahun, tiada gabungan dua perkataan, atau kehilangan perkataan yang pernah digunakan</li></ul>
     </div>
     <div class="agerow">
-      <h3>Ages 2 to 3</h3>
+      <h3>Umur 2 hingga 3 tahun</h3>
       <p>Ayat, dan difahami oleh orang di luar keluarga.</p>
       <ul><li>Ayat tiga hingga empat perkataan menjelang umur tiga tahun</li><li>Difahami oleh orang yang tidak dikenali kira-kira 50 hingga 75 peratus daripada masa menjelang umur tiga tahun</li><li>Bertanya soalan mudah: apa, di mana, siapa</li><li>Mengikut arahan dua langkah</li><li><em>Wajar diperiksa:</em> masih kebanyakannya satu perkataan, sangat sukar difahami orang lain, kerap kecewa atau memukul apabila tidak difahami</li></ul>
     </div>
     <div class="agerow">
-      <h3>Ages 4 to 5</h3>
+      <h3>Umur 4 hingga 5 tahun</h3>
       <p>Kejelasan, tatabahasa dan bercerita.</p>
       <ul><li>Pertuturan sebahagian besarnya jelas kepada pendengar yang tidak dikenali menjelang umur empat tahun</li><li>Menceritakan kisah mudah dengan peristiwa mengikut urutan</li><li>Menggunakan tatabahasa yang kebanyakannya betul, dengan kesilapan kecil yang biasa</li><li>Mampu berbual berbalas dengan sempurna</li><li><em>Wajar diperiksa:</em> masih sukar difahami, tidak dapat menyusun kisah mudah mengikut urutan, sukar mengikut arahan di dalam kelas</li></ul>
     </div>
@@ -380,9 +381,9 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <p>Beberapa perkara menghasilkan gambaran yang serupa. Penilaian yang baik akan menyingkirkannya dahulu, dan anda juga patut berbuat demikian:</p>
   <ul>
     <li><b>Kehilangan pendengaran, termasuk telinga berair.</b> Inilah perkara pertama yang perlu disingkirkan, sentiasa. Kehilangan pendengaran yang datang dan pergi akibat jangkitan telinga berulang adalah biasa dan mudah terlepas pandang.</li>
-    <li><b>Pendedahan dua atau tiga bahasa.</b> Mempelajari dua atau tiga bahasa <em>not</em> menyebabkan kelewatan. Kira perkataan merentas semua bahasa yang digabungkan. Kelewatan yang sebenar muncul dalam jumlah keseluruhan, bukan dalam satu bahasa sahaja.</li>
+    <li><b>Pendedahan dua atau tiga bahasa.</b> Mempelajari dua atau tiga bahasa <em>tidak</em> menyebabkan kelewatan. Kira perkataan merentas semua bahasa yang digabungkan. Kelewatan yang sebenar muncul dalam jumlah keseluruhan, bukan dalam satu bahasa sahaja.</li>
     <li><b>Keluarga yang pendiam, atau adik-beradik yang terlalu membantu.</b> Anak yang tidak pernah perlu meminta, kerana abang atau kakaknya bercakap bagi pihaknya, mungkin sekadar kurang sebab untuk mencuba.</li>
-    <li><b>Autism.</b> Lewat bertutur selalunya perkara pertama yang disedari. Jika ada juga perbezaan dalam isyarat tangan, perhatian berkongsi atau cara bermain, tanya tentang penilaian yang lebih luas.</li>
+    <li><b>Autisme.</b> Lewat bertutur selalunya perkara pertama yang disedari. Jika ada juga perbezaan dalam isyarat tangan, perhatian berkongsi atau cara bermain, tanya tentang penilaian yang lebih luas.</li>
     <li><b>Kesukaran motor mulut.</b> Ada kanak-kanak yang menghadapi kesukaran fizikal menyelaraskan pergerakan untuk bertutur, dan itu memerlukan terapi khusus.</li>
   </ul>
 
@@ -454,8 +455,8 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
     <p>Penilaian pertuturan dan bahasa di Malaysia dijalankan oleh <strong>ahli terapi pertuturan dan bahasa (pakar patologi pertuturan)</strong>, biasanya selepas rujukan daripada pakar pediatrik atau Klinik Kesihatan. Hospital kerajaan yang mempunyai jabatan terapi pertuturan, hospital swasta, dan klinik bebas semuanya menyediakannya.</p>
     <h3>Dua laluan</h3>
     <div class="cost">
-      <div><b>Public</b>Klinik Kesihatan boleh merujuk ke jabatan terapi pertuturan dan bahasa hospital kerajaan. Kosnya minimum, masa menunggu berbeza-beza mengikut negeri. Bagi kanak-kanak bawah enam tahun, tanya tentang <strong>Program Intervensi Awal (EIP)</strong> dan tentang pusat PDK JKM di kawasan anda.</div>
-      <div><b>Private</b>Sesi terapi pertuturan swasta di Lembah Klang lazimnya dikenakan bayaran setiap sesi, dengan penilaian awal berharga lebih tinggi. Tanya tentang kekerapan sesi sebelum membuat komitmen, kerana kebanyakan program memerlukan sekurang-kurangnya satu sesi seminggu untuk berkesan.</div>
+      <div><b>Awam</b>Klinik Kesihatan boleh merujuk ke jabatan terapi pertuturan dan bahasa hospital kerajaan. Kosnya minimum, masa menunggu berbeza-beza mengikut negeri. Bagi kanak-kanak bawah enam tahun, tanya tentang <strong>Program Intervensi Awal (EIP)</strong> dan tentang pusat PDK JKM di kawasan anda.</div>
+      <div><b>Swasta</b>Sesi terapi pertuturan swasta di Lembah Klang lazimnya dikenakan bayaran setiap sesi, dengan penilaian awal berharga lebih tinggi. Tanya tentang kekerapan sesi sebelum membuat komitmen, kerana kebanyakan program memerlukan sekurang-kurangnya satu sesi seminggu untuk berkesan.</div>
     </div>
     <p style="font-size:.95rem;margin-bottom:0">Kos dan masa menunggu berubah, jadi sahkan terus dengan pihak berkenaan. <strong>Anda tidak perlukan diagnosis untuk mula membantu anak anda</strong>, dan menunggu diagnosis tidak sepatutnya bermakna menunggu untuk bertindak.</p>
   </div>
@@ -480,7 +481,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   </ul>
 
   <h2>Apa kata kajian</h2>
-  <p>Program yang dilaksanakan oleh ibu bapa mempunyai bukti yang kukuh. Kajian tentang program Hanen <em>It Takes Two to Talk</em> mendapati kesannya terhadap perbendaharaan kata dan kerumitan ayat <strong>setanding dengan terapi yang dipimpin pakar klinikal</strong>, with <strong>peningkatan lebih besar dalam komunikasi sosial</strong>, serta keyakinan ibu bapa yang bertambah baik (<a href="https://www.hanen.org/information-tips/who-we-are-research/it-takes-two-to-talk-research-summary" target="_blank" rel="noopener">ringkasan kajian</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8345947/" target="_blank" rel="noopener">kajian yang disemak rakan sebaya</a>). Mesejnya kepada ibu bapa jelas: apa yang anda lakukan antara sesi lebih penting daripada sesi itu sendiri.</p>
+  <p>Program yang dilaksanakan oleh ibu bapa mempunyai bukti yang kukuh. Kajian tentang program Hanen <em>It Takes Two to Talk</em> mendapati kesannya terhadap perbendaharaan kata dan kerumitan ayat <strong>setanding dengan terapi yang dipimpin pakar klinikal</strong>, dengan <strong>peningkatan lebih besar dalam komunikasi sosial</strong>, serta keyakinan ibu bapa yang bertambah baik (<a href="https://www.hanen.org/information-tips/who-we-are-research/it-takes-two-to-talk-research-summary" target="_blank" rel="noopener">ringkasan kajian</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8345947/" target="_blank" rel="noopener">kajian yang disemak rakan sebaya</a>). Mesejnya kepada ibu bapa jelas: apa yang anda lakukan antara sesi lebih penting daripada sesi itu sendiri.</p>
 
   <h2 id="faq">Soalan yang ibu bapa tanyakan</h2>
   <details><summary>Patutkah kami tunggu dan lihat sahaja?</summary><p>Jika anda risau, periksa. Ujian pendengaran cepat dan saringan pertuturan dan bahasa itu mudah. Kebanyakan ibu bapa yang menunggu dan kemudian mendapatkan bantuan berkata mereka berharap mereka pergi lebih awal.</p></details>
@@ -518,7 +519,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
 
   <div class="next">
     <a href="speech-delay-support-ms.html"><span>Cara kami membantu</span><b>Sokongan di Lodestone &rarr;</b></a>
-    <a href="guide-autism-ms.html"><span>Related guide</span><b>Autism &rarr;</b></a>
+    <a href="guide-autism-ms.html"><span>Panduan berkaitan</span><b>Autisme &rarr;</b></a>
   </div>
 
 </article>

@@ -59,13 +59,14 @@
   .nav-links a:hover{color:var(--ink)}
   .nav-cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:.9rem;font-weight:500}
   .nav-cta:hover{background:var(--primary)}
+  .lang-switch{font-size:.82rem;font-weight:700;color:var(--ink-soft);border:1.5px solid var(--line);padding:6px 11px;border-radius:999px;letter-spacing:.04em;transition:.2s}.lang-switch:hover{border-color:var(--primary);color:var(--primary)}.nav-links{gap:16px}.nav-links a,.nav-links button{white-space:nowrap}.nav-links .nav-cta{color:#fff}.lang-alt{display:none;font-size:.82rem;padding-top:6px}.lang-alt a{color:var(--primary);font-weight:600;text-decoration:underline}@media(max-width:1100px){.nav-links .nav-cta{display:none}}@media(max-width:900px){.lang-alt{display:block}}
   .a11y{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--ink-soft);border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 13px;cursor:pointer;font-family:inherit}
   .a11y:hover{border-color:var(--primary);color:var(--primary)}
   .a11y[aria-pressed="true"]{background:var(--primary);color:#fff;border-color:var(--primary)}
   .menu-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--ink)}
   .crumb{font-size:.82rem;color:var(--ink-soft);padding-top:18px}
   .crumb a:hover{color:var(--primary)}
-  .art-head{padding:26px 0 6px}
+  .art-head{padding:26px 24px 6px}
   .art-head h1{font-size:clamp(1.9rem,4vw,2.7rem);margin:14px 0 0}
   .art-standfirst{font-size:1.16rem;color:var(--ink-soft);margin-top:16px}
   .byline{display:flex;align-items:center;gap:14px;margin:24px 0 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.9rem;color:var(--ink-soft)}
@@ -281,7 +282,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
         <div class="nav-dd-menu">
           <a href="index.html#programs">Say Play (Speech)</a>
           <a href="index.html#programs">SEL Program</a>
-          <a href="index.html#programs">Screening</a>
+          <a href="screening.html">Screening</a>
           <a href="index.html#programs">Math Program</a>
           <a href="index.html#programs">Progressive Coding</a>
           <a href="index.html#programs">IGCSE Crash Course</a>
@@ -302,13 +303,13 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
       <button class="a11y" id="easyToggle" aria-pressed="false" title="Easier reading">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h12M4 17h8"/></svg>Easy read
       </button>
-      <a href="index.html#contact" class="nav-cta">Book free call</a>
+      <a href="guide-slow-learners-ms.html" class="lang-switch" aria-label="Versi Bahasa Melayu">BM</a><a href="index.html#contact" class="nav-cta">Book free call</a>
     </nav>
     <button class="menu-toggle" aria-label="Menu" onclick="location.href='index.html#contact'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
   </div>
 </header>
 
-<div class="article-wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="guides.html">Parent Guides</a> &rsaquo; <span>Learning difficulties</span></nav></div>
+<div class="article-wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="guides.html">Parent Guides</a> &rsaquo; <span>Learning difficulties</span></nav><p class="lang-alt"><a href="guide-slow-learners-ms.html">Baca panduan ini dalam Bahasa Melayu</a></p></div>
 
 <div class="article-wrap art-head">
   <span class="eyebrow">Parent guide &middot; Pace &amp; retention</span>

@@ -59,13 +59,14 @@
   .nav-links a:hover{color:var(--ink)}
   .nav-cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:.9rem;font-weight:500}
   .nav-cta:hover{background:var(--primary)}
+  .lang-switch{font-size:.82rem;font-weight:700;color:var(--ink-soft);border:1.5px solid var(--line);padding:6px 11px;border-radius:999px;letter-spacing:.04em;transition:.2s}.lang-switch:hover{border-color:var(--primary);color:var(--primary)}.nav-links{gap:16px}.nav-links a,.nav-links button{white-space:nowrap}.nav-links .nav-cta{color:#fff}.lang-alt{display:none;font-size:.82rem;padding-top:6px}.lang-alt a{color:var(--primary);font-weight:600;text-decoration:underline}@media(max-width:1100px){.nav-links .nav-cta{display:none}}@media(max-width:900px){.lang-alt{display:block}}
   .a11y{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--ink-soft);border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 13px;cursor:pointer;font-family:inherit}
   .a11y:hover{border-color:var(--primary);color:var(--primary)}
   .a11y[aria-pressed="true"]{background:var(--primary);color:#fff;border-color:var(--primary)}
   .menu-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--ink)}
   .crumb{font-size:.82rem;color:var(--ink-soft);padding-top:18px}
   .crumb a:hover{color:var(--primary)}
-  .art-head{padding:26px 0 6px}
+  .art-head{padding:26px 24px 6px}
   .art-head h1{font-size:clamp(1.9rem,4vw,2.7rem);margin:14px 0 0}
   .art-standfirst{font-size:1.16rem;color:var(--ink-soft);margin-top:16px}
   .byline{display:flex;align-items:center;gap:14px;margin:24px 0 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.9rem;color:var(--ink-soft)}
@@ -234,7 +235,7 @@ html{scroll-padding-top:88px}
 .footer-bottom .privacy-link{color:inherit;text-decoration:underline;opacity:.85}.footer-bottom .privacy-link:hover{opacity:1}</style>
 
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Laman Utama", "item": "https://thelodestonesolution.com/index-ms.html"}, {"@type": "ListItem", "position": 2, "name": "Parent Guides", "item": "https://thelodestonesolution.com/guides-ms.html"}, {"@type": "ListItem", "position": 3, "name": "Kesukaran pembelajaran", "item": "https://thelodestonesolution.com/guide-slow-learners-ms.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Laman Utama", "item": "https://thelodestonesolution.com/index-ms.html"}, {"@type": "ListItem", "position": 2, "name": "Panduan Ibu Bapa", "item": "https://thelodestonesolution.com/guides-ms.html"}, {"@type": "ListItem", "position": 3, "name": "Kesukaran pembelajaran", "item": "https://thelodestonesolution.com/guide-slow-learners-ms.html"}]}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Article", "headline": "Bila Anak Belajar Perlahan: Apa yang Benar-benar Membantu", "description": "Mengapa sesetengah anak ketinggalan walaupun berusaha, tiga punca biasa di sebaliknya, dan kaedah belajar yang paling kukuh buktinya.", "image": "https://thelodestonesolution.com/og-image.png", "datePublished": "2026-08-04", "dateModified": "2026-08-04", "inLanguage": "ms-MY", "author": {"@type": "Organization", "name": "Pasukan Pendidikan The Lodestone", "url": "https://thelodestonesolution.com/"}, "publisher": {"@type": "Organization", "name": "The Lodestone Centre", "url": "https://thelodestonesolution.com/", "logo": {"@type": "ImageObject", "url": "https://thelodestonesolution.com/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://thelodestonesolution.com/guide-slow-learners-ms.html"}, "about": {"@type": "Thing", "name": "Kesukaran pembelajaran"}}
@@ -300,15 +301,15 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
       </div>
       <a href="for-schools-ms.html">Untuk Sekolah</a>
       <button class="a11y" id="easyToggle" aria-pressed="false" title="Easier reading">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h12M4 17h8"/></svg>Easy read
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h12M4 17h8"/></svg>Bacaan mudah
       </button>
-      <a href="index-ms.html#contact" class="nav-cta">Tempah panggilan percuma</a>
+      <a href="guide-slow-learners.html" class="lang-switch" aria-label="English version">EN</a><a href="index-ms.html#contact" class="nav-cta">Tempah panggilan percuma</a>
     </nav>
     <button class="menu-toggle" aria-label="Menu" onclick="location.href='index.html#contact'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
   </div>
 </header>
 
-<div class="article-wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="index-ms.html">Laman Utama</a> &rsaquo; <a href="guides-ms.html">Panduan Ibu Bapa</a> &rsaquo; <span>Kesukaran pembelajaran</span></nav></div>
+<div class="article-wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="index-ms.html">Laman Utama</a> &rsaquo; <a href="guides-ms.html">Panduan Ibu Bapa</a> &rsaquo; <span>Kesukaran pembelajaran</span></nav><p class="lang-alt"><a href="guide-slow-learners.html">Read this guide in English</a></p></div>
 
 <div class="article-wrap art-head">
   <span class="eyebrow">Panduan ibu bapa &middot; Rentak &amp; ingatan</span>
@@ -328,8 +329,8 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <p>Ada satu jenis kerisauan yang datang bersama anak yang sedang berusaha. Kalau dia malas, sekurang-kurangnya ada sesuatu yang boleh dibetulkan. Sebaliknya dia membuat kerjanya, menghadiri kelas tambahan, dan jurang itu tetap melebar. Ibu bapa selalunya sampai kepada satu soalan yang senyap dan menyakitkan: adakah anak saya memang tidak bijak? Hampir selalu, jawapannya tidak, dan ada sesuatu yang lebih khusus dan lebih mudah dibetulkan sedang berlaku.</p>
 
   <div class="toc">
-    <strong>In this guide</strong>
-    <a href="#what">Apa sebenarnya ia</a>
+    <strong>Kandungan panduan ini</strong>
+    <a href="#what">Apa sebenarnya lambat belajar</a>
     <a href="#ages">Apa yang perlu diperhatikan, mengikut usia</a>
     <a href="#notx">Bila ia nampak begini tetapi bukan</a>
     <a href="#checklist">Senarai semak pemerhatian</a>
@@ -341,9 +342,9 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
 <div class="pdf-grab"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><div><b>Lebih suka versi bercetak?</b><span>Versi 2 muka surat panduan ini, percuma.</span></div><a href="Lodestone-Guide-Slow-Learners-BM.pdf" download>Muat turun PDF &darr;</a></div>
 
 
-  <h2 id="what">Apa sebenarnya ia</h2>
+  <h2 id="what">Apa sebenarnya lambat belajar</h2>
   <p>"Pelajar perlahan" bukan diagnosis. Ia gambaran yang digunakan sekolah untuk anak yang mengambil masa lebih lama untuk memahami dan mengingati bahan baharu tanpa sebarang kesukaran khusus yang dikenal pasti. Kekaburan itu tidak membantu, jadi berbaloi kita pecahkan apa yang biasanya berlaku di sebaliknya.</p>
-  <p>Dalam kebanyakan kes ia salah satu daripada tiga perkara. <strong>Retention</strong>: anak itu faham semasa pelajaran tetapi sudah hilang menjelang minggu berikutnya, jadi tiada apa yang terkumpul. <strong>Kelajuan pemprosesan</strong>: dia boleh membuat kerja itu tetapi bukan pada rentak kelas, jadi dia sentiasa sedang menghabiskan tugasan semalam. Atau <strong>foundations</strong>: satu lompang dari dua tahun lalu bermakna pelajaran hari ini tiada tempat untuk melekat.</p>
+  <p>Dalam kebanyakan kes ia salah satu daripada tiga perkara. <strong>Pengekalan</strong>: anak itu faham semasa pelajaran tetapi sudah hilang menjelang minggu berikutnya, jadi tiada apa yang terkumpul. <strong>Kelajuan pemprosesan</strong>: dia boleh membuat kerja itu tetapi bukan pada rentak kelas, jadi dia sentiasa sedang menghabiskan tugasan semalam. Atau <strong>asas</strong>: satu lompang dari dua tahun lalu bermakna pelajaran hari ini tiada tempat untuk melekat.</p>
   <p>Ketiga-tiganya menghasilkan keputusan yang sama di mata kita, iaitu anak yang ketinggalan walaupun berusaha, dan ketiga-tiganya bertindak balas kepada perubahan kaedah mengajar dan bukan jumlah pengajaran. Ini penting, kerana tindak balas biasa ialah menambah tuisyen, yang selalunya memberikan lebih banyak daripada perkara yang memang tidak berkesan.</p>
 
   <div class="myth">
@@ -355,17 +356,17 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <p>Setiap anak berbeza. Yang penting ialah sama ada perkara ini <strong>kerap berlaku, tidak selaras dengan rakan sebaya, dan benar-benar menyusahkan</strong>.</p>
   <div class="agebox">
     <div class="agerow">
-      <h3>Ages 5 to 7</h3>
+      <h3>Umur 5 hingga 7 tahun</h3>
       <p>Lompang awal mudah terlepas pandang kerana isi kandungannya masih mudah.</p>
       <ul><li>Mengambil masa yang ketara lebih lama untuk memahami idea baharu berbanding rakan sekelas</li><li>Lupa huruf, bunyi atau nombor yang dipelajari minggu sebelumnya</li><li>Perlu arahan diulang beberapa kali</li><li>Boleh mengikuti apabila diajar seorang-seorang tetapi hilang arah dalam kumpulan</li><li>Cepat letih semasa apa-apa tugasan yang memerlukan fokus</li></ul>
     </div>
     <div class="agerow">
-      <h3>Ages 8 to 10</h3>
+      <h3>Umur 8 hingga 10 tahun</h3>
       <p>Kurikulum mula memecut dan jurang itu menjadi kelihatan.</p>
       <ul><li>Ketinggalan sedikit lagi setiap penggal walaupun berusaha</li><li>Tidak dapat mengingati bahan dengan kukuh dari satu minggu ke minggu berikutnya</li><li>Kerja rumah mengambil masa jauh lebih lama daripada sepatutnya untuk jumlah kerja itu</li><li>Mula menggambarkan dirinya sebagai bodoh atau lembap</li><li>Markah tidak mencerminkan usaha yang jelas dicurahkan</li></ul>
     </div>
     <div class="agerow">
-      <h3>Ages 11 to 13</h3>
+      <h3>Umur 11 hingga 13 tahun</h3>
       <p>Kebebasan dan jumlah isi kandungan mendedahkan asas yang lemah.</p>
       <ul><li>Sukar bekerja tanpa bimbingan seorang-seorang</li><li>Tidak dapat menguruskan tugasan panjang atau mengulang kaji sendiri</li><li>Lompang dari tahun-tahun awal kini menghalang topik baharu</li><li>Mengelak, bertangguh atau cepat berputus asa</li><li>Keyakinan menurun mendadak; mungkin berhenti mencuba untuk melindungi harga dirinya</li></ul>
     </div>
@@ -381,8 +382,8 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <ul>
     <li><b>Kesukaran khusus yang tidak dikesan.</b> Disleksia, diskalkulia dan ADHD semuanya menghasilkan anak yang berusaha keras tetapi ketinggalan. Saringan membezakannya, dan setiap satu memerlukan pengajaran yang berbeza.</li>
     <li><b>Pendengaran atau penglihatan.</b> Mudah, biasa berlaku, dan wajar disingkirkan sebelum apa-apa lagi.</li>
-    <li><b>Poor sleep.</b> Pengukuhan pembelajaran berlaku semasa tidur. Anak yang kronik kurang tidur memang akan bergelut untuk mengingati bahan.</li>
-    <li><b>Anxiety.</b> Kerisauan memenuhi ingatan bekerja. Anak yang cemas mempunyai kapasiti yang lebih sedikit untuk belajar, dan ini kelihatan sama seperti pemprosesan yang perlahan.</li>
+    <li><b>Kurang tidur.</b> Pengukuhan pembelajaran berlaku semasa tidur. Anak yang kronik kurang tidur memang akan bergelut untuk mengingati bahan.</li>
+    <li><b>Kebimbangan.</b> Kerisauan memenuhi ingatan bekerja. Anak yang cemas mempunyai kapasiti yang lebih sedikit untuk belajar, dan ini kelihatan sama seperti pemprosesan yang perlahan.</li>
     <li><b>Bahasa pengantar.</b> Anak yang belajar dalam bahasa yang belum dikuasainya sedang membuat dua kerja serentak, dan akan kelihatan lebih perlahan daripada yang sebenarnya.</li>
     <li><b>Sekadar diajar terlalu laju.</b> Kadangkala rentaknya yang menjadi masalah, bukan anak itu.</li>
   </ul>
@@ -455,8 +456,8 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
     <p>Tiada diagnosis yang dipanggil "pelajar perlahan," jadi apa yang berguna di sini ialah <strong>penilaian psikopendidikan</strong> oleh ahli psikologi pendidikan atau klinikal. Ia mengenal pasti sama ada terdapat kesukaran khusus, di mana lompangnya, dan pendekatan pengajaran yang sesuai. Itu lebih boleh ditindaki daripada sesuatu label.</p>
     <h3>Dua laluan</h3>
     <div class="cost">
-      <div><b>Public</b>Mulakan dengan Klinik Kesihatan anda atau kaunselor sekolah untuk mendapatkan rujukan. Tanya secara khusus tentang penilaian untuk kesukaran pembelajaran dan bukan pemeriksaan am. Laluan awam kosnya rendah tetapi boleh mengambil masa.</div>
-      <div><b>Private</b>Penilaian psikopendidikan swasta di Lembah Klang lazimnya mencecah beberapa ribu ringgit bergantung pada skopnya. Tanya apa yang akan disyorkan oleh laporan itu dari segi pengajaran praktikal, bukan sekadar apa yang akan dinamakannya.</div>
+      <div><b>Awam</b>Mulakan dengan Klinik Kesihatan anda atau kaunselor sekolah untuk mendapatkan rujukan. Tanya secara khusus tentang penilaian untuk kesukaran pembelajaran dan bukan pemeriksaan am. Laluan awam kosnya rendah tetapi boleh mengambil masa.</div>
+      <div><b>Swasta</b>Penilaian psikopendidikan swasta di Lembah Klang lazimnya mencecah beberapa ribu ringgit bergantung pada skopnya. Tanya apa yang akan disyorkan oleh laporan itu dari segi pengajaran praktikal, bukan sekadar apa yang akan dinamakannya.</div>
     </div>
     <p style="font-size:.95rem;margin-bottom:0">Kos dan masa menunggu berubah, jadi sahkan terus dengan pihak berkenaan. <strong>Anda tidak perlukan diagnosis untuk mula membantu anak anda</strong>, dan menunggu diagnosis tidak sepatutnya bermakna menunggu untuk bertindak.</p>
   </div>
@@ -480,7 +481,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   </ul>
 
   <h2>Apa kata kajian</h2>
-  <p>Satu kajian semula besar yang meliputi 242 kajian dan lebih 169,000 pelajar mendapati <strong>latihan berjarak</strong> and <strong>ujian latihan yang mengeluarkan semula daripada ingatan</strong> sebagai dua teknik pembelajaran paling berkesan yang ada. Yang penting bagi kumpulan ini, kajian di dalam bilik darjah sekolah rendah mendapati manfaat latihan mengeluarkan semula itu kekal <strong>tanpa mengira kefahaman bacaan atau kelajuan pemprosesan seseorang anak</strong> (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4786565/" target="_blank" rel="noopener">study</a>). Dengan kata lain, kaedah ini berkesan dengan sangat baik tepat untuk kanak-kanak yang paling memerlukannya.</p>
+  <p>Satu kajian semula besar yang meliputi 242 kajian dan lebih 169,000 pelajar mendapati <strong>latihan berjarak</strong> dan <strong>ujian latihan yang mengeluarkan semula daripada ingatan</strong> sebagai dua teknik pembelajaran paling berkesan yang ada. Yang penting bagi kumpulan ini, kajian di dalam bilik darjah sekolah rendah mendapati manfaat latihan mengeluarkan semula itu kekal <strong>tanpa mengira kefahaman bacaan atau kelajuan pemprosesan seseorang anak</strong> (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4786565/" target="_blank" rel="noopener">study</a>). Dengan kata lain, kaedah ini berkesan dengan sangat baik tepat untuk kanak-kanak yang paling memerlukannya.</p>
 
   <h2 id="faq">Soalan yang ibu bapa tanyakan</h2>
   <details><summary>Adakah "pelajar perlahan" itu satu diagnosis sebenar?</summary><p>Tidak. Ia istilah gambaran, bukan istilah klinikal. Itulah sebabnya penilaian berguna: ia menggantikan label yang kabur dengan sesuatu yang khusus dan boleh anda tindaki.</p></details>
@@ -518,7 +519,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
 
   <div class="next">
     <a href="slow-learners-support-ms.html"><span>Cara kami membantu</span><b>Sokongan di Lodestone &rarr;</b></a>
-    <a href="guide-dyscalculia-ms.html"><span>Related guide</span><b>Diskalkulia &amp; matematik &rarr;</b></a>
+    <a href="guide-dyscalculia-ms.html"><span>Panduan berkaitan</span><b>Diskalkulia &amp; matematik &rarr;</b></a>
   </div>
 
 </article>

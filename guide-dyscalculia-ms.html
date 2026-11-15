@@ -59,13 +59,14 @@
   .nav-links a:hover{color:var(--ink)}
   .nav-cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:.9rem;font-weight:500}
   .nav-cta:hover{background:var(--primary)}
+  .lang-switch{font-size:.82rem;font-weight:700;color:var(--ink-soft);border:1.5px solid var(--line);padding:6px 11px;border-radius:999px;letter-spacing:.04em;transition:.2s}.lang-switch:hover{border-color:var(--primary);color:var(--primary)}.nav-links{gap:16px}.nav-links a,.nav-links button{white-space:nowrap}.nav-links .nav-cta{color:#fff}.lang-alt{display:none;font-size:.82rem;padding-top:6px}.lang-alt a{color:var(--primary);font-weight:600;text-decoration:underline}@media(max-width:1100px){.nav-links .nav-cta{display:none}}@media(max-width:900px){.lang-alt{display:block}}
   .a11y{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--ink-soft);border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 13px;cursor:pointer;font-family:inherit}
   .a11y:hover{border-color:var(--primary);color:var(--primary)}
   .a11y[aria-pressed="true"]{background:var(--primary);color:#fff;border-color:var(--primary)}
   .menu-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--ink)}
   .crumb{font-size:.82rem;color:var(--ink-soft);padding-top:18px}
   .crumb a:hover{color:var(--primary)}
-  .art-head{padding:26px 0 6px}
+  .art-head{padding:26px 24px 6px}
   .art-head h1{font-size:clamp(1.9rem,4vw,2.7rem);margin:14px 0 0}
   .art-standfirst{font-size:1.16rem;color:var(--ink-soft);margin-top:16px}
   .byline{display:flex;align-items:center;gap:14px;margin:24px 0 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.9rem;color:var(--ink-soft)}
@@ -234,7 +235,7 @@ html{scroll-padding-top:88px}
 .footer-bottom .privacy-link{color:inherit;text-decoration:underline;opacity:.85}.footer-bottom .privacy-link:hover{opacity:1}</style>
 
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Laman Utama", "item": "https://thelodestonesolution.com/index-ms.html"}, {"@type": "ListItem", "position": 2, "name": "Parent Guides", "item": "https://thelodestonesolution.com/guides-ms.html"}, {"@type": "ListItem", "position": 3, "name": "Diskalkulia", "item": "https://thelodestonesolution.com/guide-dyscalculia-ms.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Laman Utama", "item": "https://thelodestonesolution.com/index-ms.html"}, {"@type": "ListItem", "position": 2, "name": "Panduan Ibu Bapa", "item": "https://thelodestonesolution.com/guides-ms.html"}, {"@type": "ListItem", "position": 3, "name": "Diskalkulia", "item": "https://thelodestonesolution.com/guide-dyscalculia-ms.html"}]}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Article", "headline": "Diskalkulia: Mengapa Matematik Tidak Masuk, dan Apa yang Membantu", "description": "Apa itu diskalkulia, mengapa latih tubi tidak membantu, tanda mengikut usia, dan pendekatan yang membina semula deria nombor.", "image": "https://thelodestonesolution.com/og-image.png", "datePublished": "2026-08-04", "dateModified": "2026-08-04", "inLanguage": "ms-MY", "author": {"@type": "Organization", "name": "Pasukan Pendidikan The Lodestone", "url": "https://thelodestonesolution.com/"}, "publisher": {"@type": "Organization", "name": "The Lodestone Centre", "url": "https://thelodestonesolution.com/", "logo": {"@type": "ImageObject", "url": "https://thelodestonesolution.com/logo.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://thelodestonesolution.com/guide-dyscalculia-ms.html"}, "about": {"@type": "Thing", "name": "Dyscalculia"}}
@@ -300,15 +301,15 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
       </div>
       <a href="for-schools-ms.html">Untuk Sekolah</a>
       <button class="a11y" id="easyToggle" aria-pressed="false" title="Easier reading">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h12M4 17h8"/></svg>Easy read
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h12M4 17h8"/></svg>Bacaan mudah
       </button>
-      <a href="index-ms.html#contact" class="nav-cta">Tempah panggilan percuma</a>
+      <a href="guide-dyscalculia.html" class="lang-switch" aria-label="English version">EN</a><a href="index-ms.html#contact" class="nav-cta">Tempah panggilan percuma</a>
     </nav>
     <button class="menu-toggle" aria-label="Menu" onclick="location.href='index.html#contact'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
   </div>
 </header>
 
-<div class="article-wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="index-ms.html">Laman Utama</a> &rsaquo; <a href="guides-ms.html">Panduan Ibu Bapa</a> &rsaquo; <span>Dyscalculia</span></nav></div>
+<div class="article-wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="index-ms.html">Laman Utama</a> &rsaquo; <a href="guides-ms.html">Panduan Ibu Bapa</a> &rsaquo; <span>Dyscalculia</span></nav><p class="lang-alt"><a href="guide-dyscalculia.html">Read this guide in English</a></p></div>
 
 <div class="article-wrap art-head">
   <span class="eyebrow">Panduan ibu bapa &middot; Nombor &amp; matematik</span>
@@ -328,8 +329,8 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <p>Matematik ialah mata pelajaran yang paling banyak dibelanjakan wang oleh ibu bapa. Lebih banyak tuisyen, lebih banyak lembaran kerja, lebih banyak latih tubi. Apabila seorang anak masih tidak dapat mengingati 7 + 8 selepas dua tahun begitu, mudah untuk membuat kesimpulan bahawa dia tidak berusaha. Hampir selalu, ada sesuatu yang lebih khusus sedang berlaku, dan ia bertindak balas kepada pendekatan yang sama sekali berbeza.</p>
 
   <div class="toc">
-    <strong>In this guide</strong>
-    <a href="#what">Apa sebenarnya ia</a>
+    <strong>Kandungan panduan ini</strong>
+    <a href="#what">Apa sebenarnya diskalkulia</a>
     <a href="#ages">Apa yang perlu diperhatikan, mengikut usia</a>
     <a href="#notx">Bila ia nampak begini tetapi bukan</a>
     <a href="#checklist">Senarai semak pemerhatian</a>
@@ -341,10 +342,10 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
 <div class="pdf-grab"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><div><b>Lebih suka versi bercetak?</b><span>Versi 2 muka surat panduan ini, percuma.</span></div><a href="Lodestone-Guide-Dyscalculia-BM.pdf" download>Muat turun PDF &darr;</a></div>
 
 
-  <h2 id="what">Apa sebenarnya ia</h2>
+  <h2 id="what">Apa sebenarnya diskalkulia</h2>
   <p>Diskalkulia ialah perbezaan pembelajaran khusus dalam cara otak memproses nombor dan kuantiti. Ia kadangkala dipanggil "disleksia untuk nombor," walaupun mekanismenya berbeza.</p>
-  <p>Di terasnya terletak sesuatu yang dipanggil <strong>number sense</strong>: iaitu tanggapan segera tanpa kata tentang berapa banyak. Tunjukkan empat titik kepada kebanyakan orang dan mereka terus nampak empat, tanpa mengira. Ini dipanggil subitising, dan itulah asas yang membina segala-galanya dalam aritmetik. Dalam diskalkulia, deria segera itu lemah atau tiada, jadi anak itu mengira. Setiap kali.</p>
-  <p>Sebaik anda memahaminya, yang selebihnya menyusul. Jika seorang anak terpaksa mengira untuk tahu apa itu empat <em>is</em>, maka 7 + 8 bukan fakta yang menunggu untuk dihafal, ia kerja pembinaan yang dibuat dari awal pada setiap kali. Latih tubi meminta dia menghafal jawapan kepada soalan yang belum dapat difahaminya. Itulah sebabnya menambah latih tubi tidak membantu, dan selalunya memburukkan keadaan dengan menambah kebimbangan di atasnya.</p>
+  <p>Di terasnya terletak sesuatu yang dipanggil <strong>deria nombor</strong>: iaitu tanggapan segera tanpa kata tentang berapa banyak. Tunjukkan empat titik kepada kebanyakan orang dan mereka terus nampak empat, tanpa mengira. Ini dipanggil subitising, dan itulah asas yang membina segala-galanya dalam aritmetik. Dalam diskalkulia, deria segera itu lemah atau tiada, jadi anak itu mengira. Setiap kali.</p>
+  <p>Sebaik anda memahaminya, yang selebihnya menyusul. Jika seorang anak terpaksa mengira untuk tahu apa <em>sebenarnya</em> empat, maka 7 + 8 bukan fakta yang menunggu untuk dihafal, ia kerja pembinaan yang dibuat dari awal pada setiap kali. Latih tubi meminta dia menghafal jawapan kepada soalan yang belum dapat difahaminya. Itulah sebabnya menambah latih tubi tidak membantu, dan selalunya memburukkan keadaan dengan menambah kebimbangan di atasnya.</p>
 
   <div class="myth">
     <div class="m"><b>Apa yang orang kata</b>"Dia cuma perlu lebih banyak latihan. Kami dah hantar dia ke tiga kelas tuisyen."</div>
@@ -355,7 +356,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <p>Setiap anak berbeza. Yang penting ialah sama ada perkara ini <strong>kerap berlaku, tidak selaras dengan rakan sebaya, dan benar-benar menyusahkan</strong>.</p>
   <div class="agebox">
     <div class="agerow">
-      <h3>Ages 4 to 6</h3>
+      <h3>Umur 4 hingga 6 tahun</h3>
       <p>Sebelum matematik formal, diskalkulia muncul dalam cara seorang anak mengendalikan kuantiti dan bukan simbol.</p>
       <ul><li>Sukar belajar mengira dengan tepat, atau kerap melangkau nombor</li><li>Tidak dapat mengenal kuantiti kecil tanpa mengira satu per satu</li><li>Sukar menyatakan kumpulan kecil yang mana lebih banyak</li><li>Sukar menghubungkan angka 5 dengan lima objek</li><li>Mengelak permainan yang melibatkan dadu, mengira atau mengumpul mata</li></ul>
     </div>
@@ -407,7 +408,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <p>Ini sengaja dibuat khusus. Nasihat yang kabur mudah diberi tetapi sukar digunakan.</p>
 
   <h3>Jadikan kuantiti sesuatu yang fizikal sebelum ia menjadi simbol</h3>
-  <p>Gunakan butang, penutup botol, Lego, makanan ringan. Minta dia membuat kumpulan, memecahkannya, menggabungkannya. Anak itu perlu <em>see and move</em> kuantiti sebelum sebarang pengiraan bertulis membawa makna. Sepuluh minit begini mengalahkan satu jam lembaran kerja.</p>
+  <p>Gunakan butang, penutup botol, Lego, makanan ringan. Minta dia membuat kumpulan, memecahkannya, menggabungkannya. Anak itu perlu <em>melihat dan menggerakkan</em> kuantiti sebelum sebarang pengiraan bertulis membawa makna. Sepuluh minit begini mengalahkan satu jam lembaran kerja.</p>
 
   <h3>Main permainan dadu dan domino</h3>
   <p>Permainan yang memerlukan anda mengenal corak titik tanpa mengira membina kemahiran subitising secara langsung, dan itulah kemahiran yang lemah. Ular dan tangga, Ludo, domino. Main untuk berseronok, jangan jadikannya kelas.</p>
@@ -453,11 +454,11 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   <h2 id="malaysia">Mendapatkan penilaian di Malaysia</h2>
   <div class="my-box">
     <h3>Siapa yang sebenarnya boleh menilai</h3>
-    <p>Di Malaysia, penilaian rasmi untuk kesukaran pembelajaran khusus seperti diskalkulia biasanya dijalankan oleh <strong>ahli psikologi pendidikan</strong> or <strong>ahli psikologi klinikal</strong>. Untuk diagnosis disleksia atau perbezaan pembelajaran khusus, ahli psikologi itu perlu berdaftar dengan <strong>Majlis Profesion Kesihatan Bersekutu Malaysia</strong>. Diskalkulia jauh lebih jarang dinilai berbanding disleksia di sini, jadi berbaloi bertanya terus sama ada seseorang pengamal itu berpengalaman dengan masalah matematik secara khusus.</p>
+    <p>Di Malaysia, penilaian rasmi untuk kesukaran pembelajaran khusus seperti diskalkulia biasanya dijalankan oleh <strong>ahli psikologi pendidikan</strong> atau <strong>ahli psikologi klinikal</strong>. Untuk diagnosis disleksia atau perbezaan pembelajaran khusus, ahli psikologi itu perlu berdaftar dengan <strong>Majlis Profesion Kesihatan Bersekutu Malaysia</strong>. Diskalkulia jauh lebih jarang dinilai berbanding disleksia di sini, jadi berbaloi bertanya terus sama ada seseorang pengamal itu berpengalaman dengan masalah matematik secara khusus.</p>
     <h3>Dua laluan</h3>
     <div class="cost">
-      <div><b>Public</b>Mulakan dengan rujukan daripada Klinik Kesihatan anda atau pakar pediatrik. Kosnya rendah; masa menunggu boleh jadi panjang. Tanya secara khusus tentang penilaian untuk kesukaran pembelajaran khusus dan bukan pemeriksaan tumbesaran am.</div>
-      <div><b>Private</b>Penilaian pendidikan atau psikologi swasta di Lembah Klang lazimnya mencecah beberapa ribu ringgit, bergantung pada seberapa menyeluruh set ujian itu. Sahkan sebelum menempah, dan tanya apa sebenarnya yang akan dinyatakan dalam laporan itu.</div>
+      <div><b>Awam</b>Mulakan dengan rujukan daripada Klinik Kesihatan anda atau pakar pediatrik. Kosnya rendah; masa menunggu boleh jadi panjang. Tanya secara khusus tentang penilaian untuk kesukaran pembelajaran khusus dan bukan pemeriksaan tumbesaran am.</div>
+      <div><b>Swasta</b>Penilaian pendidikan atau psikologi swasta di Lembah Klang lazimnya mencecah beberapa ribu ringgit, bergantung pada seberapa menyeluruh set ujian itu. Sahkan sebelum menempah, dan tanya apa sebenarnya yang akan dinyatakan dalam laporan itu.</div>
     </div>
     <p style="font-size:.95rem;margin-bottom:0">Kos dan masa menunggu berubah, jadi sahkan terus dengan pihak berkenaan. <strong>Anda tidak perlukan diagnosis untuk mula membantu anak anda</strong>, dan menunggu diagnosis tidak sepatutnya bermakna menunggu untuk bertindak.</p>
   </div>
@@ -482,7 +483,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
   </ul>
 
   <h2>Apa kata kajian</h2>
-  <p>Kajian meletakkan teras diskalkulia pada kesukaran mewakili <strong>numerosity</strong>, iaitu deria tentang berapa banyak, yang mendasari semua aritmetik selepasnya. Implikasinya kepada intervensi adalah langsung dan disokong kukuh: program yang berkesan mengukuhkan hubungan antara kuantiti sebenar dengan simbol yang mewakilinya, dan bukan sekadar melatih tubi simbol itu sahaja. Karya Butterworth yang dikemas kini, <a href="https://www.routledge.com/Dyscalculia-From-Science-to-Education/Butterworth/p/book/9781032579481" target="_blank" rel="noopener">Dyscalculia: From Science to Education</a> meninjau bukti semasa tentang apa yang benar-benar berkesan.</p>
+  <p>Kajian meletakkan teras diskalkulia pada kesukaran mewakili <strong>numerositi</strong>, iaitu deria tentang berapa banyak, yang mendasari semua aritmetik selepasnya. Implikasinya kepada intervensi adalah langsung dan disokong kukuh: program yang berkesan mengukuhkan hubungan antara kuantiti sebenar dengan simbol yang mewakilinya, dan bukan sekadar melatih tubi simbol itu sahaja. Karya Butterworth yang dikemas kini, <a href="https://www.routledge.com/Dyscalculia-From-Science-to-Education/Butterworth/p/book/9781032579481" target="_blank" rel="noopener">Dyscalculia: From Science to Education</a> meninjau bukti semasa tentang apa yang benar-benar berkesan.</p>
 
   <h2 id="faq">Soalan yang ibu bapa tanyakan</h2>
   <details><summary>Anak saya sudah bertahun-tahun bertuisyen tetapi masih tidak boleh matematik. Mengapa?</summary><p>Kebanyakan tuisyen memberikan lebih banyak pengajaran yang sama, dengan lebih pantas. Jika deria nombor asas tidak pernah dibina, pengulangan tambahan tiada tempat untuk melekat. Pendekatannya yang perlu berubah, bukan kuantitinya.</p></details>
@@ -520,7 +521,7 @@ document.addEventListener('submit',function(e){if(e.target&&e.target.id==='conta
 
   <div class="next">
     <a href="dyscalculia-support-ms.html"><span>Cara kami membantu</span><b>Sokongan di Lodestone &rarr;</b></a>
-    <a href="guide-adhd-ms.html"><span>Related guide</span><b>ADHD &amp; tumpuan &rarr;</b></a>
+    <a href="guide-adhd-ms.html"><span>Panduan berkaitan</span><b>ADHD &amp; tumpuan &rarr;</b></a>
   </div>
 
 </article>
