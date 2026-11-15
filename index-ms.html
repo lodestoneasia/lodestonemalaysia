@@ -2074,6 +2074,11 @@
   gtag('js', new Date());
   gtag('config', 'G-YC6ZRBTYTS');
 </script>
+<script>
+/* Enquiry click tracking: WhatsApp, phone, email, contact form */
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a||!window.gtag)return;var h=a.getAttribute('href')||'',p={page_path:location.pathname};if(h.indexOf('https://wa.me/60122127743')===0)gtag('event','whatsapp_click',p);else if(h.indexOf('tel:')===0)gtag('event','phone_click',p);else if(h.indexOf('mailto:')===0)gtag('event','email_click',p);},true);
+document.addEventListener('submit',function(e){if(e.target&&e.target.id==='contactForm'&&window.gtag)gtag('event','form_submit_call',{page_path:location.pathname});},true);
+</script>
 <style>.lang-switch{font-size:.82rem;font-weight:700;color:var(--ink-soft);border:1.5px solid var(--line);padding:6px 11px;border-radius:999px;letter-spacing:.04em;transition:.2s;text-decoration:none}.lang-switch:hover{border-color:var(--primary);color:var(--primary)}</style>
 </head>
 <body class="preloading">
@@ -2255,10 +2260,10 @@
 <section class="trust-band" aria-label="Impact stats" style="padding:32px 0">
   <div class="container">
     <div class="trust-grid">
-      <div class="trust-item"><div class="num" data-count="350" data-suffix="+">0</div><div class="lbl">Kanak-kanak dibantu</div></div>
-      <div class="trust-item"><div class="num" data-count="7">0</div><div class="lbl">Program khusus</div></div>
-      <div class="trust-item"><div class="num" data-count="12">0</div><div class="lbl">Pendidik pakar</div></div>
-      <div class="trust-item"><div class="num" data-count="98" data-suffix="%">0</div><div class="lbl">Kepuasan ibu bapa</div></div>
+      <div class="trust-item"><div class="num" data-count="350" data-suffix="+">350+</div><div class="lbl">Kanak-kanak dibantu</div></div>
+      <div class="trust-item"><div class="num" data-count="7">7</div><div class="lbl">Program khusus</div></div>
+      <div class="trust-item"><div class="num" data-count="12">12</div><div class="lbl">Pendidik pakar</div></div>
+      <div class="trust-item"><div class="num" data-count="98" data-suffix="%">98%</div><div class="lbl">Kepuasan ibu bapa</div></div>
     </div>
   </div>
 </section>

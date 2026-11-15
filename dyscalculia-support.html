@@ -359,6 +359,11 @@ html{scroll-padding-top:88px}
   gtag('js', new Date());
   gtag('config', 'G-YC6ZRBTYTS');
 </script>
+<script>
+/* Enquiry click tracking: WhatsApp, phone, email, contact form */
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a||!window.gtag)return;var h=a.getAttribute('href')||'',p={page_path:location.pathname};if(h.indexOf('https://wa.me/60122127743')===0)gtag('event','whatsapp_click',p);else if(h.indexOf('tel:')===0)gtag('event','phone_click',p);else if(h.indexOf('mailto:')===0)gtag('event','email_click',p);},true);
+document.addEventListener('submit',function(e){if(e.target&&e.target.id==='contactForm'&&window.gtag)gtag('event','form_submit_call',{page_path:location.pathname});},true);
+</script>
 </head>
 <body>
 
@@ -397,7 +402,7 @@ html{scroll-padding-top:88px}
           <a href="index.html#programs">Progressive Coding</a>
           <a href="index.html#programs">IGCSE Crash Course</a>
           <span class="dd-sep"></span>
-          <a href="lodestone-evo.html"><strong>Lodestone Evo</strong> &middot; ages 2&ndash;6</a>
+          <a href="lodestone-evo.html"><strong>Lodestone Evo</strong> &middot; ages 4&ndash;13</a>
         </div>
       </div>
       <div class="nav-dd">
@@ -681,6 +686,11 @@ html{scroll-padding-top:88px}
           <a href="lodestone-evo.html">Lodestone Evo</a>
           <a href="index.html#faq">FAQ</a>
           <a href="#contact">Contact</a><a href="/contact/">Address &amp; directions</a>
+        </div>
+        <div><h5>Screening near you</h5>
+          <a href="screening-petaling-jaya.html">Petaling Jaya</a>
+          <a href="screening-shah-alam.html">Shah Alam</a>
+          <a href="screening-puchong.html">Puchong</a>
         </div>
       </div>
     </div>
