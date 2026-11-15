@@ -40,6 +40,7 @@
   a{color:inherit;text-decoration:none}
   h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--ink)}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(58,79,181,.08);color:var(--primary);border-radius:999px;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+h1.eyebrow{font-family:var(--font);line-height:1.45}
   /* NAV */
   .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(20px);background:rgba(250,247,242,.82);border-bottom:1px solid rgba(31,37,71,.06)}
   .nav-inner{max-width:1140px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
@@ -60,7 +61,7 @@
   .crumb a:hover{color:var(--primary)}
   /* HERO */
   .hero{padding:38px 0 8px;text-align:center}
-  .hero h1{font-size:clamp(2rem,4vw,2.9rem);margin:14px 0 0}
+  .hero .hero-tagline{font-family:var(--font-display);font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--ink);font-size:clamp(2rem,4vw,2.9rem);margin:14px 0 0}
   .hero .lede{font-size:1.12rem;color:var(--ink-soft);margin:16px auto 0;max-width:620px}
   .disclaimer-pill{display:inline-flex;gap:8px;align-items:flex-start;margin-top:20px;background:#eef1fb;border-radius:12px;padding:12px 18px;font-size:.9rem;color:var(--ink-soft);text-align:left;max-width:640px}
   .disclaimer-pill svg{flex-shrink:0;color:var(--primary);margin-top:2px}
@@ -350,8 +351,8 @@ html{scroll-padding-top:88px}
 
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Free &middot; About 3 minutes &middot; Not a diagnosis</span>
-    <h1>How is your child doing?</h1>
+    <h1 class="eyebrow">Free child learning and development check &middot; 3 minutes</h1>
+    <p class="hero-tagline">How is your child doing?</p>
     <p class="lede">A whole-child check for ages 2 to 16 and up. Answer honestly about what you actually see, including the things going well. We'll show you which areas look fine and which might be worth a closer look.</p>
     <div class="disclaimer-pill">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>

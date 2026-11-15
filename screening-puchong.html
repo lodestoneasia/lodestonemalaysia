@@ -48,6 +48,7 @@
   section{padding:84px 0;position:relative}
   .white{background:var(--paper)}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(58,79,181,.08);color:var(--primary);border-radius:999px;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+h1.eyebrow{font-family:var(--font);line-height:1.45}
 
   /* reveal animations (progressive: only hide when JS is on) */
   body.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
@@ -95,8 +96,8 @@
   @keyframes spin{to{transform:rotate(360deg)}}
   @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative;z-index:1}
-  .hero h1{font-size:clamp(2.2rem,4.4vw,3.4rem);margin:18px 0 0}
-  .hero h1 .hl{color:var(--primary)}
+  .hero .hero-tagline{font-family:var(--font-display);font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--ink);font-size:clamp(2.2rem,4.4vw,3.4rem);margin:18px 0 0}
+  .hero .hero-tagline .hl{color:var(--primary)}
   .hero .lede{font-size:1.15rem;color:var(--ink-soft);margin-top:20px;max-width:560px}
   .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
   .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:1rem;cursor:pointer;border:0;transition:transform .25s var(--ease),box-shadow .25s,background .25s}
@@ -402,8 +403,8 @@ html{scroll-padding-top:88px}
   <div class="orbit-deco" aria-hidden="true"><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div></div>
   <div class="container hero-grid">
     <div class="reveal">
-      <span class="eyebrow">For families in Puchong</span>
-      <h1>Is it laziness, or something inherent? <span class="hl">Let's find out properly</span>.</h1>
+      <h1 class="eyebrow">Learning screening for Puchong families</h1>
+      <p class="hero-tagline">Is it laziness, or something inherent? <span class="hl">Let's find out properly</span>.</p>
       <p class="lede">For Puchong families whose child is struggling with reading, numbers, speech, writing or focus: a targeted screening answers in one or two sessions what years of "wait and see" cannot. RM120 per screening area, plain-language report included, no diagnosis required.</p>
       <div class="cta-row">
         <a class="btn btn-wa" href="https://wa.me/60122127743?text=Hi%21%20We%27re%20a%20family%20from%20Puchong%20and%20would%20like%20to%20book%20a%20screening." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.2.7 3 .6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.3L2 22l4.8-1.3c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>Chat on WhatsApp</a>
